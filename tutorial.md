@@ -7,9 +7,3 @@ docker-compose up -d
 
 när detta har körts så borde du kunna se jenkins på
 http://localhost:8080
-
-## PASSWORD
-du kan hitta lösenordet med:
-```bash
-docker logs jenkins-jenkins-1
-```
