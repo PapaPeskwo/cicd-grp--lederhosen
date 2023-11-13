@@ -1,0 +1,40 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the source code from your version control system (Git in this case)
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
+                // Build the latest image of 'pingurl'
+                script {
+                    docker.build("pingurl:latest")
+                }
+            }
+        }
+
+        stage('Linting') {
+            steps {
+                // Run Pylint
+                script {
+                    docker.image('pingurl:latest').inside {
+                        sh './backend/app.py'
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        failure {
+            // Actions to be taken if any of the stages fail
+            echo 'Linting issues detected. Failing the build.'
+            currentBuild.result = 'FAILURE'
+        }
+    }
+}
