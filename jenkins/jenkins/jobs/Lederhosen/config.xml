@@ -24,7 +24,7 @@
         <source class="jenkins.plugins.git.GitSCMSource" plugin="git@5.2.1">
           <id>e00e6ff7-95d5-4075-abf6-4b7b493c9556</id>
           <remote>git@github.com:nackc8/cicd-grp--lederhosen.git</remote>
-          <credentialsId>11e9a1d9-9462-4582-8212-3b54a2a89b8d</credentialsId>
+          <credentialsId>40f311dc-de1a-4ef2-85b9-491f11fda76c</credentialsId>
           <traits>
             <jenkins.plugins.git.traits.BranchDiscoveryTrait/>
           </traits>
