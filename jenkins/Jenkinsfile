@@ -34,7 +34,7 @@ pipeline {
         failure {
             // Actions to be taken if any of the stages fail
             echo 'Linting issues detected. Failing the build.'
-            currentBuild.result = 'FAILURE'
+            error('Linting issues detected')
         }
     }
 }
