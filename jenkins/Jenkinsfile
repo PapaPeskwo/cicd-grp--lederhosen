@@ -4,15 +4,14 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Checkout the source code from your version control system (Git in this case)
                 checkout scm
             }
         }
 
         stage('Build') {
             steps {
-                // Build the latest image of 'pingurl'
                 script {
+                    // Build the latest image of 'pingurl'
                     docker.build("pingurl:latest")
                 }
             }
