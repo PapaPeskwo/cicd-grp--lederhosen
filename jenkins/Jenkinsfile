@@ -38,3 +38,15 @@ pipeline {
         }
     }
 }
+
+    // Example Docker step
+    stage('Run Docker') {
+        steps {
+            script {
+                // Define your Docker-related steps here
+                docker.image('pingurl:latest').run()
+                // Additional Docker steps
+            }
+        }
+    }
+}
