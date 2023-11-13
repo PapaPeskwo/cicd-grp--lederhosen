@@ -1,3 +1,5 @@
+# Jenkins
+
 ```bash
 cd jenkins
 docker-compose up -d
@@ -7,3 +9,31 @@ docker-compose up -d
 
 när detta har körts så borde du kunna se jenkins på
 http://localhost:8080
+
+# requirements.txt
+
+```bash
+pip install -r requirements.txt
+```
+
+# pylint
+
+```bash
+pylint <file>.py
+```
+
+för att köra wildcard mot alla py filer, kör:
+```bash
+pylint **/*.py
+```
+
+# black
+
+```bash
+black <file>.py
+```
+
+för att köra wildcard mot alla py filer, kör:
+```bash
+black **/*.py
+```
