@@ -1,0 +1,7 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<jenkins.plugins.git.GitBranchSCMRevision plugin="git@5.2.1">
+  <head class="jenkins.plugins.git.GitBranchSCMHead">
+    <name>feature/jenkins_pipeline</name>
+  </head>
+  <hash>658b9faea0b23fc9a801ac2ade73dfcbf2869c47</hash>
+</jenkins.plugins.git.GitBranchSCMRevision>
