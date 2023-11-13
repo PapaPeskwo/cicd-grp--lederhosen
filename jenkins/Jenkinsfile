@@ -27,24 +27,22 @@ pipeline {
                     }
                 }
             }
+            post {
+                failure {
+                    // Actions to be taken if the linting stage fails
+                    echo 'Linting issues detected. Failing the build.'
+                    error('Linting issues detected')
+                }
+            }
         }
-    }
 
-    post {
-        failure {
-            // Actions to be taken if any of the stages fail
-            echo 'Linting issues detected. Failing the build.'
-            error('Linting issues detected')
-        }
-    }
-    
-    // Example Docker step
-    stage('Run Docker') {
-        steps {
-            script {
-                // Define your Docker-related steps here
-                docker.image('pingurl:latest').run()
-                // Additional Docker steps
+        stage('Run Docker') {
+            steps {
+                script {
+                    // Define your Docker-related steps here
+                    docker.image('pingurl:latest').run()
+                    // Additional Docker steps
+                }
             }
         }
     }
