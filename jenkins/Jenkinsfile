@@ -1,48 +1,27 @@
-@Library('docker') _
-
 pipeline {
     agent any
 
     stages {
         stage('Checkout') {
             steps {
+                // Checkout the code from the repository
                 checkout scm
             }
         }
 
-        stage('Build') {
+        stage('Build and Lint') {
             steps {
                 script {
-                    // Build the latest image of 'pingurl'
-                    docker.build("pingurl:latest")
-                }
-            }
-        }
+                    // Build the latest image of pingurl
+                    sh 'docker build -t pingurl:latest .'
 
-        stage('Linting') {
-            steps {
-                // Run Pylint
-                script {
-                    docker.image('pingurl:latest').inside {
-                        sh './backend/app.py'
+                    // Run pylint
+                    def pylintResult = sh(script: 'docker run --rm pingurl:latest pylint your_project', returnStatus: true)
+                    
+                    // Fail the build if pylint fails
+                    if (pylintResult != 0) {
+                        error 'Linting failed!'
                     }
-                }
-            }
-            post {
-                failure {
-                    // Actions to be taken if the linting stage fails
-                    echo 'Linting issues detected. Failing the build.'
-                    error('Linting issues detected')
-                }
-            }
-        }
-
-        stage('Run Docker') {
-            steps {
-                script {
-                    // Define your Docker-related steps here
-                    docker.image('pingurl:latest').run()
-                    // Additional Docker steps
                 }
             }
         }
