@@ -16,7 +16,7 @@ pipeline {
                     sh 'docker build -t pingurl:latest .'
 
                     // Run pylint
-                    def pylintResult = sh(script: 'docker run --rm pingurl:latest pylint your_project', returnStatus: true)
+                    def pylintResult = sh(script: 'docker run --rm pingurl:latest pylint .', returnStatus: true)
                     
                     // Fail the build if pylint fails
                     if (pylintResult != 0) {
