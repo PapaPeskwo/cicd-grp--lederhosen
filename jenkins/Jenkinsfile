@@ -33,7 +33,7 @@ pipeline {
             steps {
                 script {
                     // Run the Flask application in a Docker container
-                    sh 'docker run -d -p 5000:5000 --name pingapp pingurl:latest'
+                    sh 'docker run -d -p 5000:5000 pingurl:latest'
                 }
             }
         }
