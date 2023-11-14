@@ -2,11 +2,11 @@ FROM python:3.12
 
 WORKDIR /backend
 
-COPY .pylintrc /testbackend
+COPY .pylintrc /backend
 
-COPY backendtest/ .
+COPY backend/ .
 
-RUN pip install -r requirements.txtfaf
+RUN pip install -r requirements.txt
 
 RUN pip install pylint
 
