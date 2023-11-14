@@ -4,29 +4,52 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Checkout the code from the repository
                 checkout scm
             }
         }
 
-        stage('Build and Lint') {
+        stage('Build Image') {
             steps {
                 script {
-                    // Build the latest image of pingurl
-                    sh 'docker build -t pingurl:latest .'
+                    // Build the Docker image and fail the build if there are any errors
+                    sh 'docker build --no-cache -t pingurl:latest .'
+                }
+            }
+        }
 
-                    // Run pylint
-                    def pylintResult = sh(script: 'docker run --rm pingurl:latest', returnStatus: true)
-                    
-                    // Fail the build if pylint fails
-                    if (pylintResult != 0) {
-                        error 'Linting failed!'
+        stage('Lint') {
+            steps {
+                script {
+                    // Run pylint and fail if the score is under 9.0 (we are currently at ~9.5)
+                    def pylintStatus = sh(script: 'docker run --rm pingurl:latest pylint --fail-under=9.0 /backend', returnStatus: true)
+                    if (pylintStatus != 0) {
+                        error("Pylint score is below the threshold of 9.0")
                     }
                 }
             }
         }
+
+        stage('Run Application') {
+            steps {
+                script {
+                    // Run the Flask application in a Docker container
+                    sh 'docker run -d -p 5000:5000 --name pingapp pingurl:latest'
+                }
+            }
+        }
+    }
+
+    post {
+        //always {
+        //    // Clean up: Stop and remove the Docker container if it's running
+        //    sh 'docker stop pingapp || true'
+        //    sh 'docker rm pingapp || true'
+        //}
+        failure {
+            echo 'The build failed.'
+            // Clean up
+            sh 'docker stop pingapp || true'
+            sh 'docker rm pingapp || true'
+        }
     }
 }
-
-
-//test

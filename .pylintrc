@@ -422,7 +422,9 @@ confidence=HIGH,
 # no Warning level messages displayed, use "--disable=all --enable=classes
 # --disable=W".
 disable=raw-checker-failed,
-        missing-module-docstring,
+        missing-module-docstring,   # Lederhosen
+        missing-class-docstring,    # Lederhosen
+        missing-function-docstring, # Lederhosen
         bad-inline-option,
         locally-disabled,
         file-ignored,
@@ -432,7 +434,14 @@ disable=raw-checker-failed,
         line-too-long,
         use-symbolic-message-instead,
         use-implicit-booleaness-not-comparison-to-string,
-        use-implicit-booleaness-not-comparison-to-zero
+        use-implicit-booleaness-not-comparison-to-zero,
+        unnecessary-lambda,         # Lederhosen
+        invalid-name,               # Lederhosen
+        C0304,                      # Lederhosen - trailing whitespace
+        C0413,                      # Lederhosen - wrong-import-position
+        C0411                       # Lederhosen - wrong-import-order
+
+
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
@@ -634,3 +643,9 @@ init-import=no
 # List of qualified module names which can have objects that can redefine
 # builtins.
 redefining-builtins-modules=six.moves,past.builtins,future.builtins,builtins,io
+
+
+# Lederhosen configs
+[MASTER]
+# Match pylint
+max-line-length=88
