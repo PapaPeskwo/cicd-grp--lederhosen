@@ -1,7 +1,6 @@
-import atexit
-
-from apscheduler.schedulers.background import BackgroundScheduler
 from flask import Flask
+from apscheduler.schedulers.background import BackgroundScheduler
+import atexit
 
 app = Flask(__name__)
 scheduler = BackgroundScheduler(daemon=True)
