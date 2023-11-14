@@ -1,11 +1,13 @@
 from datetime import datetime, timedelta, timezone
+
+from pingurl import scheduler as apscheduler
 from pingurl.ping import send_ping_persist_data
 from pingurl.watched_urls import WatchedUrl
-from pingurl import scheduler as apscheduler
 
 jobs = {}
 
 spread_start = 1
+
 
 def add(watched_url: WatchedUrl):
     url_id = watched_url.url_id
@@ -25,12 +27,13 @@ def add(watched_url: WatchedUrl):
     job = apscheduler.add_job(
         func=send_ping_persist_data,
         args=[url_id],  # Passing url_id as an argument to the job
-        trigger='interval',
+        trigger="interval",
         seconds=watched_url.period_sec,
-        start_date=datetime.now() + start_delay
+        start_date=datetime.now() + start_delay,
     )
 
     jobs[url_id] = job.id
+
 
 def remove(url_id: WatchedUrl):
     job_id = jobs.get(url_id)

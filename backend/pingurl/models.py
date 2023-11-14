@@ -1,8 +1,17 @@
 from datetime import datetime, timedelta
+
 import validators
 
+
 class WatchedUrl:
-    def __init__(self, activate_at: datetime, force: bool, period_sec: int, url: str, url_id: int = None):
+    def __init__(
+        self,
+        activate_at: datetime,
+        force: bool,
+        period_sec: int,
+        url: str,
+        url_id: int = None,
+    ):
         if not isinstance(activate_at, datetime):
             raise ValueError("activate_at must be a datetime instance")
         if not isinstance(force, bool):
@@ -26,7 +35,7 @@ class WatchedUrl:
             "force": self.force,
             "periodSec": self.period_sec,
             "url": self.url,
-            "urlId": self.url_id
+            "urlId": self.url_id,
         }
 
     def __repr__(self):
@@ -34,8 +43,15 @@ class WatchedUrl:
 
     __str__ = __repr__
 
+
 class PingData:
-    def __init__(self, pinged_at: datetime, response_time_sec: timedelta, status_code: int, url_id: int = None):
+    def __init__(
+        self,
+        pinged_at: datetime,
+        response_time_sec: timedelta,
+        status_code: int,
+        url_id: int = None,
+    ):
         if not isinstance(pinged_at, datetime):
             raise ValueError("pinged_at must be a datetime instance")
         if not isinstance(response_time_sec, timedelta):
@@ -55,9 +71,9 @@ class PingData:
             "urlId": self.url_id,
             "pingedAt": self.pinged_at.isoformat(),
             "responseTimeSec": self.response_time_sec.total_seconds(),
-            "statusCode": self.status_code
+            "statusCode": self.status_code,
         }
-    
+
     def ok(self):
         return self.status_code < 400
 
