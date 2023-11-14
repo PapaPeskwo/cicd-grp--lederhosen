@@ -436,7 +436,11 @@ disable=raw-checker-failed,
         use-implicit-booleaness-not-comparison-to-string,
         use-implicit-booleaness-not-comparison-to-zero,
         unnecessary-lambda,         # Lederhosen
-        invalid-name                # Lederhosen
+        invalid-name,               # Lederhosen
+        C0304,                      # Lederhosen - trailing whitespace
+        C0413,                      # Lederhosen - wrong-import-position
+        C0411                       # Lederhosen - wrong-import-order
+
 
 
 # Enable the message, report, category or checker with the given id(s). You can
