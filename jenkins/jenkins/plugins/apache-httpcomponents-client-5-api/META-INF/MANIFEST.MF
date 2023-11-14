@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.0
+Build-Jdk-Spec: 11
+Specification-Title: Apache HttpComponents Client 5.x API Plugin
+Specification-Version: 5.2
+Implementation-Title: Apache HttpComponents Client 5.x API Plugin
+Implementation-Version: 5.2.1-1.1
+Group-Id: io.jenkins.plugins
+Artifact-Id: apache-httpcomponents-client-5-api
+Short-Name: apache-httpcomponents-client-5-api
+Long-Name: Apache HttpComponents Client 5.x API Plugin
+Url: https://github.com/jenkinsci/apache-httpcomponents-client-5-api-plu
+ gin
+Plugin-Version: 5.2.1-1.1
+Hudson-Version: 2.361.4
+Jenkins-Version: 2.361.4
+Plugin-Developers: Daniel Krämer:strangelookingnerd:daniel-kraemer@gmx.
+ net
+Support-Dynamic-Loading: true
+Plugin-License-Name: MIT License
+Plugin-License-Url: https://opensource.org/licenses/MIT
+Plugin-ScmConnection: scm:git:https://github.com/jenkinsci/apache-httpco
+ mponents-client-5-api-plugin.git
+Plugin-ScmTag: apache-httpcomponents-client-5-api-5.2.1-1.1
+Plugin-ScmUrl: https://github.com/jenkinsci/apache-httpcomponents-client
+ -5-api-plugin
+Plugin-GitHash: 3f0775249510afbdf1c2d0928292043334e799ba
+Implementation-Build: 3f0775249510afbdf1c2d0928292043334e799ba
+

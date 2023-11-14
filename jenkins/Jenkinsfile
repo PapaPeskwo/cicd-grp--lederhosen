@@ -1,0 +1,32 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the code from the repository
+                checkout scm
+            }
+        }
+
+        stage('Build and Lint') {
+            steps {
+                script {
+                    // Build the latest image of pingurl
+                    sh 'docker build -t pingurl:latest .'
+
+                    // Run pylint
+                    def pylintResult = sh(script: 'docker run --rm pingurl:latest', returnStatus: true)
+                    
+                    // Fail the build if pylint fails
+                    if (pylintResult != 0) {
+                        error 'Linting failed!'
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//test
