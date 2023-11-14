@@ -1,7 +1,2 @@
 <?xml version='1.1' encoding='UTF-8'?>
-<list>
-  <flow-owner plugin="workflow-job@1360.vc6700e3136f5">
-    <job>Pingurl app</job>
-    <id>37</id>
-  </flow-owner>
-</list>
+<list/>

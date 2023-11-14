@@ -87,6 +87,76 @@
             </agentType>
           </agent>
         </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef>
+        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef plugin="pipeline-model-api@2.2150.v4cfd8916915c">
+          <stages>
+            <stages>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>Checkout</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>checkout</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scm</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                                <value class="string">${scm}</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>Build and Lint</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                        <name>script</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scriptBlock</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">sh &apos;docker build --no-cache -t pingurl:latest .&apos;
+
+                    // Run pylint
+                    def pylintResult = sh(script: &apos;docker run --rm pingurl:latest&apos;, returnStatus: true)
+                    
+                    // Fail the build if pylint fails
+                    if (pylintResult != 0) {
+                        error &apos;Linting failed!&apos;
+                    }</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+            </stages>
+            <uuid>bdb0cde2-3c5b-4b6c-842a-c9f107a7e984</uuid>
+          </stages>
+          <agent>
+            <agentType>
+              <key>any</key>
+            </agentType>
+          </agent>
+        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef>
       </pipelineDefs>
     </org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction>
     <com.cloudbees.plugins.credentials.builds.CredentialsParameterBinder plugin="credentials@1309.v8835d63eb_d8a_">
@@ -167,15 +237,23 @@
         </entry>
       </revisionStates>
     </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
+    <jenkins.model.InterruptedBuildAction>
+      <causes>
+        <jenkins.model.CauseOfInterruption_-UserInterruption>
+          <user>admin</user>
+        </jenkins.model.CauseOfInterruption_-UserInterruption>
+      </causes>
+    </jenkins.model.InterruptedBuildAction>
   </actions>
-  <queueId>81</queueId>
+  <queueId>83</queueId>
   <timestamp>1699969650715</timestamp>
   <startTime>1699969650720</startTime>
-  <duration>0</duration>
+  <result>ABORTED</result>
+  <duration>262850</duration>
   <charset>UTF-8</charset>
   <keepLog>false</keepLog>
   <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
-    <result>SUCCESS</result>
+    <result>ABORTED</result>
     <script>pipeline {
     agent any
 
@@ -213,29 +291,30 @@
     <timings class="map">
       <entry>
         <string>flowNode</string>
-        <long>210051346</long>
+        <long>475633066</long>
       </entry>
       <entry>
         <string>classLoad</string>
-        <long>178381536</long>
+        <long>4260330031</long>
       </entry>
       <entry>
         <string>run</string>
-        <long>10880129734</long>
+        <long>14752186906</long>
       </entry>
       <entry>
         <string>parse</string>
-        <long>36341695</long>
+        <long>1459844534</long>
       </entry>
       <entry>
         <string>saveProgram</string>
-        <long>10166809162</long>
+        <long>13187012812</long>
       </entry>
     </timings>
     <internalCalls class="sorted-set">
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.SyntheticStageNames.checkout</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.createStepsBlock</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.getRestartedStage</string>
+      <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.markStageFailedAndContinued</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.updateJobProperties</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.updateRunAndJobActions</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.agent.impl.Any.getScript</string>
@@ -258,6 +337,7 @@
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.libraries</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.options</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.parameters</string>
+      <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.post</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.stages</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.tools</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.triggers</string>
@@ -283,13 +363,13 @@
       <string>org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper.result</string>
     </internalCalls>
     <sandbox>true</sandbox>
-    <iota>22</iota>
-    <head>1:22</head>
-    <start>2</start>
-    <done>false</done>
+    <iota>31</iota>
+    <head>1:31</head>
+    <done>true</done>
     <resumeBlocked>false</resumeBlocked>
+    <storageDir>workflow-completed</storageDir>
   </execution>
-  <completed>false</completed>
+  <completed>true</completed>
   <checkouts class="hudson.util.PersistedList">
     <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
       <scm class="hudson.plugins.git.GitSCM" plugin="git@5.2.1">
