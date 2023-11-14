@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Build the latest image of pingurl
-                    sh 'docker build -t pingurl:latest .'
+                    sh 'docker build --no-cache -t pingurl:latest .'
 
                     // Run pylint
                     def pylintResult = sh(script: 'docker run --rm pingurl:latest', returnStatus: true)
