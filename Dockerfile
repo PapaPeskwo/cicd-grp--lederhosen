@@ -3,9 +3,6 @@ FROM python:3.12
 WORKDIR /backend
 
 COPY backend/ .
-# COPY backend/app.py backend/
-# COPY backend/pingurl/ backend/pingurl/
-# COPY backend/requirements.txt .
 
 RUN pip install -r requirements.txt
 

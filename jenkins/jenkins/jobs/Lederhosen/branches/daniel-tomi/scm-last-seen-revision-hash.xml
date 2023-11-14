@@ -1,7 +1,0 @@
-<?xml version='1.1' encoding='UTF-8'?>
-<jenkins.plugins.git.GitBranchSCMRevision plugin="git@5.2.1">
-  <head class="jenkins.plugins.git.GitBranchSCMHead">
-    <name>daniel-tomi</name>
-  </head>
-  <hash>d45eb42bc39807605c00178224d69b0544bf21c7</hash>
-</jenkins.plugins.git.GitBranchSCMRevision>
