@@ -37,3 +37,11 @@ för att köra wildcard mot alla py filer, kör:
 ```bash
 black **/*.py
 ```
+
+# isort
+- löste linting problem, behöver inte köras igen men kan vara bra att veta
+
+```bash
+pip install isort
+isort backend/
+```
