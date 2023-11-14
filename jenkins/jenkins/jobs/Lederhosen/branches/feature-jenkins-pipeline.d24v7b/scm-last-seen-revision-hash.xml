@@ -3,5 +3,5 @@
   <head class="jenkins.plugins.git.GitBranchSCMHead">
     <name>feature/jenkins_pipeline</name>
   </head>
-  <hash>658b9faea0b23fc9a801ac2ade73dfcbf2869c47</hash>
+  <hash>9ce55e6e35f74510b934e7769d6f0511211d8854</hash>
 </jenkins.plugins.git.GitBranchSCMRevision>

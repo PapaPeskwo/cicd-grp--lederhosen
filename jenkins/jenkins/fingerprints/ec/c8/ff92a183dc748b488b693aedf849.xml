@@ -5,19 +5,31 @@
   <fileName>Credential id=40f311dc-de1a-4ef2-85b9-491f11fda76c name=git</fileName>
   <usages>
     <entry>
-      <string>Lederhosen/feature%2Fjenkins_pipeline</string>
+      <string>Freestyle</string>
       <ranges>1</ranges>
     </entry>
     <entry>
+      <string>Pingurl</string>
+      <ranges>1-5</ranges>
+    </entry>
+    <entry>
+      <string>Lederhosen/daniel-tomi</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>Lederhosen/feature%2Fjenkins_pipeline</string>
+      <ranges>1-2</ranges>
+    </entry>
+    <entry>
       <string>Jenkinsfile david</string>
-      <ranges>2,5-7</ranges>
+      <ranges>2,5-8,11-15</ranges>
     </entry>
   </usages>
   <facets>
     <com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet plugin="credentials@1309.v8835d63eb_d8a_">
-      <timestamp>1699878592656</timestamp>
+      <timestamp>1699949739180</timestamp>
       <itemFullName>Jenkinsfile david</itemFullName>
-      <timestamp0>1699878414979</timestamp0>
+      <timestamp0>1699949386252</timestamp0>
     </com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet>
   </facets>
 </fingerprint>

@@ -1,0 +1,10 @@
+commit bd7730fd61aaf7fb212adb45b782d78ba8ea12d5
+tree bc9d3722eb6b780568af1cbd9591d4a61f6e1169
+parent 6f39b207173df8d66f34e112e2821c9ac591dc06
+author Sundgren95 <sundgren.david@gmail.com> 2023-11-14 09:15:25 +0100
+committer Sundgren95 <sundgren.david@gmail.com> 2023-11-14 09:15:25 +0100
+
+    removed -rm
+
+
+:100644 100644 5fd442b45ea57c3eb97fe091c308c39ff6ea31e3 42b72a603ff036dcdef05d762dc87030a3ad9294 M	jenkins/Jenkinsfile
