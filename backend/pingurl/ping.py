@@ -6,10 +6,11 @@ import requests
 
 TIMEOUT = 10
 
+
 def send_ping(watched_url: WatchedUrl) -> PingData:
     if not isinstance(watched_url, WatchedUrl):
         raise ValueError("watched_url must be a WatchedUrl instance")
-    
+
     # Used only if a request exception occurs
     pinged_at = datetime.now()
 
@@ -31,14 +32,17 @@ def send_ping(watched_url: WatchedUrl) -> PingData:
         status_code = 508
     except requests.exceptions.RequestException:
         status_code = 500
-    
+
     # Calculate response time if an exception occured
     if response_time is None:
         response_time = datetime.now() - pinged_at
 
-    ping_data = PingData(pinged_at, response_time, status_code, url_id=watched_url.url_id)
+    ping_data = PingData(
+        pinged_at, response_time, status_code, url_id=watched_url.url_id
+    )
 
     return ping_data
+
 
 def send_ping_persist_data(url_id: int):
     try:
