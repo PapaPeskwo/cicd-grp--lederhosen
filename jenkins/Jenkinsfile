@@ -28,6 +28,16 @@ pipeline {
                 }
             }
         }
+        
+        stage('Stop Existing Container') {
+            steps {
+                script {
+                    // Stop and remove the Docker container if it's running
+                    sh 'docker stop pingapp || true'
+                    sh 'docker rm pingapp || true'
+                }
+            }
+        }
 
         stage('Run Application') {
             steps {
