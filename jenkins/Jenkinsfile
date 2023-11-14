@@ -4,29 +4,38 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Checkout the code from the repository
                 checkout scm
             }
         }
 
-        stage('Build and Lint') {
+        stage('Build') {
             steps {
                 script {
-                    // Build the latest image of pingurl
-                    sh 'docker build --no-cache -t pingurl:latest .'
+                    // Build the Docker image and fail the build if there are any errors
+                    def buildStatus = sh(script: 'docker build --no-cache -t pingurl:latest .', returnStatus: true)
+                    if (buildStatus != 0) {
+                        error("Docker image build failed.")
+                    }
+                }
+            }
+        }
 
-                    // Run pylint
-                    def pylintResult = sh(script: 'docker run --rm pingurl:latest', returnStatus: true)
-                    
-                    // Fail the build if pylint fails
-                    if (pylintResult != 0) {
-                        error 'Linting failed!'
+        stage('Lint') {
+            steps {
+                script {
+                    // Run pylint and fail if the score is under 9.0 (we are currently at ~9.5)
+                    def pylintStatus = sh(script: 'docker run --rm pingurl:latest pylint --fail-under=9.0 /backend', returnStatus: true)
+                    if (pylintStatus != 0) {
+                        error("Pylint score is below the threshold of 9.0")
                     }
                 }
             }
         }
     }
+
+    post {
+        failure {
+            echo 'The build failed.'
+        }
+    }
 }
-
-
-//test
