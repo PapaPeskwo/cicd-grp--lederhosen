@@ -163,3 +163,8 @@ cython_debug/
 
 # stupid mac
 .DS_Store
+
+
+# fett jobbig bree
+jenkins/jenkins/workspace/*
+jenkins/jenkins/caches/*
