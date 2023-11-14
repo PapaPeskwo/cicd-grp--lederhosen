@@ -15,7 +15,7 @@
       <libraries/>
     </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
     <org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction plugin="pipeline-model-definition@2.2150.v4cfd8916915c">
-      <stagesUUID>0bc08c27-c36e-4075-bf4e-c5ebe02062e4</stagesUUID>
+      <stagesUUID>732befa4-ef9e-4b7d-b4d1-f26cebd900d0</stagesUUID>
       <pipelineDefs>
         <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef plugin="pipeline-model-api@2.2150.v4cfd8916915c">
           <stages>
@@ -46,7 +46,7 @@
                 </branches>
               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
-                <name>Build and Lint</name>
+                <name>Build</name>
                 <branches>
                   <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
                     <name>default</name>
@@ -60,14 +60,37 @@
                                 <key>scriptBlock</key>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
-                                <value class="string">sh &apos;docker build -t pingurl:latest .&apos;
-
-                    // Run pylint
-                    def pylintResult = sh(script: &apos;docker run pingurl:latest pylint .&apos;, returnStatus: true)
-                    
-                    // Fail the build if pylint fails
-                    if (pylintResult != 0) {
-                        error &apos;Linting failed!&apos;
+                                <value class="string">def buildStatus = sh(script: &apos;docker build --no-cache -t pingurl:latest .&apos;, returnStatus: true)
+                    if (buildStatus != 0) {
+                        error(&quot;Docker image build failed.&quot;)
+                    }</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>Lint</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                        <name>script</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scriptBlock</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">def pylintStatus = sh(script: &apos;docker run --rm pingurl:latest pylint --fail-under=9.0 /backend&apos;, returnStatus: true)
+                    if (pylintStatus != 0) {
+                        error(&quot;Pylint score is below the threshold of 9.0&quot;)
                     }</value>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
                             </entry>
@@ -79,8 +102,35 @@
                 </branches>
               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
             </stages>
-            <uuid>0bc08c27-c36e-4075-bf4e-c5ebe02062e4</uuid>
+            <uuid>732befa4-ef9e-4b7d-b4d1-f26cebd900d0</uuid>
           </stages>
+          <postBuild>
+            <conditions>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+                <condition>failure</condition>
+                <branch>
+                  <name>default</name>
+                  <steps>
+                    <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <name>echo</name>
+                      <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                        <arguments class="linked-hash-map">
+                          <entry>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <key>message</key>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                              <value class="string">The build failed.</value>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          </entry>
+                        </arguments>
+                      </args>
+                    </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                  </steps>
+                </branch>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+            </conditions>
+          </postBuild>
           <agent>
             <agentType>
               <key>any</key>
@@ -95,10 +145,47 @@
     <hudson.plugins.git.util.BuildData plugin="git@5.2.1">
       <buildsByBranchName>
         <entry>
+          <string>refs/remotes/origin/feature/build_fails_on_image_build_issues</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@4.5.0">
+              <sha1>40b3f0c90a0e51a297c37de2fcc1e1cf53eac319</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/feature/build_fails_on_image_build_issues</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision plugin="git-client@4.5.0">
+              <sha1 reference="../../marked/sha1"/>
+              <branches class="list">
+                <hudson.plugins.git.Branch reference="../../../marked/branches/hudson.plugins.git.Branch"/>
+              </branches>
+            </revision>
+            <hudsonBuildNumber>28</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+        <entry>
+          <string>refs/remotes/origin/fix/pylint</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@4.5.0">
+              <sha1>297437341f9a38e502eab64f337ca575705393db</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/fix/pylint</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>40</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+        <entry>
           <string>refs/remotes/origin/david</string>
           <hudson.plugins.git.util.Build>
             <marked plugin="git-client@4.5.0">
-              <sha1>ec9a99c98f11a7831da8617116fe77fb0337f094</sha1>
+              <sha1>a662cb277bde4365e5856bf7a6b4a4d0bc89ebb7</sha1>
               <branches class="list">
                 <hudson.plugins.git.Branch>
                   <sha1 reference="../../../sha1"/>
@@ -106,12 +193,18 @@
                 </hudson.plugins.git.Branch>
               </branches>
             </marked>
-            <revision reference="../marked"/>
-            <hudsonBuildNumber>18</hudsonBuildNumber>
+            <revision plugin="git-client@4.5.0">
+              <sha1 reference="../../marked/sha1"/>
+              <branches class="list">
+                <hudson.plugins.git.Branch reference="../../../marked/branches/hudson.plugins.git.Branch"/>
+              </branches>
+            </revision>
+            <hudsonBuildNumber>33</hudsonBuildNumber>
           </hudson.plugins.git.util.Build>
         </entry>
       </buildsByBranchName>
-      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <lastBuild reference="../buildsByBranchName/entry[2]/hudson.plugins.git.util.Build"/>
+      <scmName></scmName>
       <remoteUrls>
         <string>git@github.com:nackc8/cicd-grp--lederhosen.git</string>
       </remoteUrls>
@@ -125,11 +218,11 @@
       </revisionStates>
     </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
   </actions>
-  <queueId>67</queueId>
-  <timestamp>1699953501339</timestamp>
-  <startTime>1699953501344</startTime>
+  <queueId>89</queueId>
+  <timestamp>1699970722428</timestamp>
+  <startTime>1699970722440</startTime>
   <result>SUCCESS</result>
-  <duration>52569</duration>
+  <duration>39100</duration>
   <charset>UTF-8</charset>
   <keepLog>false</keepLog>
   <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
@@ -140,54 +233,63 @@
     stages {
         stage(&apos;Checkout&apos;) {
             steps {
-                // Checkout the code from the repository
                 checkout scm
             }
         }
 
-        stage(&apos;Build and Lint&apos;) {
+        stage(&apos;Build&apos;) {
             steps {
                 script {
-                    // Build the latest image of pingurl
-                    sh &apos;docker build -t pingurl:latest .&apos;
+                    // Build the Docker image and fail the build if there are any errors
+                    def buildStatus = sh(script: &apos;docker build --no-cache -t pingurl:latest .&apos;, returnStatus: true)
+                    if (buildStatus != 0) {
+                        error(&quot;Docker image build failed.&quot;)
+                    }
+                }
+            }
+        }
 
-                    // Run pylint
-                    def pylintResult = sh(script: &apos;docker run pingurl:latest pylint .&apos;, returnStatus: true)
-                    
-                    // Fail the build if pylint fails
-                    if (pylintResult != 0) {
-                        error &apos;Linting failed!&apos;
+        stage(&apos;Lint&apos;) {
+            steps {
+                script {
+                    // Run pylint and fail if the score is under 9.0 (we are currently at ~9.5)
+                    def pylintStatus = sh(script: &apos;docker run --rm pingurl:latest pylint --fail-under=9.0 /backend&apos;, returnStatus: true)
+                    if (pylintStatus != 0) {
+                        error(&quot;Pylint score is below the threshold of 9.0&quot;)
                     }
                 }
             }
         }
     }
-}
 
-
-//test</script>
+    post {
+        failure {
+            echo &apos;The build failed.&apos;
+        }
+    }
+}</script>
     <loadedScripts class="map"/>
     <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
     <timings class="map">
       <entry>
         <string>flowNode</string>
-        <long>200260050</long>
+        <long>296918165</long>
       </entry>
       <entry>
         <string>classLoad</string>
-        <long>2001700100</long>
+        <long>170858780</long>
       </entry>
       <entry>
         <string>run</string>
-        <long>2033538134</long>
+        <long>20980845391</long>
       </entry>
       <entry>
         <string>parse</string>
-        <long>913538873</long>
+        <long>47396838</long>
       </entry>
       <entry>
         <string>saveProgram</string>
-        <long>334140327</long>
+        <long>19714808053</long>
       </entry>
     </timings>
     <internalCalls class="sorted-set">
@@ -207,6 +309,7 @@
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Agent.hasAgent</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Agent.populateMap</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Agent.rawClosure</string>
+      <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.PostBuild.&lt;init&gt;</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.&lt;init&gt;</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.agent</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.astUUID</string>
@@ -242,8 +345,8 @@
       <string>org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper.result</string>
     </internalCalls>
     <sandbox>true</sandbox>
-    <iota>31</iota>
-    <head>1:31</head>
+    <iota>39</iota>
+    <head>1:39</head>
     <done>true</done>
     <resumeBlocked>false</resumeBlocked>
     <storageDir>workflow-completed</storageDir>
@@ -261,7 +364,7 @@
         </userRemoteConfigs>
         <branches>
           <hudson.plugins.git.BranchSpec>
-            <name>*/david</name>
+            <name>*/fix/pylint</name>
           </hudson.plugins.git.BranchSpec>
         </branches>
         <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -270,7 +373,7 @@
       </scm>
       <node></node>
       <workspace>/var/jenkins_home/workspace/Pingurl app</workspace>
-      <changelogFile>/var/jenkins_home/jobs/Pingurl app/builds/18/changelog1003834317538872719.xml</changelogFile>
+      <changelogFile>/var/jenkins_home/jobs/Pingurl app/builds/40/changelog11649553131070442336.xml</changelogFile>
       <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
     </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
     <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
