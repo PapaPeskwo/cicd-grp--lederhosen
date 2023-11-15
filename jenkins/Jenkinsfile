@@ -47,15 +47,6 @@ pipeline {
                 }
             }
         }
-
-         stage('Run Local Checks') {
-            steps {
-                script {
-                    // Execute the local checks script
-                    sh 'bash jenkins/local_checks.sh'
-                }
-            }
-        }
     }
 
     post {

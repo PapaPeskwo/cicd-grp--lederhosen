@@ -2,6 +2,10 @@
 
 echo "Running local checks..."
 
+# Build Docker image locally
+echo "Building Docker image..."
+docker build --no-cache -t pingurl:latest .
+
 # Run pylint
 echo "Running pylint..."
 docker run --rm pingurl:latest pylint /backend
@@ -18,21 +22,17 @@ if [ $pylintStatus -ne 0 ]; then
     exit 1
 fi
 
-# Build Docker image locally
-echo "Building Docker image..."
-docker build --no-cache -t pingurl:latest .
-
 # Run the application and check if it starts successfully
 echo "Running the application..."
-docker run --rm -d -p 5001:5001 --name localpingapp pingurl:latest
+docker run --rm -d -p 5000:5000 --name pingapp pingurl:latest
 
 # Sleep for a moment to allow the application to start
 sleep 5
 
 # Check if the application container is running
-if [ "$(docker inspect -f '{{.State.Running}}' localpingapp)" != "true" ]; then
+if [ "$(docker inspect -f '{{.State.Running}}' pingapp)" != "true" ]; then
     echo "Error: The application failed to start."
     exit 1
 fi
-docker stop localpingapp
-docker rm localpingapp
+docker stop pingapp
+docker rm pingapp
