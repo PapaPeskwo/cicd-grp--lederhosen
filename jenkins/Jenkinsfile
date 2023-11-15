@@ -28,6 +28,18 @@ pipeline {
                 }
             }
         }
+
+        stage('Run Tests') {
+            steps {
+                script {
+                    // Run pytest and fail the build if any tests fail
+                    def pytestStatus = sh(script: 'docker run --rm pingurl:latest pytest /backend', returnStatus: true)
+                    if (pytestStatus != 0) {
+                        error("Pytest failed. Check the test results.")
+                    }
+                }
+            }
+        }
         
         stage('Stop Existing Container') {
             steps {

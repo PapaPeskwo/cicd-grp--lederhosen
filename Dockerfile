@@ -10,6 +10,8 @@ RUN pip install -r requirements.txt
 
 RUN pip install pylint
 
+RUN pip install pytest
+
 RUN pylint .
 
 EXPOSE 5000
