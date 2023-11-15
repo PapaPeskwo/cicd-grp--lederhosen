@@ -47,6 +47,15 @@ pipeline {
                 }
             }
         }
+
+         stage('Run Local Checks') {
+            steps {
+                script {
+                    // Execute the local checks script
+                    sh './local_checks.sh'
+                }
+            }
+        }
     }
 
     post {
