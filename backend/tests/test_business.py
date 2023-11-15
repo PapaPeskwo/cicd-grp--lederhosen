@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import datetime
 import pytest
 from unittest.mock import Mock
 import sys
