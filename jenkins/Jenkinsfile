@@ -52,7 +52,7 @@ pipeline {
             steps {
                 script {
                     // Execute the local checks script
-                    sh './local_checks.sh'
+                    sh 'bash jenkins/local_checks.sh'
                 }
             }
         }
