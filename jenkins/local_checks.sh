@@ -22,6 +22,18 @@ if [ $pylintStatus -ne 0 ]; then
     exit 1
 fi
 
+# Run pytest
+echo "Running pytest..."
+docker run --rm pingurl:latest pytest /backend
+
+# Check the exit status of the pytest command
+pytestStatus=$?
+
+if [ $pytestStatus -ne 0 ]; then
+    echo "Error: Pytest failed. Check the test results."
+    exit 1
+fi
+
 # Run the application and check if it starts successfully
 echo "Running the application..."
 docker run --rm -d -p 5000:5000 --name pingapp pingurl:latest
