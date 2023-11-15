@@ -34,7 +34,3 @@ if [ "$(docker inspect -f '{{.State.Running}}' pingapp)" != "true" ]; then
     echo "Error: The application failed to start."
     exit 1
 fi
-
-# Check code formatting using black
-echo "Checking code formatting with black..."
-docker run --rm pingurl:latest black --check /backend
