@@ -24,7 +24,7 @@ docker build --no-cache -t pingurl:latest .
 
 # Run the application and check if it starts successfully
 echo "Running the application..."
-docker run --rm -d -p 5000:5000 --name localpingapp pingurl:latest
+docker run --rm -d -p 5001:5001 --name localpingapp pingurl:latest
 
 # Sleep for a moment to allow the application to start
 sleep 5
