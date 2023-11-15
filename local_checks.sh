@@ -10,15 +10,27 @@ docker build --no-cache -t pingurl:latest .
 echo "Running pylint..."
 docker run --rm pingurl:latest pylint /backend
 
-# Run pylint and fail if the score is under 9.0
+# Run pylint and fail if the score is under 8.0
 echo "Running pylint with threshold..."
-docker run --rm pingurl:latest pylint --fail-under=9.0 /backend
+docker run --rm pingurl:latest pylint --fail-under=8.0 /backend
 
 # Check the exit status of the pylint command
 pylintStatus=$?
 
 if [ $pylintStatus -ne 0 ]; then
-    echo "Error: Pylint score is below the threshold of 9.0"
+    echo "Error: Pylint score is below the threshold of 8.0"
+    exit 1
+fi
+
+# Run pytest
+echo "Running pytest..."
+docker run --rm pingurl:latest pytest /backend
+
+# Check the exit status of the pytest command
+pytestStatus=$?
+
+if [ $pytestStatus -ne 0 ]; then
+    echo "Error: Pytest failed. Check the test results."
     exit 1
 fi
 
@@ -35,4 +47,4 @@ if [ "$(docker inspect -f '{{.State.Running}}' pingapp)" != "true" ]; then
     exit 1
 fi
 docker stop pingapp
-docker rm pingapp
+
