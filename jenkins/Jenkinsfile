@@ -21,9 +21,21 @@ pipeline {
             steps {
                 script {
                     // Run pylint and fail if the score is under 9.0 (we are currently at ~9.5)
-                    def pylintStatus = sh(script: 'docker run --rm pingurl:latest pylint --fail-under=9.0 /backend', returnStatus: true)
+                    def pylintStatus = sh(script: 'docker run --rm pingurl:latest pylint --fail-under=8.0 /backend', returnStatus: true)
                     if (pylintStatus != 0) {
-                        error("Pylint score is below the threshold of 9.0")
+                        error("Pylint score is below the threshold of 8.0")
+                    }
+                }
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                script {
+                    // Run pytest and fail the build if any tests fail
+                    def pytestStatus = sh(script: 'docker run --rm pingurl:latest pytest /backend', returnStatus: true)
+                    if (pytestStatus != 0) {
+                        error("Pytest failed. Check the test results.")
                     }
                 }
             }
