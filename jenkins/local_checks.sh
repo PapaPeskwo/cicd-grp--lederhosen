@@ -24,13 +24,15 @@ docker build --no-cache -t pingurl:latest .
 
 # Run the application and check if it starts successfully
 echo "Running the application..."
-docker run --rm -d -p 5000:5000 --name pingapp pingurl:latest
+docker run --rm -d -p 5000:5000 --name localpingapp pingurl:latest
 
 # Sleep for a moment to allow the application to start
 sleep 5
 
 # Check if the application container is running
-if [ "$(docker inspect -f '{{.State.Running}}' pingapp)" != "true" ]; then
+if [ "$(docker inspect -f '{{.State.Running}}' localpingapp)" != "true" ]; then
     echo "Error: The application failed to start."
     exit 1
 fi
+docker stop localpingapp
+docker rm localpingapp
