@@ -3,8 +3,9 @@ from datetime import datetime, timedelta
 import pytest
 import sys
 import os
+
 # Add the root directory to the sys.path
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from pingurl.models import WatchedUrl, PingData
 from pingurl.persistance import (
     add_watched_url,
@@ -32,9 +33,11 @@ sample_ping_data = PingData(
     url_id=0,
 )
 
+
 def test_add_watched_url():
     url_id = add_watched_url(sample_watched_url)
     assert url_id == 0
+
 
 def test_get_watched_url():
     watched_url = get_watched_url(0)
