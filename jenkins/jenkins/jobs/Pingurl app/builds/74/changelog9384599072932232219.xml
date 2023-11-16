@@ -1,0 +1,52 @@
+commit 71171278590eef5d3b091efb0a917b9c216f19db
+tree c3dd98512544d1a0f9ebcf6210e82b523b2a946d
+parent 18de94841b0cf9f13aac20c7d1894a8af94c3831
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:02:14 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:02:14 +0100
+
+    -
+
+
+:100644 100644 2a39a5334b0c20a81cd99ce05d63a55f36daa254 a9091d2e75b02c64fb89339ae74dc228876b423b M	jenkins/jenkins/.config/jgit/config
+:100644 100644 596413ad7ab1c9fcf9a8aa795b545b46542bc84b c07ccbb1027ff8d349748fb268a8420c10fcfcce M	jenkins/jenkins/fingerprints/ec/c8/ff92a183dc748b488b693aedf849.xml
+:100644 000000 2ad859835aace46c1519208dfc8ab70a475787b2 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/68/log
+:100644 000000 c7b4f25f95dbbf84f56f57424a5f179b809fedc1 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/68/log-index
+:100644 100644 c5f496c002aa61e8a4ea406651f5732f2bb94336 c9e50e883b66a72d0a24fd21af06ff34bbc39e35 R085	jenkins/jenkins/jobs/Pingurl app/builds/68/build.xml	jenkins/jenkins/jobs/Pingurl app/builds/73/build.xml
+:100644 100644 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 R100	jenkins/jenkins/jobs/Pingurl app/builds/68/changelog11988395317912122327.xml	jenkins/jenkins/jobs/Pingurl app/builds/73/changelog16325001124200845835.xml
+:000000 100644 0000000000000000000000000000000000000000 b6e573e8a4a81b2bf1f31b2febb751820dc6559c A	jenkins/jenkins/jobs/Pingurl app/builds/73/log
+:000000 100644 0000000000000000000000000000000000000000 d075d7740dd0008db10d6b8961d2e218aee85b2d A	jenkins/jenkins/jobs/Pingurl app/builds/73/log-index
+:100644 100644 36531d98bab1138d378b8a328f3eb78a59f3cb11 059c6ca3606884c4a4a7c80ae0f11f7abdf2e107 R076	jenkins/jenkins/jobs/Pingurl app/builds/68/workflow-completed/flowNodeStore.xml	jenkins/jenkins/jobs/Pingurl app/builds/73/workflow-completed/flowNodeStore.xml
+:100644 100644 5c6f8865d307947b25c6826543258d694fcb597b 86e31ed454d75c8e2e4c6b0f4dca325b1b7d6a5f M	jenkins/jenkins/jobs/Pingurl app/builds/permalinks
+:100644 100644 d69c74c8b95c8c0574cec707ab1a39d5926b9398 fff0a2476aa5c8e60a3ef21cfc66e0cc670920be M	jenkins/jenkins/jobs/Pingurl app/nextBuildNumber
+:100644 100644 9abecdb47bcf148aacda668f6df25ca7f9bd3d0f 245f47abbc8e9c9eb0b7a9881931a1f5ae58ef69 M	jenkins/jenkins/queue.xml
+commit 18de94841b0cf9f13aac20c7d1894a8af94c3831
+tree 5f7221054a87ac160a46f74e273a8d8427327216
+parent b877aad22a5cebc737a22d71c922786f4966a77b
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:01:58 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:01:58 +0100
+
+    feat: :sparkles: add Pingurl Postman collection and dev environment files
+
+
+:000000 100644 0000000000000000000000000000000000000000 2df3b287167b54fe00be9331b98b243316bb0a12 A	newman_tests/Pingurl.postman_collection.json
+:000000 100644 0000000000000000000000000000000000000000 1b2163287e99752dfdf2a977d1c7789513df0c5b A	newman_tests/dev.postman_environment.json
+commit b877aad22a5cebc737a22d71c922786f4966a77b
+tree 177ebe7a56611db20eec33f43c63379f31af9031
+parent 3307cdf8d99629e87bf1273b73f42f5965d11e58
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:01:37 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:01:37 +0100
+
+    fix: :bug: refactor Jenkinsfile to use actual file names in Newman test execution
+
+
+:100644 100644 3f1714abe36f92c7e4ffb480a572acfe0f781f50 2e64aca07ebb062f86c20d9bac27078aa46faf8a M	jenkins/Jenkinsfile
+commit 3307cdf8d99629e87bf1273b73f42f5965d11e58
+tree 3b149927e09dd5eff123cf2d24a143caa4204605
+parent 7b84754481b00b5ad098e1f9680853aeff49b804
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:00:27 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:00:27 +0100
+
+    feat: :sparkles: refactor Dockerfile: add newman_tests and update nodejs installation
+
+
+:100644 100644 5f532053884f8cfe19f28ccd0dc708f5a9443420 fe23a71aabc05f5a90ab2a189833e1da96c60a5b M	Dockerfile
