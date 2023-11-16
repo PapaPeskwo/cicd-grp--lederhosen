@@ -10,12 +10,12 @@ from unittest.mock import patch
 MIN_PERIOD = 10
 
 @pytest.fixture
-def test_client():
+def watched_url_client():
     app.config["TESTING"] = True
     with app.test_client() as client:
         yield client
 
-def test_add_watched_url_success(test_client):
+def test_add_watched_url_success(watched_url_client):
     data = {
         "activateAt": "2023-11-15T13:00:00Z",
         "force": False,
@@ -24,19 +24,19 @@ def test_add_watched_url_success(test_client):
     }
 
     with patch("pingurl.watched_urls.business.add_watched_url", return_value=1):
-        response = test_client.post("/watched-urls", json=data)
+        response = watched_url_client.post("/watched-urls", json=data)
 
     assert response.status_code == 201
     assert response.json == {"message": "Watched URL added", "urlId": 1}
 
-def test_add_watched_url_missing_parameter(test_client):
+def test_add_watched_url_missing_parameter(watched_url_client):
     data = {
         "activateAt": "2023-11-15T13:00:00Z",
         "force": False,
         "url": "http://example.com",
     }
 
-    response = test_client.post("/watched-urls", json=data)
+    response = watched_url_client.post("/watched-urls", json=data)
 
     assert response.status_code == 400
     assert response.json == {
@@ -44,7 +44,7 @@ def test_add_watched_url_missing_parameter(test_client):
         "message": "Missing parameter 'periodSec'",
     }
 
-def test_add_watched_url_invalid_url(test_client):
+def test_add_watched_url_invalid_url(watched_url_client):
     data = {
         "activateAt": "2023-11-15T13:00:00Z",
         "force": False,
@@ -52,7 +52,7 @@ def test_add_watched_url_invalid_url(test_client):
         "url": "invalid_url",
     }
 
-    response = test_client.post("/watched-urls", json=data)
+    response = watched_url_client.post("/watched-urls", json=data)
 
     assert response.status_code == 400
     assert response.json == {
