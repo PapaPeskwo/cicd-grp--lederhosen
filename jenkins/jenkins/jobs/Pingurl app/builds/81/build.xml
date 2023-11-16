@@ -4,6 +4,10 @@
     <hudson.model.CauseAction>
       <causeBag class="linked-hash-map">
         <entry>
+          <hudson.triggers.SCMTrigger_-SCMTriggerCause/>
+          <int>1</int>
+        </entry>
+        <entry>
           <hudson.model.Cause_-UserIdCause>
             <userId>admin</userId>
           </hudson.model.Cause_-UserIdCause>
@@ -11,11 +15,12 @@
         </entry>
       </causeBag>
     </hudson.model.CauseAction>
+    <hudson.triggers.SCMTrigger_-BuildAction/>
     <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="pipeline-groovy-lib@689.veec561a_dee13">
       <libraries/>
     </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
     <org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction plugin="pipeline-model-definition@2.2150.v4cfd8916915c">
-      <stagesUUID>8d884e4b-2031-4003-a8e6-1c40cda1c482</stagesUUID>
+      <stagesUUID>e41657d0-b52f-45c4-87ba-9a813f2eb5ad</stagesUUID>
       <pipelineDefs>
         <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef plugin="pipeline-model-api@2.2150.v4cfd8916915c">
           <stages>
@@ -85,9 +90,9 @@
                                 <key>scriptBlock</key>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
                               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
-                                <value class="string">def pylintStatus = sh(script: &apos;docker run --rm pingurl:latest pylint --fail-under=8.0 /backend&apos;, returnStatus: true)
+                                <value class="string">def pylintStatus = sh(script: &apos;docker run --rm pingurl:latest pylint --fail-under=9.0 /backend&apos;, returnStatus: true)
                     if (pylintStatus != 0) {
-                        error(&quot;Pylint score is below the threshold of 8.0&quot;)
+                        error(&quot;Pylint score is below the threshold of 9.0&quot;)
                     }</value>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
                             </entry>
@@ -116,34 +121,6 @@
                                 <value class="string">def pytestStatus = sh(script: &apos;docker run --rm pingurl:latest pytest /backend&apos;, returnStatus: true)
                     if (pytestStatus != 0) {
                         error(&quot;Pytest failed. Check the test results.&quot;)
-                    }</value>
-                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
-                            </entry>
-                          </arguments>
-                        </args>
-                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
-                    </steps>
-                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
-                </branches>
-              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
-              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
-                <name>Run Postman Tests with Newman</name>
-                <branches>
-                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
-                    <name>default</name>
-                    <steps>
-                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
-                        <name>script</name>
-                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
-                          <arguments class="linked-hash-map">
-                            <entry>
-                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
-                                <key>scriptBlock</key>
-                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
-                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
-                                <value class="string">def newmanStatus = sh(script: &apos;docker run --rm pingurl:latest newman run ./newman_tests/dev.postman_environment.json -e ./newman_tests/Pingurl.postman_collection.json&apos;, returnStatus: true)
-                    if (newmanStatus != 0) {
-                        error(&quot;Newman tests failed. Check the test results.&quot;)
                     }</value>
                               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
                             </entry>
@@ -205,8 +182,38 @@
                   </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
                 </branches>
               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>Run Postman Tests with Newman</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                        <name>script</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scriptBlock</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">sleep(10) 
+
+                    def newmanStatus = sh(script: &apos;docker run --network=&quot;host&quot; --rm pingurl:latest newman run ./newman_tests/Pingurl.postman_collection.json -e ./newman_tests/dev.postman_environment.json&apos;, returnStatus: true)
+                    if (newmanStatus != 0) {
+                        error(&quot;Newman tests failed. Check the test results.&quot;)
+                    }</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
             </stages>
-            <uuid>8d884e4b-2031-4003-a8e6-1c40cda1c482</uuid>
+            <uuid>e41657d0-b52f-45c4-87ba-9a813f2eb5ad</uuid>
           </stages>
           <postBuild>
             <conditions>
@@ -429,7 +436,7 @@
           <string>refs/remotes/origin/tests/api_test-post_test</string>
           <hudson.plugins.git.util.Build>
             <marked plugin="git-client@4.5.0">
-              <sha1>97fd9da03fa6bd6012cb7cf128a1c67509cd97e6</sha1>
+              <sha1>82a251647e35b9c78db0ea06e3bef66e3b4870e1</sha1>
               <branches class="list">
                 <hudson.plugins.git.Branch>
                   <sha1 reference="../../../sha1"/>
@@ -438,11 +445,12 @@
               </branches>
             </marked>
             <revision reference="../marked"/>
-            <hudsonBuildNumber>75</hudsonBuildNumber>
+            <hudsonBuildNumber>81</hudsonBuildNumber>
           </hudson.plugins.git.util.Build>
         </entry>
       </buildsByBranchName>
       <lastBuild reference="../buildsByBranchName/entry[8]/hudson.plugins.git.util.Build"/>
+      <scmName></scmName>
       <remoteUrls>
         <string>git@github.com:nackc8/cicd-grp--lederhosen.git</string>
       </remoteUrls>
@@ -456,11 +464,11 @@
       </revisionStates>
     </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
   </actions>
-  <queueId>144</queueId>
-  <timestamp>1700136633284</timestamp>
-  <startTime>1700136633290</startTime>
+  <queueId>153</queueId>
+  <timestamp>1700137992859</timestamp>
+  <startTime>1700137992864</startTime>
   <result>SUCCESS</result>
-  <duration>157232</duration>
+  <duration>158760</duration>
   <charset>UTF-8</charset>
   <keepLog>false</keepLog>
   <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
@@ -478,7 +486,6 @@
         stage(&apos;Build Image&apos;) {
             steps {
                 script {
-                    // Build the Docker image and fail the build if there are any errors
                     sh &apos;docker build --no-cache -t pingurl:latest .&apos;
                 }
             }
@@ -487,10 +494,9 @@
         stage(&apos;Lint&apos;) {
             steps {
                 script {
-                    // Run pylint and fail if the score is under 9.0 (we are currently at ~9.5)
-                    def pylintStatus = sh(script: &apos;docker run --rm pingurl:latest pylint --fail-under=8.0 /backend&apos;, returnStatus: true)
+                    def pylintStatus = sh(script: &apos;docker run --rm pingurl:latest pylint --fail-under=9.0 /backend&apos;, returnStatus: true)
                     if (pylintStatus != 0) {
-                        error(&quot;Pylint score is below the threshold of 8.0&quot;)
+                        error(&quot;Pylint score is below the threshold of 9.0&quot;)
                     }
                 }
             }
@@ -499,21 +505,9 @@
         stage(&apos;Run Tests&apos;) {
             steps {
                 script {
-                    // Run pytest and fail the build if any tests fail
                     def pytestStatus = sh(script: &apos;docker run --rm pingurl:latest pytest /backend&apos;, returnStatus: true)
                     if (pytestStatus != 0) {
                         error(&quot;Pytest failed. Check the test results.&quot;)
-                    }
-                }
-            }
-        }
-
-        stage(&apos;Run Postman Tests with Newman&apos;) {
-            steps {
-                script {
-                    def newmanStatus = sh(script: &apos;docker run --rm pingurl:latest newman run ./newman_tests/dev.postman_environment.json -e ./newman_tests/Pingurl.postman_collection.json&apos;, returnStatus: true)
-                    if (newmanStatus != 0) {
-                        error(&quot;Newman tests failed. Check the test results.&quot;)
                     }
                 }
             }
@@ -522,7 +516,6 @@
         stage(&apos;Stop Existing Container&apos;) {
             steps {
                 script {
-                    // Stop and remove the Docker container if it&apos;s running
                     sh &apos;docker stop pingapp || true&apos;
                     sh &apos;docker rm pingapp || true&apos;
                 }
@@ -532,8 +525,20 @@
         stage(&apos;Run Application&apos;) {
             steps {
                 script {
-                    // Run the Flask application in a Docker container
                     sh &apos;docker run -d -p 5000:5000 --name pingapp pingurl:latest&apos;
+                }
+            }
+        }
+
+        stage(&apos;Run Postman Tests with Newman&apos;) {
+            steps {
+                script {
+                    sleep(10) 
+
+                    def newmanStatus = sh(script: &apos;docker run --network=&quot;host&quot; --rm pingurl:latest newman run ./newman_tests/Pingurl.postman_collection.json -e ./newman_tests/dev.postman_environment.json&apos;, returnStatus: true)
+                    if (newmanStatus != 0) {
+                        error(&quot;Newman tests failed. Check the test results.&quot;)
+                    }
                 }
             }
         }
@@ -542,7 +547,6 @@
     post {
         failure {
             echo &apos;The build failed.&apos;
-            // Clean up
             sh &apos;docker stop pingapp || true&apos;
             sh &apos;docker rm pingapp || true&apos;
         }
@@ -554,23 +558,23 @@
     <timings class="map">
       <entry>
         <string>flowNode</string>
-        <long>733627680</long>
+        <long>645070853</long>
       </entry>
       <entry>
         <string>classLoad</string>
-        <long>307058796</long>
+        <long>190492086</long>
       </entry>
       <entry>
         <string>run</string>
-        <long>100345056688</long>
+        <long>100686891397</long>
       </entry>
       <entry>
         <string>parse</string>
-        <long>117382209</long>
+        <long>55212377</long>
       </entry>
       <entry>
         <string>saveProgram</string>
-        <long>96654087943</long>
+        <long>97598380121</long>
       </entry>
     </timings>
     <internalCalls class="sorted-set">
@@ -626,8 +630,8 @@
       <string>org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper.result</string>
     </internalCalls>
     <sandbox>true</sandbox>
-    <iota>76</iota>
-    <head>1:76</head>
+    <iota>77</iota>
+    <head>1:77</head>
     <done>true</done>
     <resumeBlocked>false</resumeBlocked>
     <storageDir>workflow-completed</storageDir>
@@ -654,7 +658,7 @@
       </scm>
       <node></node>
       <workspace>/var/jenkins_home/workspace/Pingurl app</workspace>
-      <changelogFile>/var/jenkins_home/jobs/Pingurl app/builds/75/changelog17855722918777141887.xml</changelogFile>
+      <changelogFile>/var/jenkins_home/jobs/Pingurl app/builds/81/changelog9944460759052819578.xml</changelogFile>
       <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
     </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
     <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
