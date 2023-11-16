@@ -1,6 +1,5 @@
-# tests/test_schedule.py
 from datetime import datetime, timedelta, timezone
-from unittest.mock import patch, Mock, call
+from unittest.mock import patch, Mock
 import pytest
 import sys
 import os

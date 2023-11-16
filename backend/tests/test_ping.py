@@ -1,15 +1,12 @@
-# tests/test_ping.py
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from unittest.mock import patch
-import pytest
 import sys
 import os
 
 # Add the root directory to the sys.path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from pingurl.ping import send_ping, send_ping_persist_data
+from pingurl.ping import send_ping
 from pingurl.models import WatchedUrl, PingData
-from pingurl import persistance
 
 
 def test_send_ping_success():
@@ -24,7 +21,7 @@ def test_send_ping_success():
     with patch("pingurl.ping.requests.get") as mock_get:
         mock_response = mock_get.return_value
         mock_response.headers = {
-            "Date": datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S GMT")
+            "Date": datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S GMT")
         }
         mock_response.status_code = 200
         mock_response.elapsed = timedelta(seconds=1)

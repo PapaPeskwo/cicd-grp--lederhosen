@@ -40,11 +40,10 @@ def test_ping_data_ok():
 
     ping_data = PingData(pinged_at, response_time_sec, status_code, url_id)
 
-    assert ping_data.ok() == True
+    assert ping_data.ok()
 
 
 def test_ping_data_not_ok():
-    # Test that PingData.ok() returns False for a status code >= 400
     ping_data = PingData(datetime.now(), timedelta(seconds=1), 404, 1)
 
-    assert ping_data.ok() == False
+    assert not ping_data.ok()
