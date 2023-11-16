@@ -46,4 +46,4 @@ def test_ping_data_ok():
 def test_ping_data_not_ok():
     ping_data = PingData(datetime.now(), timedelta(seconds=1), 404, 1)
 
-    assert not ping_data.ok() 
+    assert not ping_data.ok()

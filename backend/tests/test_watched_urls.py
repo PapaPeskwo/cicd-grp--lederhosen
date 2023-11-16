@@ -9,11 +9,13 @@ from unittest.mock import patch
 
 MIN_PERIOD = 10
 
+
 @pytest.fixture
 def watched_url_client():
     app.config["TESTING"] = True
     with app.test_client() as client:
         yield client
+
 
 def test_add_watched_url_success(watched_url_client):
     data = {
@@ -29,6 +31,7 @@ def test_add_watched_url_success(watched_url_client):
     assert response.status_code == 201
     assert response.json == {"message": "Watched URL added", "urlId": 1}
 
+
 def test_add_watched_url_missing_parameter(watched_url_client):
     data = {
         "activateAt": "2023-11-15T13:00:00Z",
@@ -43,6 +46,7 @@ def test_add_watched_url_missing_parameter(watched_url_client):
         "error": "Bad request",
         "message": "Missing parameter 'periodSec'",
     }
+
 
 def test_add_watched_url_invalid_url(watched_url_client):
     data = {

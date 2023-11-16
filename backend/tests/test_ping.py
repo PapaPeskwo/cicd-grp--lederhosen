@@ -8,6 +8,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")
 from pingurl.ping import send_ping
 from pingurl.models import WatchedUrl, PingData
 
+
 def test_send_ping_success():
     watched_url = WatchedUrl(
         activate_at=datetime.now(),

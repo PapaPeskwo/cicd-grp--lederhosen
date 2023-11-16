@@ -23,9 +23,11 @@ sample_ping_data = PingData(
     url_id=0,
 )
 
+
 def test_add_watched_url():
     url_id = add_watched_url(sample_watched_url)
     assert url_id == 0
+
 
 def test_get_watched_url():
     watched_url = get_watched_url(0)
