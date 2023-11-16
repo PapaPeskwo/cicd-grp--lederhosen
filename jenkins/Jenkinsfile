@@ -21,9 +21,9 @@ pipeline {
             steps {
                 script {
                     // Run pylint and fail if the score is under 9.0 (we are currently at ~9.5)
-                    def pylintStatus = sh(script: 'docker run --rm pingurl:latest pylint --fail-under=8.0 /backend', returnStatus: true)
+                    def pylintStatus = sh(script: 'docker run --rm pingurl:latest pylint --fail-under=9.0 /backend', returnStatus: true)
                     if (pylintStatus != 0) {
-                        error("Pylint score is below the threshold of 8.0")
+                        error("Pylint score is below the threshold of 9.0")
                     }
                 }
             }
@@ -36,17 +36,6 @@ pipeline {
                     def pytestStatus = sh(script: 'docker run --rm pingurl:latest pytest /backend', returnStatus: true)
                     if (pytestStatus != 0) {
                         error("Pytest failed. Check the test results.")
-                    }
-                }
-            }
-        }
-
-        stage('Run Postman Tests with Newman') {
-            steps {
-                script {
-                    def newmanStatus = sh(script: 'docker run --rm pingurl:latest newman run ./newman_tests/Pingurl.postman_collection.json -e ./newman_tests/dev.postman_environment.json', returnStatus: true)
-                    if (newmanStatus != 0) {
-                        error("Newman tests failed. Check the test results.")
                     }
                 }
             }
@@ -71,6 +60,17 @@ pipeline {
             }
         }
     }
+
+        stage('Run Postman Tests with Newman') {
+            steps {
+                script {
+                    def newmanStatus = sh(script: 'docker run --rm pingurl:latest newman run ./newman_tests/Pingurl.postman_collection.json -e ./newman_tests/dev.postman_environment.json', returnStatus: true)
+                    if (newmanStatus != 0) {
+                        error("Newman tests failed. Check the test results.")
+                    }
+                }
+            }
+        }
 
     post {
         failure {
