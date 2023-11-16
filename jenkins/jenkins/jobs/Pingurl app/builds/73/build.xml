@@ -4,17 +4,18 @@
     <hudson.model.CauseAction>
       <causeBag class="linked-hash-map">
         <entry>
-          <hudson.triggers.SCMTrigger_-SCMTriggerCause/>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>admin</userId>
+          </hudson.model.Cause_-UserIdCause>
           <int>1</int>
         </entry>
       </causeBag>
     </hudson.model.CauseAction>
-    <hudson.triggers.SCMTrigger_-BuildAction/>
     <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="pipeline-groovy-lib@689.veec561a_dee13">
       <libraries/>
     </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
     <org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction plugin="pipeline-model-definition@2.2150.v4cfd8916915c">
-      <stagesUUID>eba7588d-7f00-4a14-afdf-5fde5d91fb31</stagesUUID>
+      <stagesUUID>7b017b42-f628-4bf1-88d4-1ddd516b5242</stagesUUID>
       <pipelineDefs>
         <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef plugin="pipeline-model-api@2.2150.v4cfd8916915c">
           <stages>
@@ -126,6 +127,34 @@
                 </branches>
               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
               <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>Run Postman Tests with Newman</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                        <name>script</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scriptBlock</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">def newmanStatus = sh(script: &apos;docker run --rm pingurl:latest newman run /backend/YourCollection.json -e /backend/YourEnvironment.json&apos;, returnStatus: true)
+                    if (newmanStatus != 0) {
+                        error(&quot;Newman tests failed. Check the test results.&quot;)
+                    }</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
                 <name>Stop Existing Container</name>
                 <branches>
                   <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
@@ -177,7 +206,7 @@
                 </branches>
               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
             </stages>
-            <uuid>eba7588d-7f00-4a14-afdf-5fde5d91fb31</uuid>
+            <uuid>7b017b42-f628-4bf1-88d4-1ddd516b5242</uuid>
           </stages>
           <postBuild>
             <conditions>
@@ -292,10 +321,31 @@
           </hudson.plugins.git.util.Build>
         </entry>
         <entry>
+          <string>refs/remotes/origin/main</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@4.5.0">
+              <sha1>0c2e194b57e5371d19bdabc98bccf154d1671363</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/main</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision plugin="git-client@4.5.0">
+              <sha1 reference="../../marked/sha1"/>
+              <branches class="list">
+                <hudson.plugins.git.Branch reference="../../../marked/branches/hudson.plugins.git.Branch"/>
+              </branches>
+            </revision>
+            <hudsonBuildNumber>71</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+        <entry>
           <string>refs/remotes/origin/pytest</string>
           <hudson.plugins.git.util.Build>
             <marked plugin="git-client@4.5.0">
-              <sha1>04427ff0de7ae9f19a67276bdeab890975a968f4</sha1>
+              <sha1>42a9a40468463d7ec00905363f0e2008b7b72c64</sha1>
               <branches class="list">
                 <hudson.plugins.git.Branch>
                   <sha1 reference="../../../sha1"/>
@@ -303,8 +353,13 @@
                 </hudson.plugins.git.Branch>
               </branches>
             </marked>
-            <revision reference="../marked"/>
-            <hudsonBuildNumber>68</hudsonBuildNumber>
+            <revision plugin="git-client@4.5.0">
+              <sha1 reference="../../marked/sha1"/>
+              <branches class="list">
+                <hudson.plugins.git.Branch reference="../../../marked/branches/hudson.plugins.git.Branch"/>
+              </branches>
+            </revision>
+            <hudsonBuildNumber>70</hudsonBuildNumber>
           </hudson.plugins.git.util.Build>
         </entry>
         <entry>
@@ -370,8 +425,24 @@
             <hudsonBuildNumber>54</hudsonBuildNumber>
           </hudson.plugins.git.util.Build>
         </entry>
+        <entry>
+          <string>refs/remotes/origin/tests/api_test-post_test</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@4.5.0">
+              <sha1>7b84754481b00b5ad098e1f9680853aeff49b804</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/tests/api_test-post_test</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>73</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
       </buildsByBranchName>
-      <lastBuild reference="../buildsByBranchName/entry[3]/hudson.plugins.git.util.Build"/>
+      <lastBuild reference="../buildsByBranchName/entry[8]/hudson.plugins.git.util.Build"/>
       <remoteUrls>
         <string>git@github.com:nackc8/cicd-grp--lederhosen.git</string>
       </remoteUrls>
@@ -385,11 +456,11 @@
       </revisionStates>
     </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
   </actions>
-  <queueId>135</queueId>
-  <timestamp>1700056870440</timestamp>
-  <startTime>1700056870442</startTime>
+  <queueId>140</queueId>
+  <timestamp>1700135622876</timestamp>
+  <startTime>1700135622887</startTime>
   <result>FAILURE</result>
-  <duration>25108</duration>
+  <duration>152532</duration>
   <charset>UTF-8</charset>
   <keepLog>false</keepLog>
   <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
@@ -436,6 +507,19 @@
                 }
             }
         }
+
+        stage(&apos;Run Postman Tests with Newman&apos;) {
+            steps {
+                script {
+                    // Assuming Postman collection and environment files are copied to the Docker image
+                    // Replace &apos;YourCollection.json&apos; and &apos;YourEnvironment.json&apos; with actual file names
+                    def newmanStatus = sh(script: &apos;docker run --rm pingurl:latest newman run /backend/YourCollection.json -e /backend/YourEnvironment.json&apos;, returnStatus: true)
+                    if (newmanStatus != 0) {
+                        error(&quot;Newman tests failed. Check the test results.&quot;)
+                    }
+                }
+            }
+        }
         
         stage(&apos;Stop Existing Container&apos;) {
             steps {
@@ -458,11 +542,6 @@
     }
 
     post {
-        //always {
-        //    // Clean up: Stop and remove the Docker container if it&apos;s running
-        //    sh &apos;docker stop pingapp || true&apos;
-        //    sh &apos;docker rm pingapp || true&apos;
-        //}
         failure {
             echo &apos;The build failed.&apos;
             // Clean up
@@ -477,23 +556,23 @@
     <timings class="map">
       <entry>
         <string>flowNode</string>
-        <long>174267345</long>
+        <long>569062587</long>
       </entry>
       <entry>
         <string>classLoad</string>
-        <long>56275454</long>
+        <long>3469143316</long>
       </entry>
       <entry>
         <string>run</string>
-        <long>814138274</long>
+        <long>26417736038</long>
       </entry>
       <entry>
         <string>parse</string>
-        <long>13775723</long>
+        <long>1047452031</long>
       </entry>
       <entry>
         <string>saveProgram</string>
-        <long>371079400</long>
+        <long>22061647793</long>
       </entry>
     </timings>
     <internalCalls class="sorted-set">
@@ -564,8 +643,8 @@
       <string>org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper.result</string>
     </internalCalls>
     <sandbox>true</sandbox>
-    <iota>64</iota>
-    <head>1:64</head>
+    <iota>57</iota>
+    <head>1:57</head>
     <done>true</done>
     <resumeBlocked>false</resumeBlocked>
     <storageDir>workflow-completed</storageDir>
@@ -583,7 +662,7 @@
         </userRemoteConfigs>
         <branches>
           <hudson.plugins.git.BranchSpec>
-            <name>*/pytest</name>
+            <name>*/tests/api_test-post_test</name>
           </hudson.plugins.git.BranchSpec>
         </branches>
         <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -592,7 +671,7 @@
       </scm>
       <node></node>
       <workspace>/var/jenkins_home/workspace/Pingurl app</workspace>
-      <changelogFile>/var/jenkins_home/jobs/Pingurl app/builds/68/changelog11988395317912122327.xml</changelogFile>
+      <changelogFile>/var/jenkins_home/jobs/Pingurl app/builds/73/changelog16325001124200845835.xml</changelogFile>
       <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
     </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
     <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
