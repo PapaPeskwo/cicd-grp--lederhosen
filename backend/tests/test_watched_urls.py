@@ -63,7 +63,7 @@ def test_add_watched_url_invalid_url(client):
 
     response = client.post("/watched-urls", json=data)
 
-    assert response.status_code == 400
+    assert response.status_code == 0
     assert response.json == {
         "error": "Bad request",
         "message": "The 'url' parameter must be valid URL string.",

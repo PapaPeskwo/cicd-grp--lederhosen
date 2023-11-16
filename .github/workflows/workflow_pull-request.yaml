@@ -33,3 +33,18 @@ jobs:
 
       - name: Test with pytest
         run: pytest
+
+  merge-check:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Check Build Status
+        id: check_build
+        run: echo "Build status is successful"
+
+  merge:
+    needs: [build, merge-check]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Merge Pull Request
+        run: echo "Merging pull request"
