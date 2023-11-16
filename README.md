@@ -2,6 +2,35 @@
 
 PingURL is a RESTful service designed to monitor and perform periodic checks on specified URLs.
 
+## Docker & Jenkins
+
+### Requirements
+
+ -  Python 3.10 or greater is required.
+ -  Docker 24.0.5 or greater is required.
+
+#### Run Jenkins
+
+- Make sure your current working directory is the jenkins directory if you're not already there
+```bash
+cd jenkins
+```
+- Run Jenkins
+```bash
+docker-compose up --build -d
+```
+- Jenkins should now be running and accessible at `http://127.0.0.1:8080/`
+- Inside Jenkins open Pingurlapp and it should start whitin a minute.
+- When the Pingurlapp container is up and running you should be able to access it at http://127.0.0.1:5000/
+
+#### Run Jenkins checks "locally"
+- Make sure your current working directory is the cicd-grp--lederhosen directory if your're not already there
+- Run the local script
+```bash
+./local_checks.sh
+```
+- Pingurl should now be running and accessible at http://127.0.0.1:5000/
+
 ## Backend
 
 ### Requirements
