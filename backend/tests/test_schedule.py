@@ -1,6 +1,5 @@
-# tests/test_schedule.py
 from datetime import datetime, timedelta, timezone
-from unittest.mock import patch, Mock, call
+from unittest.mock import patch, Mock
 import pytest
 import sys
 import os
@@ -11,7 +10,6 @@ from pingurl.schedule import add, remove, jobs
 from pingurl.watched_urls import WatchedUrl
 from pingurl.ping import send_ping_persist_data
 
-
 @pytest.fixture
 def sample_watched_url():
     return WatchedUrl(
@@ -21,7 +19,6 @@ def sample_watched_url():
         url="http://example.com",
         url_id=1,
     )
-
 
 @patch("pingurl.schedule.apscheduler.add_job")
 @patch("pingurl.schedule.send_ping_persist_data", side_effect=send_ping_persist_data)
@@ -41,7 +38,6 @@ def test_add(mock_send_ping, mock_add_job, sample_watched_url):
         seconds=sample_watched_url.period_sec,
         start_date=sample_watched_url.activate_at,
     )
-
 
 @patch("pingurl.schedule.apscheduler.remove_job")
 def test_remove(mock_remove_job, sample_watched_url):
