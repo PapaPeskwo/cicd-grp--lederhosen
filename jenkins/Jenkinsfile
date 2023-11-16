@@ -40,6 +40,19 @@ pipeline {
                 }
             }
         }
+
+        stage('Run Postman Tests with Newman') {
+            steps {
+                script {
+                    // Assuming Postman collection and environment files are copied to the Docker image
+                    // Replace 'YourCollection.json' and 'YourEnvironment.json' with actual file names
+                    def newmanStatus = sh(script: 'docker run --rm pingurl:latest newman run /backend/YourCollection.json -e /backend/YourEnvironment.json', returnStatus: true)
+                    if (newmanStatus != 0) {
+                        error("Newman tests failed. Check the test results.")
+                    }
+                }
+            }
+        }
         
         stage('Stop Existing Container') {
             steps {
@@ -62,11 +75,6 @@ pipeline {
     }
 
     post {
-        //always {
-        //    // Clean up: Stop and remove the Docker container if it's running
-        //    sh 'docker stop pingapp || true'
-        //    sh 'docker rm pingapp || true'
-        //}
         failure {
             echo 'The build failed.'
             // Clean up
