@@ -12,6 +12,11 @@ RUN pip install pylint
 
 RUN pip install pytest
 
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
+RUN apt-get install -y nodejs
+
+RUN npm install -g newman
+
 RUN pylint .
 
 EXPOSE 5000
