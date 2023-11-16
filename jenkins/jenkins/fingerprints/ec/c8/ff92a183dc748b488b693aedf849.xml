@@ -18,7 +18,7 @@
     </entry>
     <entry>
       <string>Pingurl app</string>
-      <ranges>17-18,20-22,33-49,53-69,71-75</ranges>
+      <ranges>17-18,20-22,33-49,53-69,71-77</ranges>
     </entry>
     <entry>
       <string>Lederhosen/feature%2Fjenkins_pipeline</string>
@@ -36,9 +36,9 @@
       <timestamp0>1699951334113</timestamp0>
     </com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet>
     <com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet plugin="credentials@1309.v8835d63eb_d8a_">
-      <timestamp>1700136633296</timestamp>
+      <timestamp>1700137332735</timestamp>
       <itemFullName>Pingurl app</itemFullName>
-      <timestamp0>1700136254486</timestamp0>
+      <timestamp0>1700137312819</timestamp0>
     </com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet>
   </facets>
 </fingerprint>
