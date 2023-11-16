@@ -3,100 +3,11 @@
   <entry>
     <string>44</string>
     <Tag plugin="workflow-support@865.v43e78cc44e0d">
-      <node class="cps.n.StepEndNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
+      <node class="cps.n.StepStartNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
         <parentIds>
           <string>43</string>
         </parentIds>
         <id>44</id>
-        <startId>35</startId>
-      </node>
-      <actions>
-        <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835175</startTime>
-        </wf.a.TimingAction>
-        <wf.a.ErrorAction plugin="workflow-api@1283.v99c10937efcb_">
-          <error class="hudson.AbortException">
-            <detailMessage>Pytest failed. Check the test results.</detailMessage>
-            <stackTrace>
-              <trace>org.jenkinsci.plugins.workflow.steps.ErrorStep$Execution.run(ErrorStep.java:64)</trace>
-              <trace>org.jenkinsci.plugins.workflow.steps.ErrorStep$Execution.run(ErrorStep.java:51)</trace>
-              <trace>org.jenkinsci.plugins.workflow.steps.SynchronousStepExecution.start(SynchronousStepExecution.java:37)</trace>
-              <trace>org.jenkinsci.plugins.workflow.cps.DSL.invokeStep(DSL.java:323)</trace>
-              <trace>org.jenkinsci.plugins.workflow.cps.DSL.invokeMethod(DSL.java:196)</trace>
-              <trace>org.jenkinsci.plugins.workflow.cps.CpsScript.invokeMethod(CpsScript.java:124)</trace>
-              <trace>jdk.internal.reflect.GeneratedMethodAccessor263.invoke(Unknown Source)</trace>
-              <trace>java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</trace>
-              <trace>java.base/java.lang.reflect.Method.invoke(Method.java:568)</trace>
-              <trace>org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:98)</trace>
-              <trace>groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)</trace>
-              <trace>groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1225)</trace>
-              <trace>groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1034)</trace>
-              <trace>org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:41)</trace>
-              <trace>org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)</trace>
-              <trace>org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)</trace>
-              <trace>org.kohsuke.groovy.sandbox.impl.Checker$1.call(Checker.java:180)</trace>
-              <trace>org.kohsuke.groovy.sandbox.GroovyInterceptor.onMethodCall(GroovyInterceptor.java:23)</trace>
-              <trace>org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.SandboxInterceptor.onMethodCall(SandboxInterceptor.java:163)</trace>
-              <trace>org.kohsuke.groovy.sandbox.impl.Checker$1.call(Checker.java:178)</trace>
-              <trace>org.kohsuke.groovy.sandbox.impl.Checker.checkedCall(Checker.java:182)</trace>
-              <trace>org.kohsuke.groovy.sandbox.impl.Checker.checkedCall(Checker.java:152)</trace>
-              <trace>org.kohsuke.groovy.sandbox.impl.Checker.checkedCall(Checker.java:152)</trace>
-              <trace>com.cloudbees.groovy.cps.sandbox.SandboxInvoker.methodCall(SandboxInvoker.java:17)</trace>
-              <trace>org.jenkinsci.plugins.workflow.cps.LoggingInvoker.methodCall(LoggingInvoker.java:105)</trace>
-              <trace>WorkflowScript.run(WorkflowScript:38)</trace>
-              <trace>___cps.transform___(Native Method)</trace>
-              <trace>com.cloudbees.groovy.cps.impl.ContinuationGroup.methodCall(ContinuationGroup.java:90)</trace>
-              <trace>com.cloudbees.groovy.cps.impl.FunctionCallBlock$ContinuationImpl.dispatchOrArg(FunctionCallBlock.java:116)</trace>
-              <trace>com.cloudbees.groovy.cps.impl.FunctionCallBlock$ContinuationImpl.fixArg(FunctionCallBlock.java:85)</trace>
-              <trace>jdk.internal.reflect.GeneratedMethodAccessor150.invoke(Unknown Source)</trace>
-              <trace>java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</trace>
-              <trace>java.base/java.lang.reflect.Method.invoke(Method.java:568)</trace>
-              <trace>com.cloudbees.groovy.cps.impl.ContinuationPtr$ContinuationImpl.receive(ContinuationPtr.java:72)</trace>
-              <trace>com.cloudbees.groovy.cps.impl.ConstantBlock.eval(ConstantBlock.java:21)</trace>
-              <trace>com.cloudbees.groovy.cps.Next.step(Next.java:83)</trace>
-              <trace>com.cloudbees.groovy.cps.Continuable$1.call(Continuable.java:152)</trace>
-              <trace>com.cloudbees.groovy.cps.Continuable$1.call(Continuable.java:146)</trace>
-              <trace>org.codehaus.groovy.runtime.GroovyCategorySupport$ThreadCategoryInfo.use(GroovyCategorySupport.java:136)</trace>
-              <trace>org.codehaus.groovy.runtime.GroovyCategorySupport.use(GroovyCategorySupport.java:275)</trace>
-              <trace>com.cloudbees.groovy.cps.Continuable.run0(Continuable.java:146)</trace>
-              <trace>org.jenkinsci.plugins.workflow.cps.SandboxContinuable.access$001(SandboxContinuable.java:18)</trace>
-              <trace>org.jenkinsci.plugins.workflow.cps.SandboxContinuable.run0(SandboxContinuable.java:51)</trace>
-              <trace>org.jenkinsci.plugins.workflow.cps.CpsThread.runNextChunk(CpsThread.java:187)</trace>
-              <trace>org.jenkinsci.plugins.workflow.cps.CpsThreadGroup.run(CpsThreadGroup.java:423)</trace>
-              <trace>org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:331)</trace>
-              <trace>org.jenkinsci.plugins.workflow.cps.CpsThreadGroup$2.call(CpsThreadGroup.java:295)</trace>
-              <trace>org.jenkinsci.plugins.workflow.cps.CpsVmExecutorService$2.call(CpsVmExecutorService.java:97)</trace>
-              <trace>java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)</trace>
-              <trace>hudson.remoting.SingleLaneExecutorService$1.run(SingleLaneExecutorService.java:139)</trace>
-              <trace>jenkins.util.ContextResettingExecutorService$1.run(ContextResettingExecutorService.java:28)</trace>
-              <trace>jenkins.security.ImpersonatingExecutorService$1.run(ImpersonatingExecutorService.java:68)</trace>
-              <trace>jenkins.util.ErrorLoggingExecutorService.lambda$wrap$0(ErrorLoggingExecutorService.java:51)</trace>
-              <trace>java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)</trace>
-              <trace>java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)</trace>
-              <trace>java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)</trace>
-              <trace>java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)</trace>
-              <trace>java.base/java.lang.Thread.run(Thread.java:833)</trace>
-            </stackTrace>
-            <suppressedExceptions>
-              <wf.a.ErrorAction_-ErrorId>
-                <stackTrace/>
-                <suppressedExceptions class="empty-list"/>
-                <uuid>ac7eb043-2b29-40af-aab0-8c5c04032c33</uuid>
-              </wf.a.ErrorAction_-ErrorId>
-            </suppressedExceptions>
-          </error>
-        </wf.a.ErrorAction>
-      </actions>
-    </Tag>
-  </entry>
-  <entry>
-    <string>45</string>
-    <Tag plugin="workflow-support@865.v43e78cc44e0d">
-      <node class="cps.n.StepStartNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
-        <parentIds>
-          <string>44</string>
-        </parentIds>
-        <id>45</id>
         <descriptorId>org.jenkinsci.plugins.workflow.support.steps.StageStep</descriptorId>
       </node>
       <actions>
@@ -112,7 +23,28 @@
           <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
         </cps.a.ArgumentsActionImpl>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835188</startTime>
+          <startTime>1700126897500</startTime>
+        </wf.a.TimingAction>
+      </actions>
+    </Tag>
+  </entry>
+  <entry>
+    <string>45</string>
+    <Tag plugin="workflow-support@865.v43e78cc44e0d">
+      <node class="cps.n.StepStartNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
+        <parentIds>
+          <string>44</string>
+        </parentIds>
+        <id>45</id>
+        <descriptorId>org.jenkinsci.plugins.workflow.support.steps.StageStep</descriptorId>
+      </node>
+      <actions>
+        <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
+        <wf.a.LabelAction plugin="workflow-api@1283.v99c10937efcb_">
+          <displayName>Stop Existing Container</displayName>
+        </wf.a.LabelAction>
+        <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
+          <startTime>1700126897508</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -125,122 +57,105 @@
           <string>45</string>
         </parentIds>
         <id>46</id>
-        <descriptorId>org.jenkinsci.plugins.workflow.support.steps.StageStep</descriptorId>
+        <descriptorId>org.jenkinsci.plugins.pipeline.modeldefinition.steps.ScriptStep</descriptorId>
       </node>
       <actions>
-        <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
-        <wf.a.LabelAction plugin="workflow-api@1283.v99c10937efcb_">
-          <displayName>Stop Existing Container</displayName>
-        </wf.a.LabelAction>
+        <s.a.LogStorageAction/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835189</startTime>
+          <startTime>1700126897830</startTime>
         </wf.a.TimingAction>
-        <wf.a.TagsAction plugin="workflow-api@1283.v99c10937efcb_">
-          <tags>
-            <entry>
-              <string>STAGE_STATUS</string>
-              <string>SKIPPED_FOR_FAILURE</string>
-            </entry>
-          </tags>
-        </wf.a.TagsAction>
       </actions>
     </Tag>
   </entry>
   <entry>
     <string>47</string>
     <Tag plugin="workflow-support@865.v43e78cc44e0d">
-      <node class="cps.n.StepEndNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
+      <node class="cps.n.StepStartNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
         <parentIds>
           <string>46</string>
         </parentIds>
         <id>47</id>
-        <startId>46</startId>
+        <descriptorId>org.jenkinsci.plugins.pipeline.modeldefinition.steps.ScriptStep</descriptorId>
       </node>
       <actions>
         <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835203</startTime>
+          <startTime>1700126897838</startTime>
         </wf.a.TimingAction>
-        <wf.a.ErrorAction plugin="workflow-api@1283.v99c10937efcb_">
-          <error class="hudson.AbortException" reference="../../../../../entry/Tag/actions/wf.a.ErrorAction/error"/>
-        </wf.a.ErrorAction>
       </actions>
     </Tag>
   </entry>
   <entry>
     <string>48</string>
     <Tag plugin="workflow-support@865.v43e78cc44e0d">
-      <node class="cps.n.StepEndNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
+      <node class="cps.n.StepAtomNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
         <parentIds>
           <string>47</string>
         </parentIds>
         <id>48</id>
-        <startId>45</startId>
+        <descriptorId>org.jenkinsci.plugins.workflow.steps.durable_task.ShellStep</descriptorId>
       </node>
       <actions>
-        <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835223</startTime>
-        </wf.a.TimingAction>
-        <wf.a.ErrorAction plugin="workflow-api@1283.v99c10937efcb_">
-          <error class="hudson.AbortException" reference="../../../../../entry/Tag/actions/wf.a.ErrorAction/error"/>
-        </wf.a.ErrorAction>
-      </actions>
-    </Tag>
-  </entry>
-  <entry>
-    <string>49</string>
-    <Tag plugin="workflow-support@865.v43e78cc44e0d">
-      <node class="cps.n.StepStartNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
-        <parentIds>
-          <string>48</string>
-        </parentIds>
-        <id>49</id>
-        <descriptorId>org.jenkinsci.plugins.workflow.support.steps.StageStep</descriptorId>
-      </node>
-      <actions>
-        <s.a.LogStorageAction/>
         <cps.a.ArgumentsActionImpl plugin="workflow-cps@3806.va_3a_6988277b_2">
           <arguments>
             <entry>
-              <string>name</string>
-              <string>Run Application</string>
+              <string>script</string>
+              <string>docker stop pingapp || true</string>
             </entry>
           </arguments>
           <sensitiveVariables/>
           <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
         </cps.a.ArgumentsActionImpl>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835235</startTime>
+          <startTime>1700126898137</startTime>
         </wf.a.TimingAction>
+        <s.a.LogStorageAction/>
+      </actions>
+    </Tag>
+  </entry>
+  <entry>
+    <string>49</string>
+    <Tag plugin="workflow-support@865.v43e78cc44e0d">
+      <node class="cps.n.StepAtomNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
+        <parentIds>
+          <string>48</string>
+        </parentIds>
+        <id>49</id>
+        <descriptorId>org.jenkinsci.plugins.workflow.steps.durable_task.ShellStep</descriptorId>
+      </node>
+      <actions>
+        <cps.a.ArgumentsActionImpl plugin="workflow-cps@3806.va_3a_6988277b_2">
+          <arguments>
+            <entry>
+              <string>script</string>
+              <string>docker rm pingapp || true</string>
+            </entry>
+          </arguments>
+          <sensitiveVariables/>
+          <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+        </cps.a.ArgumentsActionImpl>
+        <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
+          <startTime>1700126898695</startTime>
+        </wf.a.TimingAction>
+        <s.a.LogStorageAction/>
       </actions>
     </Tag>
   </entry>
   <entry>
     <string>50</string>
     <Tag plugin="workflow-support@865.v43e78cc44e0d">
-      <node class="cps.n.StepStartNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
+      <node class="cps.n.StepEndNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
         <parentIds>
           <string>49</string>
         </parentIds>
         <id>50</id>
-        <descriptorId>org.jenkinsci.plugins.workflow.support.steps.StageStep</descriptorId>
+        <startId>47</startId>
       </node>
       <actions>
         <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
-        <wf.a.LabelAction plugin="workflow-api@1283.v99c10937efcb_">
-          <displayName>Run Application</displayName>
-        </wf.a.LabelAction>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835239</startTime>
+          <startTime>1700126899319</startTime>
         </wf.a.TimingAction>
-        <wf.a.TagsAction plugin="workflow-api@1283.v99c10937efcb_">
-          <tags>
-            <entry>
-              <string>STAGE_STATUS</string>
-              <string>SKIPPED_FOR_FAILURE</string>
-            </entry>
-          </tags>
-        </wf.a.TagsAction>
       </actions>
     </Tag>
   </entry>
@@ -252,16 +167,12 @@
           <string>50</string>
         </parentIds>
         <id>51</id>
-        <startId>50</startId>
+        <startId>46</startId>
       </node>
       <actions>
-        <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835253</startTime>
+          <startTime>1700126900023</startTime>
         </wf.a.TimingAction>
-        <wf.a.ErrorAction plugin="workflow-api@1283.v99c10937efcb_">
-          <error class="hudson.AbortException" reference="../../../../../entry/Tag/actions/wf.a.ErrorAction/error"/>
-        </wf.a.ErrorAction>
       </actions>
     </Tag>
   </entry>
@@ -273,42 +184,29 @@
           <string>51</string>
         </parentIds>
         <id>52</id>
-        <startId>49</startId>
+        <startId>45</startId>
       </node>
       <actions>
+        <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835272</startTime>
+          <startTime>1700126900136</startTime>
         </wf.a.TimingAction>
-        <wf.a.ErrorAction plugin="workflow-api@1283.v99c10937efcb_">
-          <error class="hudson.AbortException" reference="../../../../../entry/Tag/actions/wf.a.ErrorAction/error"/>
-        </wf.a.ErrorAction>
       </actions>
     </Tag>
   </entry>
   <entry>
     <string>53</string>
     <Tag plugin="workflow-support@865.v43e78cc44e0d">
-      <node class="cps.n.StepStartNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
+      <node class="cps.n.StepEndNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
         <parentIds>
           <string>52</string>
         </parentIds>
         <id>53</id>
-        <descriptorId>org.jenkinsci.plugins.workflow.support.steps.StageStep</descriptorId>
+        <startId>44</startId>
       </node>
       <actions>
-        <s.a.LogStorageAction/>
-        <cps.a.ArgumentsActionImpl plugin="workflow-cps@3806.va_3a_6988277b_2">
-          <arguments>
-            <entry>
-              <string>name</string>
-              <string>Declarative: Post Actions</string>
-            </entry>
-          </arguments>
-          <sensitiveVariables/>
-          <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
-        </cps.a.ArgumentsActionImpl>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835286</startTime>
+          <startTime>1700126903265</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -324,21 +222,20 @@
         <descriptorId>org.jenkinsci.plugins.workflow.support.steps.StageStep</descriptorId>
       </node>
       <actions>
-        <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
-        <wf.a.LabelAction plugin="workflow-api@1283.v99c10937efcb_">
-          <displayName>Declarative: Post Actions</displayName>
-        </wf.a.LabelAction>
-        <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835289</startTime>
-        </wf.a.TimingAction>
-        <wf.a.TagsAction plugin="workflow-api@1283.v99c10937efcb_">
-          <tags>
+        <s.a.LogStorageAction/>
+        <cps.a.ArgumentsActionImpl plugin="workflow-cps@3806.va_3a_6988277b_2">
+          <arguments>
             <entry>
-              <string>SYNTHETIC_STAGE</string>
-              <string>POST</string>
+              <string>name</string>
+              <string>Run Application</string>
             </entry>
-          </tags>
-        </wf.a.TagsAction>
+          </arguments>
+          <sensitiveVariables/>
+          <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
+        </cps.a.ArgumentsActionImpl>
+        <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
+          <startTime>1700126903413</startTime>
+        </wf.a.TimingAction>
       </actions>
     </Tag>
   </entry>
@@ -360,8 +257,9 @@
               <string>overrides</string>
               <list>
                 <string>GIT_BRANCH=origin/pytest</string>
-                <string>GIT_COMMIT=04427ff0de7ae9f19a67276bdeab890975a968f4</string>
-                <string>GIT_PREVIOUS_COMMIT=66642093309cce25ec947c1eec1848c37bde7af8</string>
+                <string>GIT_COMMIT=42a9a40468463d7ec00905363f0e2008b7b72c64</string>
+                <string>GIT_PREVIOUS_COMMIT=a7a11107c1900076110af0a70c0b8221bfcbe8c4</string>
+                <string>GIT_PREVIOUS_SUCCESSFUL_COMMIT=a7a11107c1900076110af0a70c0b8221bfcbe8c4</string>
                 <string>GIT_URL=git@github.com:nackc8/cicd-grp--lederhosen.git</string>
               </list>
             </entry>
@@ -370,7 +268,7 @@
           <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
         </cps.a.ArgumentsActionImpl>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056814338</startTime>
+          <startTime>1700126856371</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -378,28 +276,29 @@
   <entry>
     <string>55</string>
     <Tag plugin="workflow-support@865.v43e78cc44e0d">
-      <node class="cps.n.StepAtomNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
+      <node class="cps.n.StepStartNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
         <parentIds>
           <string>54</string>
         </parentIds>
         <id>55</id>
-        <descriptorId>org.jenkinsci.plugins.workflow.steps.EchoStep</descriptorId>
+        <descriptorId>org.jenkinsci.plugins.workflow.support.steps.StageStep</descriptorId>
       </node>
       <actions>
-        <cps.a.ArgumentsActionImpl plugin="workflow-cps@3806.va_3a_6988277b_2">
-          <arguments>
-            <entry>
-              <string>message</string>
-              <string>The build failed.</string>
-            </entry>
-          </arguments>
-          <sensitiveVariables/>
-          <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
-        </cps.a.ArgumentsActionImpl>
+        <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
+        <wf.a.LabelAction plugin="workflow-api@1283.v99c10937efcb_">
+          <displayName>Run Application</displayName>
+        </wf.a.LabelAction>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835307</startTime>
+          <startTime>1700126903439</startTime>
         </wf.a.TimingAction>
-        <s.a.LogStorageAction/>
+        <wf.a.TagsAction plugin="workflow-api@1283.v99c10937efcb_">
+          <tags>
+            <entry>
+              <string>STAGE_STATUS</string>
+              <string>FAILED_AND_CONTINUED</string>
+            </entry>
+          </tags>
+        </wf.a.TagsAction>
       </actions>
     </Tag>
   </entry>
@@ -416,7 +315,7 @@
       <actions>
         <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056814339</startTime>
+          <startTime>1700126856380</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -424,28 +323,18 @@
   <entry>
     <string>56</string>
     <Tag plugin="workflow-support@865.v43e78cc44e0d">
-      <node class="cps.n.StepAtomNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
+      <node class="cps.n.StepStartNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
         <parentIds>
           <string>55</string>
         </parentIds>
         <id>56</id>
-        <descriptorId>org.jenkinsci.plugins.workflow.steps.durable_task.ShellStep</descriptorId>
+        <descriptorId>org.jenkinsci.plugins.pipeline.modeldefinition.steps.ScriptStep</descriptorId>
       </node>
       <actions>
-        <cps.a.ArgumentsActionImpl plugin="workflow-cps@3806.va_3a_6988277b_2">
-          <arguments>
-            <entry>
-              <string>script</string>
-              <string>docker stop pingapp || true</string>
-            </entry>
-          </arguments>
-          <sensitiveVariables/>
-          <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
-        </cps.a.ArgumentsActionImpl>
-        <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835313</startTime>
-        </wf.a.TimingAction>
         <s.a.LogStorageAction/>
+        <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
+          <startTime>1700126905125</startTime>
+        </wf.a.TimingAction>
       </actions>
     </Tag>
   </entry>
@@ -472,7 +361,7 @@
           <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
         </cps.a.ArgumentsActionImpl>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056814351</startTime>
+          <startTime>1700126856696</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -480,28 +369,18 @@
   <entry>
     <string>57</string>
     <Tag plugin="workflow-support@865.v43e78cc44e0d">
-      <node class="cps.n.StepAtomNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
+      <node class="cps.n.StepStartNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
         <parentIds>
           <string>56</string>
         </parentIds>
         <id>57</id>
-        <descriptorId>org.jenkinsci.plugins.workflow.steps.durable_task.ShellStep</descriptorId>
+        <descriptorId>org.jenkinsci.plugins.pipeline.modeldefinition.steps.ScriptStep</descriptorId>
       </node>
       <actions>
-        <cps.a.ArgumentsActionImpl plugin="workflow-cps@3806.va_3a_6988277b_2">
-          <arguments>
-            <entry>
-              <string>script</string>
-              <string>docker rm pingapp || true</string>
-            </entry>
-          </arguments>
-          <sensitiveVariables/>
-          <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
-        </cps.a.ArgumentsActionImpl>
+        <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835580</startTime>
+          <startTime>1700126905141</startTime>
         </wf.a.TimingAction>
-        <s.a.LogStorageAction/>
       </actions>
     </Tag>
   </entry>
@@ -521,7 +400,7 @@
           <displayName>Checkout</displayName>
         </wf.a.LabelAction>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056814353</startTime>
+          <startTime>1700126856703</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -534,13 +413,49 @@
           <string>57</string>
         </parentIds>
         <id>58</id>
-        <startId>54</startId>
+        <startId>57</startId>
       </node>
       <actions>
         <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835844</startTime>
+          <startTime>1700126906810</startTime>
         </wf.a.TimingAction>
+        <wf.a.ErrorAction plugin="workflow-api@1283.v99c10937efcb_">
+          <error class="org.jenkinsci.plugins.workflow.steps.FlowInterruptedException" plugin="workflow-step-api@639.v6eca_cd8c04a_a_">
+            <stackTrace>
+              <trace>org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.interrupt(CpsFlowExecution.java:1209)</trace>
+              <trace>org.jenkinsci.plugins.workflow.job.WorkflowRun$2.lambda$interrupt$0(WorkflowRun.java:397)</trace>
+              <trace>jenkins.security.ImpersonatingScheduledExecutorService$1.run(ImpersonatingScheduledExecutorService.java:67)</trace>
+              <trace>java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)</trace>
+              <trace>java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)</trace>
+              <trace>java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)</trace>
+              <trace>java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)</trace>
+              <trace>java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)</trace>
+              <trace>java.base/java.lang.Thread.run(Thread.java:840)</trace>
+            </stackTrace>
+            <suppressedExceptions>
+              <wf.a.ErrorAction_-ErrorId plugin="workflow-api@1283.v99c10937efcb_">
+                <stackTrace/>
+                <suppressedExceptions class="empty-list"/>
+                <uuid>828f1fbe-92ef-49ad-9706-97e0704e86d4</uuid>
+              </wf.a.ErrorAction_-ErrorId>
+            </suppressedExceptions>
+            <result>
+              <name>ABORTED</name>
+              <ordinal>4</ordinal>
+              <color>ABORTED</color>
+              <completeBuild>false</completeBuild>
+            </result>
+            <causes class="java.util.Arrays$ArrayList">
+              <a class="jenkins.model.CauseOfInterruption-array">
+                <jenkins.model.CauseOfInterruption_-UserInterruption>
+                  <user>admin</user>
+                </jenkins.model.CauseOfInterruption_-UserInterruption>
+              </a>
+            </causes>
+            <actualInterruption>true</actualInterruption>
+          </error>
+        </wf.a.ErrorAction>
       </actions>
     </Tag>
   </entry>
@@ -613,7 +528,7 @@
           <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
         </cps.a.ArgumentsActionImpl>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056814376</startTime>
+          <startTime>1700126857075</startTime>
         </wf.a.TimingAction>
         <s.a.LogStorageAction/>
       </actions>
@@ -627,12 +542,15 @@
           <string>58</string>
         </parentIds>
         <id>59</id>
-        <startId>53</startId>
+        <startId>56</startId>
       </node>
       <actions>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835860</startTime>
+          <startTime>1700126909600</startTime>
         </wf.a.TimingAction>
+        <wf.a.ErrorAction plugin="workflow-api@1283.v99c10937efcb_">
+          <error class="org.jenkinsci.plugins.workflow.steps.FlowInterruptedException" reference="../../../../../entry[19]/Tag/actions/wf.a.ErrorAction/error"/>
+        </wf.a.ErrorAction>
       </actions>
     </Tag>
   </entry>
@@ -649,7 +567,7 @@
       <actions>
         <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056816066</startTime>
+          <startTime>1700126859598</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -666,7 +584,7 @@
       </node>
       <actions>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056816082</startTime>
+          <startTime>1700126860363</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -694,7 +612,7 @@
           <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
         </cps.a.ArgumentsActionImpl>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056816095</startTime>
+          <startTime>1700126860393</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -715,7 +633,7 @@
           <displayName>Build Image</displayName>
         </wf.a.LabelAction>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056816099</startTime>
+          <startTime>1700126860400</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -733,7 +651,7 @@
       <actions>
         <s.a.LogStorageAction/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056816122</startTime>
+          <startTime>1700126860871</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -747,7 +665,7 @@
       </node>
       <actions>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056812397</startTime>
+          <startTime>1700126833856</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -765,10 +683,10 @@
       <actions>
         <s.a.LogStorageAction/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056812488</startTime>
+          <startTime>1700126835800</startTime>
         </wf.a.TimingAction>
         <org.jenkinsci.plugins.workflow.support.steps.ExecutorStepExecution_-QueueItemActionImpl plugin="workflow-durable-task-step@1289.v4d3e7b_01546b_">
-          <id>134</id>
+          <id>140</id>
         </org.jenkinsci.plugins.workflow.support.steps.ExecutorStepExecution_-QueueItemActionImpl>
         <s.a.WorkspaceActionImpl>
           <node></node>
@@ -791,7 +709,7 @@
       <actions>
         <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056812505</startTime>
+          <startTime>1700126836164</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -819,7 +737,7 @@
           <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
         </cps.a.ArgumentsActionImpl>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056812518</startTime>
+          <startTime>1700126836436</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -840,7 +758,7 @@
           <displayName>Declarative: Checkout SCM</displayName>
         </wf.a.LabelAction>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056812520</startTime>
+          <startTime>1700126836448</startTime>
         </wf.a.TimingAction>
         <wf.a.TagsAction plugin="workflow-api@1283.v99c10937efcb_">
           <tags>
@@ -920,7 +838,7 @@
           <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
         </cps.a.ArgumentsActionImpl>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056812536</startTime>
+          <startTime>1700126836735</startTime>
         </wf.a.TimingAction>
         <s.a.LogStorageAction/>
       </actions>
@@ -939,7 +857,7 @@
       <actions>
         <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056814318</startTime>
+          <startTime>1700126855677</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -956,7 +874,7 @@
       </node>
       <actions>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056814329</startTime>
+          <startTime>1700126856247</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -969,15 +887,15 @@
           <string>59</string>
         </parentIds>
         <id>60</id>
-        <startId>11</startId>
+        <startId>55</startId>
       </node>
       <actions>
         <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835865</startTime>
+          <startTime>1700126909988</startTime>
         </wf.a.TimingAction>
         <wf.a.ErrorAction plugin="workflow-api@1283.v99c10937efcb_">
-          <error class="hudson.AbortException" reference="../../../../../entry/Tag/actions/wf.a.ErrorAction/error"/>
+          <error class="org.jenkinsci.plugins.workflow.steps.FlowInterruptedException" reference="../../../../../entry[19]/Tag/actions/wf.a.ErrorAction/error"/>
         </wf.a.ErrorAction>
       </actions>
     </Tag>
@@ -990,14 +908,14 @@
           <string>60</string>
         </parentIds>
         <id>61</id>
-        <startId>10</startId>
+        <startId>54</startId>
       </node>
       <actions>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835906</startTime>
+          <startTime>1700126910736</startTime>
         </wf.a.TimingAction>
         <wf.a.ErrorAction plugin="workflow-api@1283.v99c10937efcb_">
-          <error class="hudson.AbortException" reference="../../../../../entry/Tag/actions/wf.a.ErrorAction/error"/>
+          <error class="org.jenkinsci.plugins.workflow.steps.FlowInterruptedException" reference="../../../../../entry[19]/Tag/actions/wf.a.ErrorAction/error"/>
         </wf.a.ErrorAction>
       </actions>
     </Tag>
@@ -1010,15 +928,15 @@
           <string>61</string>
         </parentIds>
         <id>62</id>
-        <startId>4</startId>
+        <startId>11</startId>
       </node>
       <actions>
         <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835916</startTime>
+          <startTime>1700126910894</startTime>
         </wf.a.TimingAction>
         <wf.a.ErrorAction plugin="workflow-api@1283.v99c10937efcb_">
-          <error class="hudson.AbortException" reference="../../../../../entry/Tag/actions/wf.a.ErrorAction/error"/>
+          <error class="org.jenkinsci.plugins.workflow.steps.FlowInterruptedException" reference="../../../../../entry[19]/Tag/actions/wf.a.ErrorAction/error"/>
         </wf.a.ErrorAction>
       </actions>
     </Tag>
@@ -1031,17 +949,14 @@
           <string>62</string>
         </parentIds>
         <id>63</id>
-        <startId>3</startId>
+        <startId>10</startId>
       </node>
       <actions>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835934</startTime>
+          <startTime>1700126912022</startTime>
         </wf.a.TimingAction>
         <wf.a.ErrorAction plugin="workflow-api@1283.v99c10937efcb_">
-          <error class="hudson.AbortException" reference="../../../../../entry/Tag/actions/wf.a.ErrorAction/error"/>
-        </wf.a.ErrorAction>
-        <wf.a.ErrorAction plugin="workflow-api@1283.v99c10937efcb_">
-          <error class="hudson.AbortException" reference="../../../../../entry/Tag/actions/wf.a.ErrorAction/error"/>
+          <error class="org.jenkinsci.plugins.workflow.steps.FlowInterruptedException" reference="../../../../../entry[19]/Tag/actions/wf.a.ErrorAction/error"/>
         </wf.a.ErrorAction>
       </actions>
     </Tag>
@@ -1049,26 +964,21 @@
   <entry>
     <string>64</string>
     <Tag plugin="workflow-support@865.v43e78cc44e0d">
-      <node class="org.jenkinsci.plugins.workflow.graph.FlowEndNode" plugin="workflow-api@1283.v99c10937efcb_">
+      <node class="cps.n.StepEndNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
         <parentIds>
           <string>63</string>
         </parentIds>
         <id>64</id>
-        <startId>2</startId>
-        <result>
-          <name>FAILURE</name>
-          <ordinal>2</ordinal>
-          <color>RED</color>
-          <completeBuild>true</completeBuild>
-        </result>
+        <startId>4</startId>
       </node>
       <actions>
-        <wf.a.ErrorAction plugin="workflow-api@1283.v99c10937efcb_">
-          <error class="hudson.AbortException" reference="../../../../../entry/Tag/actions/wf.a.ErrorAction/error"/>
-        </wf.a.ErrorAction>
+        <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835946</startTime>
+          <startTime>1700126912176</startTime>
         </wf.a.TimingAction>
+        <wf.a.ErrorAction plugin="workflow-api@1283.v99c10937efcb_">
+          <error class="org.jenkinsci.plugins.workflow.steps.FlowInterruptedException" reference="../../../../../entry[19]/Tag/actions/wf.a.ErrorAction/error"/>
+        </wf.a.ErrorAction>
       </actions>
     </Tag>
   </entry>
@@ -1085,8 +995,31 @@
       <actions>
         <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056816126</startTime>
+          <startTime>1700126860913</startTime>
         </wf.a.TimingAction>
+      </actions>
+    </Tag>
+  </entry>
+  <entry>
+    <string>65</string>
+    <Tag plugin="workflow-support@865.v43e78cc44e0d">
+      <node class="cps.n.StepEndNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
+        <parentIds>
+          <string>64</string>
+        </parentIds>
+        <id>65</id>
+        <startId>3</startId>
+      </node>
+      <actions>
+        <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
+          <startTime>1700126913707</startTime>
+        </wf.a.TimingAction>
+        <wf.a.ErrorAction plugin="workflow-api@1283.v99c10937efcb_">
+          <error class="org.jenkinsci.plugins.workflow.steps.FlowInterruptedException" reference="../../../../../entry[19]/Tag/actions/wf.a.ErrorAction/error"/>
+        </wf.a.ErrorAction>
+        <wf.a.ErrorAction plugin="workflow-api@1283.v99c10937efcb_">
+          <error class="org.jenkinsci.plugins.workflow.steps.FlowInterruptedException" reference="../../../../../entry[19]/Tag/actions/wf.a.ErrorAction/error"/>
+        </wf.a.ErrorAction>
       </actions>
     </Tag>
   </entry>
@@ -1112,9 +1045,35 @@
           <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
         </cps.a.ArgumentsActionImpl>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056816141</startTime>
+          <startTime>1700126861385</startTime>
         </wf.a.TimingAction>
         <s.a.LogStorageAction/>
+      </actions>
+    </Tag>
+  </entry>
+  <entry>
+    <string>66</string>
+    <Tag plugin="workflow-support@865.v43e78cc44e0d">
+      <node class="org.jenkinsci.plugins.workflow.graph.FlowEndNode" plugin="workflow-api@1283.v99c10937efcb_">
+        <parentIds>
+          <string>65</string>
+        </parentIds>
+        <id>66</id>
+        <startId>2</startId>
+        <result>
+          <name>ABORTED</name>
+          <ordinal>4</ordinal>
+          <color>ABORTED</color>
+          <completeBuild>false</completeBuild>
+        </result>
+      </node>
+      <actions>
+        <wf.a.ErrorAction plugin="workflow-api@1283.v99c10937efcb_">
+          <error class="org.jenkinsci.plugins.workflow.steps.FlowInterruptedException" reference="../../../../../entry[19]/Tag/actions/wf.a.ErrorAction/error"/>
+        </wf.a.ErrorAction>
+        <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
+          <startTime>1700126913810</startTime>
+        </wf.a.TimingAction>
       </actions>
     </Tag>
   </entry>
@@ -1131,7 +1090,7 @@
       <actions>
         <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056827160</startTime>
+          <startTime>1700126878096</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -1148,7 +1107,7 @@
       </node>
       <actions>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056827176</startTime>
+          <startTime>1700126878744</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -1166,7 +1125,7 @@
       <actions>
         <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056827181</startTime>
+          <startTime>1700126878776</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -1183,7 +1142,7 @@
       </node>
       <actions>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056827193</startTime>
+          <startTime>1700126879361</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -1211,7 +1170,7 @@
           <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
         </cps.a.ArgumentsActionImpl>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056827202</startTime>
+          <startTime>1700126879403</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -1232,7 +1191,7 @@
           <displayName>Lint</displayName>
         </wf.a.LabelAction>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056827205</startTime>
+          <startTime>1700126879411</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -1250,7 +1209,7 @@
       <actions>
         <s.a.LogStorageAction/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056827224</startTime>
+          <startTime>1700126879825</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -1268,7 +1227,7 @@
       <actions>
         <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056827228</startTime>
+          <startTime>1700126879836</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -1299,7 +1258,7 @@
           <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
         </cps.a.ArgumentsActionImpl>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056827242</startTime>
+          <startTime>1700126880252</startTime>
         </wf.a.TimingAction>
         <s.a.LogStorageAction/>
       </actions>
@@ -1318,7 +1277,7 @@
       <actions>
         <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056833607</startTime>
+          <startTime>1700126892404</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -1335,7 +1294,7 @@
       </node>
       <actions>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056833623</startTime>
+          <startTime>1700126893005</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -1353,7 +1312,7 @@
       <actions>
         <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056833628</startTime>
+          <startTime>1700126893031</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -1370,7 +1329,7 @@
       </node>
       <actions>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056833642</startTime>
+          <startTime>1700126893532</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -1398,7 +1357,7 @@
           <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
         </cps.a.ArgumentsActionImpl>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056833653</startTime>
+          <startTime>1700126893569</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -1419,16 +1378,8 @@
           <displayName>Run Tests</displayName>
         </wf.a.LabelAction>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056833655</startTime>
+          <startTime>1700126893589</startTime>
         </wf.a.TimingAction>
-        <wf.a.TagsAction plugin="workflow-api@1283.v99c10937efcb_">
-          <tags>
-            <entry>
-              <string>STAGE_STATUS</string>
-              <string>FAILED_AND_CONTINUED</string>
-            </entry>
-          </tags>
-        </wf.a.TagsAction>
       </actions>
     </Tag>
   </entry>
@@ -1445,7 +1396,7 @@
       <actions>
         <s.a.LogStorageAction/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056833676</startTime>
+          <startTime>1700126894062</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -1463,7 +1414,7 @@
       <actions>
         <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056833682</startTime>
+          <startTime>1700126894078</startTime>
         </wf.a.TimingAction>
       </actions>
     </Tag>
@@ -1494,7 +1445,7 @@
           <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
         </cps.a.ArgumentsActionImpl>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056833698</startTime>
+          <startTime>1700126894401</startTime>
         </wf.a.TimingAction>
         <s.a.LogStorageAction/>
       </actions>
@@ -1503,31 +1454,18 @@
   <entry>
     <string>40</string>
     <Tag plugin="workflow-support@865.v43e78cc44e0d">
-      <node class="cps.n.StepAtomNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
+      <node class="cps.n.StepEndNode" plugin="workflow-cps@3806.va_3a_6988277b_2">
         <parentIds>
           <string>39</string>
         </parentIds>
         <id>40</id>
-        <descriptorId>org.jenkinsci.plugins.workflow.steps.ErrorStep</descriptorId>
+        <startId>38</startId>
       </node>
       <actions>
-        <cps.a.ArgumentsActionImpl plugin="workflow-cps@3806.va_3a_6988277b_2">
-          <arguments>
-            <entry>
-              <string>message</string>
-              <string>Pytest failed. Check the test results.</string>
-            </entry>
-          </arguments>
-          <sensitiveVariables/>
-          <isUnmodifiedBySanitization>true</isUnmodifiedBySanitization>
-        </cps.a.ArgumentsActionImpl>
+        <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835121</startTime>
+          <startTime>1700126896283</startTime>
         </wf.a.TimingAction>
-        <s.a.LogStorageAction/>
-        <wf.a.ErrorAction plugin="workflow-api@1283.v99c10937efcb_">
-          <error class="hudson.AbortException" reference="../../../../../entry/Tag/actions/wf.a.ErrorAction/error"/>
-        </wf.a.ErrorAction>
       </actions>
     </Tag>
   </entry>
@@ -1539,16 +1477,12 @@
           <string>40</string>
         </parentIds>
         <id>41</id>
-        <startId>38</startId>
+        <startId>37</startId>
       </node>
       <actions>
-        <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835128</startTime>
+          <startTime>1700126896907</startTime>
         </wf.a.TimingAction>
-        <wf.a.ErrorAction plugin="workflow-api@1283.v99c10937efcb_">
-          <error class="hudson.AbortException" reference="../../../../../entry/Tag/actions/wf.a.ErrorAction/error"/>
-        </wf.a.ErrorAction>
       </actions>
     </Tag>
   </entry>
@@ -1560,15 +1494,13 @@
           <string>41</string>
         </parentIds>
         <id>42</id>
-        <startId>37</startId>
+        <startId>36</startId>
       </node>
       <actions>
+        <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835146</startTime>
+          <startTime>1700126896929</startTime>
         </wf.a.TimingAction>
-        <wf.a.ErrorAction plugin="workflow-api@1283.v99c10937efcb_">
-          <error class="hudson.AbortException" reference="../../../../../entry/Tag/actions/wf.a.ErrorAction/error"/>
-        </wf.a.ErrorAction>
       </actions>
     </Tag>
   </entry>
@@ -1580,16 +1512,12 @@
           <string>42</string>
         </parentIds>
         <id>43</id>
-        <startId>36</startId>
+        <startId>35</startId>
       </node>
       <actions>
-        <wf.a.BodyInvocationAction plugin="workflow-api@1283.v99c10937efcb_"/>
         <wf.a.TimingAction plugin="workflow-api@1283.v99c10937efcb_">
-          <startTime>1700056835157</startTime>
+          <startTime>1700126897473</startTime>
         </wf.a.TimingAction>
-        <wf.a.ErrorAction plugin="workflow-api@1283.v99c10937efcb_">
-          <error class="hudson.AbortException" reference="../../../../../entry/Tag/actions/wf.a.ErrorAction/error"/>
-        </wf.a.ErrorAction>
       </actions>
     </Tag>
   </entry>

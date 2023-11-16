@@ -5,7 +5,7 @@
       <causeBag class="linked-hash-map">
         <entry>
           <hudson.triggers.SCMTrigger_-SCMTriggerCause/>
-          <int>1</int>
+          <int>2</int>
         </entry>
       </causeBag>
     </hudson.model.CauseAction>
@@ -14,7 +14,7 @@
       <libraries/>
     </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
     <org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction plugin="pipeline-model-definition@2.2150.v4cfd8916915c">
-      <stagesUUID>e7ee67ce-3497-45af-b10b-b1368140866b</stagesUUID>
+      <stagesUUID>805b7371-427f-4797-869c-42b55d4328f2</stagesUUID>
       <pipelineDefs>
         <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef plugin="pipeline-model-api@2.2150.v4cfd8916915c">
           <stages>
@@ -177,7 +177,7 @@
                 </branches>
               </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
             </stages>
-            <uuid>e7ee67ce-3497-45af-b10b-b1368140866b</uuid>
+            <uuid>805b7371-427f-4797-869c-42b55d4328f2</uuid>
           </stages>
           <postBuild>
             <conditions>
@@ -295,7 +295,7 @@
           <string>refs/remotes/origin/pytest</string>
           <hudson.plugins.git.util.Build>
             <marked plugin="git-client@4.5.0">
-              <sha1>66642093309cce25ec947c1eec1848c37bde7af8</sha1>
+              <sha1>42a9a40468463d7ec00905363f0e2008b7b72c64</sha1>
               <branches class="list">
                 <hudson.plugins.git.Branch>
                   <sha1 reference="../../../sha1"/>
@@ -304,7 +304,7 @@
               </branches>
             </marked>
             <revision reference="../marked"/>
-            <hudsonBuildNumber>65</hudsonBuildNumber>
+            <hudsonBuildNumber>70</hudsonBuildNumber>
           </hudson.plugins.git.util.Build>
         </entry>
         <entry>
@@ -384,16 +384,23 @@
         </entry>
       </revisionStates>
     </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
+    <jenkins.model.InterruptedBuildAction>
+      <causes>
+        <jenkins.model.CauseOfInterruption_-UserInterruption>
+          <user>admin</user>
+        </jenkins.model.CauseOfInterruption_-UserInterruption>
+      </causes>
+    </jenkins.model.InterruptedBuildAction>
   </actions>
-  <queueId>129</queueId>
-  <timestamp>1700056690421</timestamp>
-  <startTime>1700056690423</startTime>
-  <result>FAILURE</result>
-  <duration>24304</duration>
+  <queueId>139</queueId>
+  <timestamp>1700126829999</timestamp>
+  <startTime>1700126830009</startTime>
+  <result>ABORTED</result>
+  <duration>84059</duration>
   <charset>UTF-8</charset>
   <keepLog>false</keepLog>
   <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
-    <result>FAILURE</result>
+    <result>ABORTED</result>
     <script>pipeline {
     agent any
 
@@ -477,35 +484,30 @@
     <timings class="map">
       <entry>
         <string>flowNode</string>
-        <long>205928560</long>
+        <long>984883846</long>
       </entry>
       <entry>
         <string>classLoad</string>
-        <long>57760556</long>
+        <long>3487948150</long>
       </entry>
       <entry>
         <string>run</string>
-        <long>881399557</long>
+        <long>42285083887</long>
       </entry>
       <entry>
         <string>parse</string>
-        <long>15288007</long>
+        <long>1062771492</long>
       </entry>
       <entry>
         <string>saveProgram</string>
-        <long>367887487</long>
+        <long>36319021458</long>
       </entry>
     </timings>
     <internalCalls class="sorted-set">
-      <string>hudson.model.Result.fromString</string>
-      <string>org.jenkinsci.plugins.pipeline.StageStatus.TAG_NAME</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.SyntheticStageNames.checkout</string>
-      <string>org.jenkinsci.plugins.pipeline.modeldefinition.SyntheticStageNames.postBuild</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.createStepsBlock</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.getRestartedStage</string>
-      <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.logToTaskListener</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.markStageFailedAndContinued</string>
-      <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.markStageWithTag</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.updateJobProperties</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.Utils.updateRunAndJobActions</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.agent.impl.Any.getScript</string>
@@ -519,10 +521,7 @@
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Agent.hasAgent</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Agent.populateMap</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Agent.rawClosure</string>
-      <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.BuildCondition.getCombinedResult</string>
-      <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.BuildCondition.orderedConditionNames</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.PostBuild.&lt;init&gt;</string>
-      <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.PostBuild.closureForSatisfiedCondition</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.&lt;init&gt;</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.agent</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.astUUID</string>
@@ -536,9 +535,6 @@
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.stages</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.tools</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Root.triggers</string>
-      <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.SkippedStageReason$Failure.&lt;init&gt;</string>
-      <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.SkippedStageReason$Failure.message</string>
-      <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.SkippedStageReason$Failure.stageStatus</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Stage.&lt;init&gt;</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Stage.agent</string>
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.Stage.environment</string>
@@ -558,14 +554,11 @@
       <string>org.jenkinsci.plugins.pipeline.modeldefinition.model.StepsBlock.closure</string>
       <string>org.jenkinsci.plugins.workflow.cps.persistence.IteratorHack$Itr.hasNext</string>
       <string>org.jenkinsci.plugins.workflow.cps.persistence.IteratorHack$Itr.next</string>
-      <string>org.jenkinsci.plugins.workflow.job.WorkflowRun.result</string>
-      <string>org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper.currentResult</string>
-      <string>org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper.rawBuild</string>
       <string>org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper.result</string>
     </internalCalls>
     <sandbox>true</sandbox>
-    <iota>64</iota>
-    <head>1:64</head>
+    <iota>66</iota>
+    <head>1:66</head>
     <done>true</done>
     <resumeBlocked>false</resumeBlocked>
     <storageDir>workflow-completed</storageDir>
@@ -592,7 +585,7 @@
       </scm>
       <node></node>
       <workspace>/var/jenkins_home/workspace/Pingurl app</workspace>
-      <changelogFile>/var/jenkins_home/jobs/Pingurl app/builds/65/changelog12694036312582633057.xml</changelogFile>
+      <changelogFile>/var/jenkins_home/jobs/Pingurl app/builds/70/changelog11065849287697757533.xml</changelogFile>
       <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
     </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
     <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>

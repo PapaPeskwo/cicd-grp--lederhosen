@@ -1,0 +1,64 @@
+commit 42a9a40468463d7ec00905363f0e2008b7b72c64
+tree 38aca2235d70340a728094787e91b6853d739290
+parent a7a11107c1900076110af0a70c0b8221bfcbe8c4
+author Sundgren95 <sundgren.david@gmail.com> 2023-11-15 15:09:19 +0100
+committer Sundgren95 <sundgren.david@gmail.com> 2023-11-15 15:09:19 +0100
+
+    pytest done and added to pipeline
+
+
+:100644 100644 3af73f26263b253a94d376b3f545ec70fee6f71f b9427d7ecec6ec8fcc3e1f99bf95add81612c0f3 M	jenkins/jenkins/copy_reference_file.log
+:100644 100644 0afd0cd0d3622fe78f53cad157ba2c5b2ffa5ec4 a3b5e274a6a7d6d28a3751f4bf26cfd4e8651ecb M	jenkins/jenkins/fingerprints/ec/c8/ff92a183dc748b488b693aedf849.xml
+:100644 000000 1c8546b6463692c74c595fca17ebb0b54a1e6eaf 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/45/changelog12422712551010359814.xml
+:100644 000000 2aeb53b071f0b3dad044bfafb31ccc11524fd6f7 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/45/log
+:100644 000000 9876b82e9e3448ea7d65a0100d7c359739f8520b 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/45/log-index
+:100644 000000 cd09dec6151282235855f3c89151e98deda44c28 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/46/build.xml
+:100644 000000 58ac13b9136ca96275929fcada2c857c44661d2b 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/46/changelog14068086220584904266.xml
+:100644 000000 dc33d008d4474f5d1af404bc938f03e475e5d413 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/46/log
+:100644 000000 45c2773a5f2a1f448dee0da83eb8944e520c837a 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/46/log-index
+:100644 000000 bbf10f0c69cf13d968623e4f39e0f21b1d666fc7 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/46/workflow-completed/flowNodeStore.xml
+:100644 000000 dca4ee7a4656ebc2df775f412f2508f6c95411fa 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/47/changelog17761877927295507839.xml
+:100644 000000 2930fdc19f6ac0cb8744eb9febc02a53d8c2e00c 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/47/log-index
+:100644 000000 8d2c7244688c1a60774fa24194802bd7b73daea4 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/48/changelog14594452618384405069.xml
+:100644 000000 255eef2a4314270c0b71d0153647aeb206cd8b3b 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/48/log
+:100644 000000 202c831d00fcd60ff0e972080e4cce4b2ac45f45 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/48/log-index
+:100644 000000 6ff8f3f9826d71f6c3d6fc802dac3ee015c2252d 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/49/changelog17603562958286749409.xml
+:100644 000000 a748e24b0d6b533781512e972cbff1dcf11c9d22 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/49/log
+:100644 000000 b61e0414091924b7b0d6dc996d79ab2ab482025c 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/49/log-index
+:100644 100644 dfa9cf71e464cd703b7b708a800fb492aa01d9f0 8279f1b4843fa0a494d58193c0f61d3a41425f62 R080	jenkins/jenkins/jobs/Pingurl app/builds/48/build.xml	jenkins/jenkins/jobs/Pingurl app/builds/65/build.xml
+:000000 100644 0000000000000000000000000000000000000000 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 A	jenkins/jenkins/jobs/Pingurl app/builds/65/changelog12694036312582633057.xml
+:000000 100644 0000000000000000000000000000000000000000 2b2e6a567ab9bcea64fea74e9a4d21e491fe0fc8 A	jenkins/jenkins/jobs/Pingurl app/builds/65/log
+:000000 100644 0000000000000000000000000000000000000000 19d6a75f379ce61d6d7555305773d634e2afe391 A	jenkins/jenkins/jobs/Pingurl app/builds/65/log-index
+:100644 100644 c0cf7e78c4307e8d9565d7d78cb7f2a5c358976e 2780c267b2ecbda0e8f93154b6c7aabe75362b05 R071	jenkins/jenkins/jobs/Pingurl app/builds/45/workflow-completed/flowNodeStore.xml	jenkins/jenkins/jobs/Pingurl app/builds/65/workflow-completed/flowNodeStore.xml
+:100644 100644 c1ddb9ca14a6796db5ddc27cdc81a78f3e65b2b3 862fcaff61b007abea00461d5c7ccfcc13ba17bf R076	jenkins/jenkins/jobs/Pingurl app/builds/45/build.xml	jenkins/jenkins/jobs/Pingurl app/builds/66/build.xml
+:000000 100644 0000000000000000000000000000000000000000 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 A	jenkins/jenkins/jobs/Pingurl app/builds/66/changelog1084354699142677849.xml
+:000000 100644 0000000000000000000000000000000000000000 213a9cd4785b29e216f404ddcc66adf6c4fac06e A	jenkins/jenkins/jobs/Pingurl app/builds/66/log
+:000000 100644 0000000000000000000000000000000000000000 e62650dab28bf494fc27c0b124aeddacaf80c620 A	jenkins/jenkins/jobs/Pingurl app/builds/66/log-index
+:100644 100644 0c38a912f367e6d520c47de52edce9c16b028207 9be16cbb42cf12666c3de8df4c2e0108edcf9b2b R071	jenkins/jenkins/jobs/Pingurl app/builds/47/workflow-completed/flowNodeStore.xml	jenkins/jenkins/jobs/Pingurl app/builds/66/workflow-completed/flowNodeStore.xml
+:000000 100644 0000000000000000000000000000000000000000 c5543fc1202ee88aed4fb286a3a69fc9cf771f85 A	jenkins/jenkins/jobs/Pingurl app/builds/67/build.xml
+:000000 100644 0000000000000000000000000000000000000000 c535cb0c8307089b3ea3a66ebd41662ce6467282 A	jenkins/jenkins/jobs/Pingurl app/builds/67/changelog14523874388554679667.xml
+:000000 100644 0000000000000000000000000000000000000000 124c27f81aac0cb7a1b869be31aeb3a3e0593dc2 A	jenkins/jenkins/jobs/Pingurl app/builds/67/log
+:000000 100644 0000000000000000000000000000000000000000 1a1554e2f42d1b7df6407b134348889c31102b16 A	jenkins/jenkins/jobs/Pingurl app/builds/67/log-index
+:100644 100644 ea7a542e51bc293d5bb6e0f8b687b2ec7de78bf9 767f1915be3d3ab860ff3b6657b1950f8ac89325 R068	jenkins/jenkins/jobs/Pingurl app/builds/49/workflow-completed/flowNodeStore.xml	jenkins/jenkins/jobs/Pingurl app/builds/67/workflow-completed/flowNodeStore.xml
+:100644 100644 9a4df7c97fe2cadef13712069da9dcfcf84eaaa4 c5f496c002aa61e8a4ea406651f5732f2bb94336 R076	jenkins/jenkins/jobs/Pingurl app/builds/47/build.xml	jenkins/jenkins/jobs/Pingurl app/builds/68/build.xml
+:000000 100644 0000000000000000000000000000000000000000 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 A	jenkins/jenkins/jobs/Pingurl app/builds/68/changelog11988395317912122327.xml
+:000000 100644 0000000000000000000000000000000000000000 2ad859835aace46c1519208dfc8ab70a475787b2 A	jenkins/jenkins/jobs/Pingurl app/builds/68/log
+:000000 100644 0000000000000000000000000000000000000000 c7b4f25f95dbbf84f56f57424a5f179b809fedc1 A	jenkins/jenkins/jobs/Pingurl app/builds/68/log-index
+:000000 100644 0000000000000000000000000000000000000000 36531d98bab1138d378b8a328f3eb78a59f3cb11 A	jenkins/jenkins/jobs/Pingurl app/builds/68/workflow-completed/flowNodeStore.xml
+:100644 100644 dce06c3312744eb373acb6dfed4a78e9241cb97c 0429ed3837b272f12cbc8f4f373d2f9418f1b637 R083	jenkins/jenkins/jobs/Pingurl app/builds/49/build.xml	jenkins/jenkins/jobs/Pingurl app/builds/69/build.xml
+:000000 100644 0000000000000000000000000000000000000000 c36f2ba261157b951d4533f6fc92f113703a72db A	jenkins/jenkins/jobs/Pingurl app/builds/69/changelog4139824885910011265.xml
+:100644 100644 f8990356e83de8553530cb09a807453006a9c227 452a6f0db430d1b1688e64f05fd3228405588baf R051	jenkins/jenkins/jobs/Pingurl app/builds/47/log	jenkins/jenkins/jobs/Pingurl app/builds/69/log
+:000000 100644 0000000000000000000000000000000000000000 6ec462431150cc01e5a770cf4286f88e0d449080 A	jenkins/jenkins/jobs/Pingurl app/builds/69/log-index
+:100644 100644 2ac5b78f79482ce16700df220758d8d76b8cc37f 72537d81acec4a5f2990f279c31a93b253a729ae R081	jenkins/jenkins/jobs/Pingurl app/builds/48/workflow-completed/flowNodeStore.xml	jenkins/jenkins/jobs/Pingurl app/builds/69/workflow-completed/flowNodeStore.xml
+:100644 100644 b3a35bbe2176443fbdd9451dd7bc2c816d4d35d3 1f5267fbd78e74822c89b5aa3e1aba82a08a8f87 M	jenkins/jenkins/jobs/Pingurl app/builds/permalinks
+:100644 100644 0e9604b6391f4b36a15e040ce825aa2a2c6605d3 a6d56c08d3300b161e93114b02230e562e5df5ce M	jenkins/jenkins/jobs/Pingurl app/config.xml
+:100644 100644 e373ee695f6e76d7d3f8f8c4e92d1d60995352e5 2bbd69c2e548374bb9a87e06a2cfe52136f28465 M	jenkins/jenkins/jobs/Pingurl app/nextBuildNumber
+:100644 100644 ba47db28803c2aac16da039169679b24baaf2815 60185f55f28a5bc20282265d3719eb34de036ef4 M	jenkins/jenkins/logs/tasks/Periodic background build discarder.log.1
+:100644 100644 f38dfb9253b6e45fa5506f26ac943cc2204d4f14 ba47db28803c2aac16da039169679b24baaf2815 M	jenkins/jenkins/logs/tasks/Periodic background build discarder.log.2
+:100644 100644 8b4e1592b9e49320dfbf2bc276c7918fa62531fa f38dfb9253b6e45fa5506f26ac943cc2204d4f14 M	jenkins/jenkins/logs/tasks/Periodic background build discarder.log.3
+:100644 100644 98a496971c350da66b72a78243f04adbaf261a6c 8b4e1592b9e49320dfbf2bc276c7918fa62531fa M	jenkins/jenkins/logs/tasks/Periodic background build discarder.log.4
+:100644 100644 de2e80c18b7cab52527bb7290925a54aa3b2a7df 98a496971c350da66b72a78243f04adbaf261a6c M	jenkins/jenkins/logs/tasks/Periodic background build discarder.log.5
+:100644 100644 8910e7c929f5b5b09bc091e4160c99cb0e310097 62e7e19551ddd3ff05277e34ad6ec8fd60b76dd0 M	jenkins/jenkins/queue.xml
+:100644 100644 d13d7ad0000f6dab9b906d377b8d5551cb20d774 6aeeb81fdb944bd1b113b4648b680781f196f5d8 M	jenkins/jenkins/queue.xml.bak
+:100644 100644 db285300d5d64c12e720f35bf051d62f01743e38 1c63ac217144a2446e9eab8dc6e883158afa751e M	jenkins/jenkins/updates/default.json
+:100644 100644 eac78d87fbd94ba334a096bee7695ac94a4e260b 18feec8fca98a86b99b75fadfa344c2d7be09fb2 M	jenkins/jenkins/updates/hudson.plugins.gradle.GradleInstaller
