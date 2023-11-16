@@ -41,10 +41,17 @@ docker run --rm -d -p 5000:5000 --name pingapp pingurl:latest
 # Sleep for a moment to allow the application to start
 sleep 5
 
+# Run Newman tests using Docker
+newmanStatus=$(docker run --network="host" --rm pingurl:latest newman run ./newman_tests/Pingurl.postman_collection.json -e ./newman_tests/dev.postman_environment.json)
+
+# Check the exit status of Newman tests
+if [ "$newmanStatus" -ne 0 ]; then
+    echo "Newman tests failed. Check the test results."
+    exit 1
+fi
+
 # Check if the application container is running
 if [ "$(docker inspect -f '{{.State.Running}}' pingapp)" != "true" ]; then
     echo "Error: The application failed to start."
     exit 1
 fi
-docker stop pingapp
-
