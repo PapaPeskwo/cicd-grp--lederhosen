@@ -33,7 +33,7 @@ jobs:
 
       - name: Test with pytest
         run: pytest
-
+        
   merge-check:
     runs-on: ubuntu-latest
     needs: build
