@@ -1,0 +1,60 @@
+commit 82a251647e35b9c78db0ea06e3bef66e3b4870e1
+tree 662f185a1f5671c9fae40108cc96fe4bcb3543a1
+parent 57709607bef2d76ce6ee9b6a1eea9edb7e921d94
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:32:48 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:32:48 +0100
+
+    fix: :bug: fix Docker network issue and add delay before running Newman tests
+
+
+:100644 100644 cc9ea8ddaea4a76acffb29ee51758319d4eac5d8 77de0753a5cd989552ce66292b8596194d81728b M	jenkins/Jenkinsfile
+commit 57709607bef2d76ce6ee9b6a1eea9edb7e921d94
+tree 4ffafb30f30a3b85898c02e5bf6c65bcd2624f4f
+parent a24dad2f4cfc7e88f0f7b5de9cbb8158a2785234
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:30:09 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:30:09 +0100
+
+    -
+
+
+:000000 100644 0000000000000000000000000000000000000000 a281828998e80bb8bb8c3f5d30df35a264251d90 A	jenkins/jenkins/.java/fonts/17.0.9/fcinfo-1-12a9bf338993-Debian GNU/Linux-12-en-.properties
+:100644 100644 a196ce69f74c706fe478cdee6f8dd0d0eedf015e 57ed8108478fa7c4c7a8db3111364ae859e1f0c7 M	jenkins/jenkins/copy_reference_file.log
+:100644 100644 d9d584ed36a236f3a27a934e3785cbc11ee6a8cc cab5ec888117c757cb15f78287e50e5f0c0372de M	jenkins/jenkins/fingerprints/ec/c8/ff92a183dc748b488b693aedf849.xml
+:100644 000000 dce0f2ab09d8041633da6e197fa4a9f956bf834e 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/71/log-index
+:100644 000000 9b9353deadf63b08f9f121d17da11cf2bf0098b0 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/72/build.xml
+:100644 000000 026df67338a380400ab2b20aa0709af7aaef7b14 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/72/log
+:100644 000000 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/72/log-index
+:100644 100644 971c926c5cf58203004879332a506e75a2b6817e a4a68130dd6bda2ea39a7bddbbdd9a8cfc434352 R085	jenkins/jenkins/jobs/Pingurl app/builds/71/build.xml	jenkins/jenkins/jobs/Pingurl app/builds/76/build.xml
+:000000 100644 0000000000000000000000000000000000000000 2e40b9e2923ceb39321732a3731e575d97e12235 A	jenkins/jenkins/jobs/Pingurl app/builds/76/changelog8600202482683294254.xml
+:000000 100644 0000000000000000000000000000000000000000 c21cadfc2c9ce6a6f7b52d6d8e7fc824a97596a3 A	jenkins/jenkins/jobs/Pingurl app/builds/76/log
+:000000 100644 0000000000000000000000000000000000000000 943f0f211220301be0fa18dae7e83ea9d64913e6 A	jenkins/jenkins/jobs/Pingurl app/builds/76/log-index
+:100644 100644 8c743c9ffad06c513e035c874e030cac866da072 4209a7bb5ba6741de787ae31a34cd5dfc62ba1be R070	jenkins/jenkins/jobs/Pingurl app/builds/71/workflow-completed/flowNodeStore.xml	jenkins/jenkins/jobs/Pingurl app/builds/76/workflow-completed/flowNodeStore.xml
+:000000 100644 0000000000000000000000000000000000000000 609ed8a2050932a398a7b26fdcb3e07de9a1b94e A	jenkins/jenkins/jobs/Pingurl app/builds/77/build.xml
+:100644 100644 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 R100	jenkins/jenkins/jobs/Pingurl app/builds/71/changelog7741777614458025268.xml	jenkins/jenkins/jobs/Pingurl app/builds/77/changelog7787797473823622925.xml
+:100644 100644 43709441be0c17971c502f0b1cf270d51983d557 8f2218e2307c077977b04b57b2ddc251fb20780d R055	jenkins/jenkins/jobs/Pingurl app/builds/71/log	jenkins/jenkins/jobs/Pingurl app/builds/77/log
+:000000 100644 0000000000000000000000000000000000000000 256d12dbff728ccd69a40c4721a57e29ebc18bd4 A	jenkins/jenkins/jobs/Pingurl app/builds/77/log-index
+:000000 100644 0000000000000000000000000000000000000000 4387959bb7bcc85b8308bf8a5b8cd10928c94a97 A	jenkins/jenkins/jobs/Pingurl app/builds/77/workflow-completed/flowNodeStore.xml
+:100644 100644 190f551888f71eae88bcdaa4360077d1ff685bcb 8c31f14f4a6ffe6513cb384abcc2c7b2efc31481 M	jenkins/jenkins/jobs/Pingurl app/builds/permalinks
+:100644 100644 dd475631baeff3ce652b97d921c1cc43c917b9e2 8e14edce9ccd63cedb63bd0c07f8b829438a6c8a M	jenkins/jenkins/jobs/Pingurl app/nextBuildNumber
+:100644 100644 d957eb67f4a94d506e88db7fdb8d43394f197745 c907daaabb2d380ffdd5bf12509cb40e8c5b35d1 M	jenkins/jenkins/queue.xml
+:100644 100644 245f47abbc8e9c9eb0b7a9881931a1f5ae58ef69 d957eb67f4a94d506e88db7fdb8d43394f197745 M	jenkins/jenkins/queue.xml.bak
+commit a24dad2f4cfc7e88f0f7b5de9cbb8158a2785234
+tree f242c9040a3f4889730206029c8655d831f53810
+parent 276877fb10f59b6d205d298f72571f6da9a76870
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:30:00 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:30:00 +0100
+
+    fix: :bug: update Pylint threshold to 9.0 in local_checks.sh
+
+
+:100755 100755 4f354293018ca62e11ca1294983c6a0ef9496b3f 36c70652db120ec5270dcc7d0a589925675eb942 M	local_checks.sh
+commit 276877fb10f59b6d205d298f72571f6da9a76870
+tree 13e3c47e343997ad658f2c41a5e641a717c2c2a7
+parent bd2cf25e94b3f70292fdeadc0ab411d43d44b596
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:29:39 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:29:39 +0100
+
+    fix: :bug: update pylint threshold to 9.0 and add Postman tests with Newman
+
+
+:100644 100644 2e64aca07ebb062f86c20d9bac27078aa46faf8a cc9ea8ddaea4a76acffb29ee51758319d4eac5d8 M	jenkins/Jenkinsfile

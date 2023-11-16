@@ -1,0 +1,293 @@
+Started by an SCM change
+Obtained jenkins/Jenkinsfile from git git@github.com:nackc8/cicd-grp--lederhosen.git
+[8mha:////4MDpX5avLhIAPcCqLUvw+AQKog+7PUsLNjIo75XUjB2nAAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4FZA3sFcuWY+gSOdmjQwXkK2kPDhRgGRHj4M8bquUHyMAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
+Running on [8mha:////4PULKLaX7294nokFLsXemyg/KWjr8OJGAyU/oSL1PPUvAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZR/eT83ILSktQifY2k0sycEt3MPE19AHHxbH3KAAAA[0mJenkins in /var/jenkins_home/workspace/Pingurl app@2
+[8mha:////4OZYOGsal2yJJtzGQ1wuZh+Dv35sfEp13uJJ/CDj4EBHAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[8mha:////4BrGpk5OFUT4QoL4wTrlrLO3cZIDYNMjZjnFplF3gNsoAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gQkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jc09154wAAAAA==[0m[Pipeline] stage
+[8mha:////4HWs6axrjOKeKIifsBvDATHiweffZ6rMOW0qok3WqxYuAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] { (Declarative: Checkout SCM)
+[8mha:////4KcfCRJBanweP+XuYMySs6FaA5wL8VdgeiXDAuTEtZZnAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaWGsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gfg7KmOvAAAAA==[0m[Pipeline] checkout
+The recommended git tool is: git
+using credential 40f311dc-de1a-4ef2-85b9-491f11fda76c
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/Pingurl app@2/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@github.com:nackc8/cicd-grp--lederhosen.git # timeout=10
+Fetching upstream changes from git@github.com:nackc8/cicd-grp--lederhosen.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+using GIT_SSH to set credentials 
+Verifying host key using manually-configured host key entries
+ > git fetch --tags --force --progress -- git@github.com:nackc8/cicd-grp--lederhosen.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/tests/api_test-post_test^{commit} # timeout=10
+Checking out Revision 6d104a74f7f28b2eb440d7043befccf40a4034fe (refs/remotes/origin/tests/api_test-post_test)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 6d104a74f7f28b2eb440d7043befccf40a4034fe # timeout=10
+Commit message: "-"
+ > git rev-list --no-walk 6d104a74f7f28b2eb440d7043befccf40a4034fe # timeout=10
+[8mha:////4E8AbWI3jNnLKav2MiS6D4xwsBTF68bqYQQ8hXeYPGBwAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGRNjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9Dg2gqvAAAAA==[0m[Pipeline] }
+[8mha:////4KVeFijT2XUIpzCwMzXtUi0AlRbZ0i2wYT87aO8P/TKaAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQRbWRhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9J+wGOvAAAAA==[0m[Pipeline] // stage
+[8mha:////4MTApYNalYyjuC7O4GoOii822v3BYUv+pvy5hY2yf0KFAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQDEh2iorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INtuQqUcEAAAA=[0m[Pipeline] withEnv
+[8mha:////4BtT7c7eWshp2PpmjMMq0jzNQoU3ECbmucCLhv5bjCZJAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoiUzoiJNerCCUITQtLo/zZJSSdOxNW4Ay2VmPBg2Zas93pDGQOcKBjuNHYWY2t570czJ54pdDdPmTu68pYwkte80bkhpc9rbShpWFUw2AjYamw9RYsmwU44+ZCVl2iqSwrzdhTArBrgCYWYyUmG9C1TgP19VJHwx/kLgKlPwOrDYvXyLD8BobDcwgAAAA==[0m[Pipeline] {
+[8mha:////4IsfyvwYMRQKObq1lUkktt+VxwI4PilE9ArTefNTGc6rAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUZUVMrFEWThCaEJJG/7dJSjpxIq7GHWipxIQHy7ZkvdcbqhjgRMEwp7GzGFvLej+aObFMobt5yszRlbWEkbxmQmdBSp/XKihpWFWUsOGw1dh6ihZNgh138iFrL9HUlxTm7cihtGqAJxR8JicZ0rdMAfb3UUXCH+cvAKY+Qdk0ix2WZ/UBbwyqm8IAAAA=[0m[Pipeline] stage
+[8mha:////4IjlkI6D+rr+ojsqyjc+T9Q4KQf9f1UvAvywDS3OjbQ5AAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUwIiYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfLdfrbD/Cw+y7kUycIAAAA=[0m[Pipeline] { (Checkout)
+[8mha:////4GvR5sQAK4G+qy3jXgnLB1E5qaFdTXaICdWEMdrZUQZWAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBB2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyu3uU/vwBgq0rvS+AAAA[0m[Pipeline] checkout
+The recommended git tool is: git
+using credential 40f311dc-de1a-4ef2-85b9-491f11fda76c
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/Pingurl app@2/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@github.com:nackc8/cicd-grp--lederhosen.git # timeout=10
+Fetching upstream changes from git@github.com:nackc8/cicd-grp--lederhosen.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.39.2'
+using GIT_SSH to set credentials 
+Verifying host key using manually-configured host key entries
+ > git fetch --tags --force --progress -- git@github.com:nackc8/cicd-grp--lederhosen.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/tests/api_test-post_test^{commit} # timeout=10
+Checking out Revision 6d104a74f7f28b2eb440d7043befccf40a4034fe (refs/remotes/origin/tests/api_test-post_test)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 6d104a74f7f28b2eb440d7043befccf40a4034fe # timeout=10
+Commit message: "-"
+[8mha:////4EesCTP4DCnSoqwVo7VcjKTekqbrT2yw6t/ixOlOYvuxAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIihKgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrt/lO7N7BnLt++AAAA[0m[Pipeline] }
+[8mha:////4NM5LyGecje9+i5C3J7LJObS1mFNV+pbgU5w3dowVTQ3AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiKGgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrt/lO7N4glvS6+AAAA[0m[Pipeline] // stage
+[8mha:////4B3WP6+PXoU+IngTJ8rpjx9qV6clVz3DrVI5RsOE+hbMAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUnRgQE2uUhROEJoSk0f9tkpJOnIircQdaKjHhwbItWe/1hioGOFEwzGnsLMbWst6PZk4sU+hunjJzdGUtYSSvmdBZkNLntQpKGlYVJWw4bDW2nqJFk2DHnXzI2ks09SWFeTtyKK0a4AkFn8lJhvQtU4D9fVSR8Mf5C4CpT1A2zWKH5Vl9ANydZ8vCAAAA[0m[Pipeline] stage
+[8mha:////4CnNSYwjiBwebfUlDg/sNfv3bROoeuj7eKL2dUL/5F7LAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUTCAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD0rlhNLCAAAA[0m[Pipeline] { (Build Image)
+[8mha:////4EirYtT28rVTwIbblz5iriI7Lla/PBL/S1OqSP0DmcpaAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUbCDE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxASnCIIrCAAAA[0m[Pipeline] script
+[8mha:////4PteJOn5NQL6L3/inUsLsTpkpG+MoK3MrxCd0sE0e014AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogU2BDqxBp14QShCSFp9H9JUtKJE3E17kCgEhMeLNuS9Z4vqIKHhrxmVmFvMHSGDW7UObFEvr84SszSmXWEgZxirUotSXWca0tRwayihAWHpcLOUTCoI6y4FXdRO4G6PkWftwOH0sgbPKDgmRyFj98yeVhfRxkIf5y/AJiGCOV2n223+TyrN7xWSV3CAAAA[0m[Pipeline] {
+[8mha:////4GmzCQ8QcHo3dYce2kyvle4/HzOhtd+kbgQR7mp8m6xWAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICtIgqreWGF5jYGCfWnbEdkooX8TX+QCASFVusdraZ5wuWKcKRo8XWUOcoNQ6D7+20cODYXTwP2PIZG6bE3qA0g2Rt6hklZwNzihIWAlaGGs/Jkc2wFq26q8orstUpx+k7CCidvsEDCjGZs4r5C2OEzbXXienn+SuAMWQo99tP7cIbaOP4NL4AAAA=[0m[Pipeline] sh
++ docker build --no-cache -t pingurl:latest .
+#0 building with "default" instance using docker driver
+
+#1 [ 1/11] FROM docker.io/library/python:3.12
+#1 DONE 0.0s
+
+#2 [ 2/11] WORKDIR /backend
+#2 CACHED
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B 0.0s done
+#3 DONE 0.0s
+
+#4 [internal] load build definition from Dockerfile
+#4 transferring dockerfile: 439B 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load metadata for docker.io/library/python:3.12
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 3.17kB 0.0s done
+#6 DONE 0.1s
+
+#7 exporting to image
+#7 exporting layers
+#7 exporting layers 4.8s done
+#7 writing image sha256:64de2b3fbd1bc0df23ca9d6283157f3ffec2b8afe883aa8cf6cfd3c0ef05dd86 done
+#7 naming to docker.io/library/pingurl:latest 0.0s done
+#7 DONE 4.8s
+[8mha:////4Am0vXuUlrCErhFakCb8g91MACfcs20e7S/582O+Gz/mAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKC0iIqWisNLzCJMXasO8d2cCpexNf4A4FIVGyx2tlmni9YxwBHDhqtot5QbA16N+p5YebQXx1ntHzBlimyU9io3HCnTgs2nBQsKUpYCdgoah1HQzrBVlh5l5WTpKtzCvN3EFCaboAHFGI2JxnSF6YAu9vYRaaf568AJu8TlHX9qf0b7E/nQb4AAAA=[0m[Pipeline] }
+[8mha:////4ALFBo5DPpDIElABaHCmlyMrJbty3qNQcBXJuayFLN8PAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIioEIoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcrdPtf28AEud0rYvgAAAA==[0m[Pipeline] // script
+[8mha:////4MYxEU+69dpLFDlVl4ANnAvPpOmkzAzPkPPC+CeOXcSzAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiEAUSSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANQ4Ryt8+1PXwAAHdIsr4AAAA=[0m[Pipeline] }
+[8mha:////4P1kM0ygsQZoFOJrrDH4jXPzO7T4VUTReg+dw67WB7osAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIikBAFSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANQ4Ryt8+1PXwANLmr6b4AAAA=[0m[Pipeline] // stage
+[8mha:////4KPvgWlAtXfTdZyk/VSriR8SMToyHhk07I7+WB1n/pPdAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUZWBBTF2jLpwgNCEkjf4vSUo6cSKuxh0IVGLCg2Vbst7zBVXwcCSvmVU4GAy9YaObdE4skR8ujhKzdGY9YSCnWKdSR1K1S+0oKlhUlLDisFbYOwoGdYQNt+IuaidQ16fo83bgUBp5gwcUPJOj8PFbZg/b6yQD4Y/zFwDzGKFsmmy7/edZvQHkVNMxwgAAAA==[0m[Pipeline] stage
+[8mha:////4BFvRdgSh9QOu1Y/dXPzNMUNePrXIqC2VeoVXNZNmKC3AAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUYoABMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfAAyQCqkwgAAAA==[0m[Pipeline] { (Lint)
+[8mha:////4MrToWk3/hxFgktug5LBCO68SzbG5oUjy7Vt19ZqMaKjAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUYgEJMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfAAnLfKUwgAAAA==[0m[Pipeline] script
+[8mha:////4L56zsTFeiIQEYEexbwlouVYnARCXlOMc4gzN1BGVmqvAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUYgIhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD0QKVszCAAAA[0m[Pipeline] {
+[8mha:////4OXt5niJW6ysE3AX4eNrYsbUSQzQ/LJf5iJkvfTSafT/AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCoEIoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDREKHeHXPvt8AHN/bm5vgAAAA==[0m[Pipeline] sh
++ docker run --rm pingurl:latest pylint --fail-under=9.0 /backend
+************* Module backend.pingurl.watched_urls
+pingurl/watched_urls.py:28:12: W0707: Consider explicitly re-raising using 'raise BadRequest("The 'activateAt' parameter must an ISO 8601 date-time.") from e' (raise-missing-from)
+pingurl/watched_urls.py:51:29: W1309: Using an f-string that does not have any interpolated variables (f-string-without-interpolation)
+pingurl/watched_urls.py:61:12: W0707: Consider explicitly re-raising using 'raise BadRequest(str(e)) from e' (raise-missing-from)
+pingurl/watched_urls.py:27:8: W0612: Unused variable 'e' (unused-variable)
+pingurl/watched_urls.py:7:0: C0412: Imports from package pingurl are not grouped (ungrouped-imports)
+************* Module backend.pingurl.schedule
+pingurl/schedule.py:22:8: W0603: Using the global statement (global-statement)
+************* Module backend.pingurl.persistance
+pingurl/persistance.py:14:4: W0603: Using the global statement (global-statement)
+pingurl/persistance.py:83:4: C0206: Consider iterating with .items() (consider-using-dict-items)
+************* Module backend.pingurl.models
+pingurl/models.py:6:4: R0913: Too many arguments (6/5) (too-many-arguments)
+************* Module backend.tests.test_persistance
+tests/test_persistance.py:3:0: W0611: Unused import pytest (unused-import)
+tests/test_persistance.py:10:0: W0611: Unused delete_watched_url imported from pingurl.persistance (unused-import)
+tests/test_persistance.py:10:0: W0611: Unused get_url_data imported from pingurl.persistance (unused-import)
+tests/test_persistance.py:10:0: W0611: Unused get_url_ids imported from pingurl.persistance (unused-import)
+tests/test_persistance.py:10:0: W0611: Unused add_ping_data imported from pingurl.persistance (unused-import)
+tests/test_persistance.py:10:0: W0611: Unused get_stats imported from pingurl.persistance (unused-import)
+************* Module backend.tests.test_models
+tests/test_models.py:43:11: C0121: Comparison 'ping_data.ok() == True' should be 'ping_data.ok() is True' if checking for the singleton value True, or 'ping_data.ok()' if testing for truthiness (singleton-comparison)
+tests/test_models.py:50:11: C0121: Comparison 'ping_data.ok() == False' should be 'ping_data.ok() is False' if checking for the singleton value False, or 'not ping_data.ok()' if testing for falsiness (singleton-comparison)
+************* Module backend.tests.test_watched_urls
+tests/test_watched_urls.py:21:30: W0621: Redefining name 'client' from outer scope (line 19) (redefined-outer-name)
+tests/test_watched_urls.py:25:33: W0621: Redefining name 'client' from outer scope (line 19) (redefined-outer-name)
+tests/test_watched_urls.py:40:43: W0621: Redefining name 'client' from outer scope (line 19) (redefined-outer-name)
+tests/test_watched_urls.py:56:37: W0621: Redefining name 'client' from outer scope (line 19) (redefined-outer-name)
+tests/test_watched_urls.py:2:0: W0611: Unused json imported from flask (unused-import)
+tests/test_watched_urls.py:9:0: W0611: Unused WatchedUrl imported from pingurl.models (unused-import)
+tests/test_watched_urls.py:10:0: W0611: Unused business imported from pingurl (unused-import)
+tests/test_watched_urls.py:11:0: W0611: Unused Mock imported from unittest.mock (unused-import)
+tests/test_watched_urls.py:12:0: W0611: Unused BadRequest imported from werkzeug.exceptions (unused-import)
+tests/test_watched_urls.py:13:0: W0611: Unused datetime imported from datetime (unused-import)
+tests/test_watched_urls.py:13:0: W0611: Unused timedelta imported from datetime (unused-import)
+************* Module backend.tests.test_schedule
+tests/test_schedule.py:28:43: W0621: Redefining name 'sample_watched_url' from outer scope (line 16) (redefined-outer-name)
+tests/test_schedule.py:47:33: W0621: Redefining name 'sample_watched_url' from outer scope (line 16) (redefined-outer-name)
+tests/test_schedule.py:3:0: W0611: Unused call imported from unittest.mock (unused-import)
+************* Module backend.tests.test_ping
+tests/test_ping.py:4:0: W0611: Unused import pytest (unused-import)
+tests/test_ping.py:10:0: W0611: Unused send_ping_persist_data imported from pingurl.ping (unused-import)
+tests/test_ping.py:12:0: W0611: Unused persistance imported from pingurl (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 9.06/10 (previous run: 0.00/10, +9.06)
+
+[8mha:////4AIXDdy/iZCBHKP+TZf4yrd5SGsJelF/jn7wUJ5k444aAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIioEIoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcr9Ntfu8AFSjtgYvgAAAA==[0m[Pipeline] }
+[8mha:////4HerfiMjiQckwKQWAdbW67JLjMPBuYbPL7Bd0VyYPI9oAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIihQYJUaW10vACExvjxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgsNc0WIqdRe9GkxdOHIar4wl7vmDHFNlpbPXUstLNgi0nDUuKElYCNpo6x9GSSbAVvXzIykky1TmF/B0FlFbd4QmFyOYkQ/rCHGB3G1Vk+nn+CmD2PkG5r3PVhw9qzEvpvgAAAA==[0m[Pipeline] // script
+[8mha:////4B5PjyTfCiNQJ2if9DpQA/JiIYSTXmjpaiN/1zbmkX7kAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMKRSEGBqNJaaXiBiQ/jxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgRI80WIqdFd6NJi8xcRiujifR80V0TJEdihanljU2C7acEJYUJawkbJA6x9GSSbCVvXqoyiky1TmF/B0llFbf4QmFzOakQvrCHGB3G3Vk+nn+CmD2PkFZ17n2hw9eAqiyvgAAAA==[0m[Pipeline] }
+[8mha:////4ARia9YY0QCqHqjFHn+uCBu+F2I+RhNkvsYxj37/JDqQAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiAaJBqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDu9rm2hw9wAqrYvgAAAA==[0m[Pipeline] // stage
+[8mha:////4KHZ4ZMWBrDusB8lX9KHjFML1I9ocuymLG3g4/h6a+TXAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUFWJCTF2jLpwgNCEkjf4vSUo6cSKuxh0IVGLCg2Vbst7zBVXwcCSvmVU4GAy9YaObdE4skR8ujhKzdGY9YSCnWKdSR1K1S+0oKlhUlLDisFbYOwoGdYQNt+IuaidQ16fo83bgUBp5gwcUPJOj8PFbZg/b6yQD4Y/zFwDzGKFsmmy7/edZvQH+LTARwgAAAA==[0m[Pipeline] stage
+[8mha:////4HtAtJjPZClTSd5yABhEy70jEpXstF0xUynTcBhuQ2Q4AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0QLAgpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD02yRsvCAAAA[0m[Pipeline] { (Run Tests)
+[8mha:////4JvUHXQG7bKYKwQnWJHq4hW9Sv1AStLXRgGjcqpxUXvAAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0QIIBMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfADpB/iZwgAAAA==[0m[Pipeline] script
+[8mha:////4Mgiu77rpcSOw7rHhj7irD1xmXxW/3anwLk9AKdC/cTrAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0YAAJMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfAD8aiCpwgAAAA==[0m[Pipeline] {
+[8mha:////4GNZS9GaQkJuxIWeWPU3kAyrU+Q3rM5WXuUblSEOns8YAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJS0IAQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUG53n9qHN65NpgK+AAAA[0m[Pipeline] sh
++ docker run --rm pingurl:latest pytest /backend
+============================= test session starts ==============================
+platform linux -- Python 3.12.0, pytest-7.4.3, pluggy-1.3.0
+rootdir: /backend
+configfile: pytest.ini
+collected 12 items
+
+tests/test_models.py ....                                                [ 33%]
+tests/test_persistance.py ..                                             [ 50%]
+tests/test_ping.py .                                                     [ 58%]
+tests/test_schedule.py ..                                                [ 75%]
+tests/test_watched_urls.py ...                                           [100%]
+
+=============================== warnings summary ===============================
+tests/test_ping.py::test_send_ping_success
+  /backend/tests/test_ping.py:27: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "Date": datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S GMT")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 12 passed, 1 warning in 0.41s =========================
+[8mha:////4Ou2AcR4fZNTj5wedj1d2pg9bmEflket2aXjvUzFmeTCAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCBAUSSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANQ4Ryv821O3wArmI/eL4AAAA=[0m[Pipeline] }
+[8mha:////4IlfK3D/ZkM9vVz4J84Sp4+a+Ob2VtBtTMTHABuSIhefAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBBIFSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANQ4Ryv821O3wAmqzcI74AAAA=[0m[Pipeline] // script
+[8mha:////4BKX/Do0CG3pXat7c9nif178VJqyDvakP4LYeSjbY1jdAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiAaJBqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDut7l2hw+i7k/SvgAAAA==[0m[Pipeline] }
+[8mha:////4E98YOI6LWJPZ3rwyqZpegn47b1NmAbIac5Vvkz6avY9AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSBCpEldZKwwtMbIwT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYPBXtNgKXYWvRtNXjhxGK6OJ+z5gh1TZKex1VPLSjcLtpw0LClKWAnYaOocR0smwVb08iErJ8lU5xTydxRQWnWHJxQim5MM6QtzgN1tVJHp5/krgNn7BOW+zlUfPr1sGoC+AAAA[0m[Pipeline] // stage
+[8mha:////4MlQNxXsjfapS1e5LPPCOkwIdvNE7zIu3pjkMznbqOugAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycohUlbohJtaoCycIaQhJo//bJKWdOBFX4w4EKjHhwbItWe/5gjIGOFIw3GnsLUZl+eAnkxOfKfRXTzN3dOGKMJLXvNVzS50+rbWlpGFVwWAjYKtReYoWTYKdcPIuKy/RVOcU8nYQwGw3wgMKkclJhvQtS4D9beoi4Y/zFwDLkIDVdbam+TzLN9XAyx/CAAAA[0m[Pipeline] stage
+[8mha:////4Crk4kWMCO+1B2rLAmejnRCmntQf4ZeHIpUIcfMgHCoUAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0KRNiYo2ycILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMUAJwqGOY2dxdha1vvRzIllCt3NU2aOrqwljOQ1EzoLUvq8VkFJw6qihA2HrcbWU7RoEuy4kw9Ze4mmvqQwb0cOpVUDPKHgMznJkL5lCrC/jyoS/jh/ATD1CcqmWeywPKsPIshjPcIAAAA=[0m[Pipeline] { (Stop Existing Container)
+[8mha:////4FyyxCK5FdoI4Dw9nI3XIRgq1kaYAxb6eM40wjpzX92oAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0ARbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxAUxleXrCAAAA[0m[Pipeline] script
+[8mha:////4GTu63gNPmml49I7mCRuPzdFFPab+nYKldxjhRZawQhDAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0QTAgpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD+jQxyjCAAAA[0m[Pipeline] {
+[8mha:////4OLcnlb3kunphCNTpdMh1X+WIfwz2rOKB2mTDVygez/8AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSIIGEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK7+9Q+vAGaE3/ivgAAAA==[0m[Pipeline] sh
++ docker stop pingapp
+pingapp
+[8mha:////4Fsd0Hr7pERmeUh+lxiY2cMfaFUOXk9V7aP+/UkndRQxAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSICGEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK7+9Q+vAHbImT7vgAAAA==[0m[Pipeline] sh
++ docker rm pingapp
+pingapp
+[8mha:////4Iw7vni7BDXVV5ddTT2hg6Qa1AjoyivXBd/StyUTbDSHAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJCAaJAqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDut7l2hw9M4rYBvgAAAA==[0m[Pipeline] }
+[8mha:////4KFsEFLPUrrI167+6ScbtzuUTr8bPj17UsrNR0JjMx6aAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJKBBqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDut7l2hw9/Ae29vgAAAA==[0m[Pipeline] // script
+[8mha:////4EDrWfOROyRebcKVFfZ091mWGAPnQKfdh5SV2AY6HakHAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIVIhqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAczeJyjrfa5D/QFrInCivgAAAA==[0m[Pipeline] }
+[8mha:////4Dr7w1x51QE2ysLwVbK8kzO+Icr7aUw7mL3kd2dnvEvPAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIpCBWiSmul4QUmPowT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYMRPdJgKXZWeDeavMTEYbg6nkTPF9ExRXYoWpxa1tgs2HJCWFKUsJKwQeocR0smwVb26qEqp8hU5xTyd5RQWn2HJxQym5MK6QtzgN1t1JHp5/krgNn7BOVhn6uuP1jBKx6+AAAA[0m[Pipeline] // stage
+[8mha:////4ARU/BA2lWsio9gWi7mQ2VG6Ya77x4k9uAkHS23YOpdUAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUlWBCTF2jLpwgNCEkjf4vSUo6cSKuxh0IVGLCg2Vbst7zBVXwcCSvmVU4GAy9YaObdE4skR8ujhKzdGY9YSCnWKdSR1K1S+0oKlhUlLDisFbYOwoGdYQNt+IuaidQ16fo83bgUBp5gwcUPJOj8PFbZg/b6yQD4Y/zFwDzGKFsmmz73edZvQFhy7y5wgAAAA==[0m[Pipeline] stage
+[8mha:////4DyauRqk/dG+SMzOilrB1gFoU3612Gst8/NGZ0ESP5HbAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoh0oRNiYo26cILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMYAJwqGO42dxdha3vvRzIlnCt3NU+aOrrwljOQ1b3RuSOnzWhtKGlYVDDYCthpbT9GiSbATTj5k5SWa6pLCvB0FMKsGeEIhZnKSIX3LFGB/H1Uk/HH+AmDqE7D6sFi9PMsP+Y+xAMIAAAA=[0m[Pipeline] { (Run Application)
+[8mha:////4A5oIvG2eojRYnz0Ftj0byyG638OtkZHrZP0HQ7HLzcmAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0KgtiYo2ycILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMUAJwqGOY2dxdha1vvRzIllCt3NU2aOrqwljOQ1EzoLUvq8VkFJw6qihA2HrcbWU7RoEuy4kw9Ze4mmvqQwb0cOpVUDPKHgMznJkL5lCrC/jyoS/jh/ATD1CcqmWeywPKsPlyKrR8IAAAA=[0m[Pipeline] script
+[8mha:////4Mtea5VwdV6U4up0rwLXN6O1kd7yYtTaV30zeZcz3itcAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0AgbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxATOXFRXCAAAA[0m[Pipeline] {
+[8mha:////4KOrI7Y4KQ5VcoZz8Upbgb+/bMXMPJM4Zq9YvMgDBetYAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSIZAQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUG53n9qHNzN5Fy++AAAA[0m[Pipeline] sh
++ docker run -d -p 5000:5000 --name pingapp pingurl:latest
+a5232163653746af0c01c46bf5f20f2fadf8994ac21d02e65e2f871a2cd9291b
+[8mha:////4LFxEeXyDlrY0zAx9crf8tWy98/fKEbJtZ6UqbIsmeUFAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSIYQQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrt/lO7N8WCoj++AAAA[0m[Pipeline] }
+[8mha:////4Fv/UMFzTgCt4hoFbMOpkDRNgpehXVQ4/pqMM3ZGdMwqAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJCQxpEldZKwwtMbIwT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYPBXtNgKXYWvRtNXjhxGK6OJ+z5gh1TZKex1VPLSjcLtpw0LClKWAnYaOocR0smwVb08iErJ8lU5xTydxRQWnWHJxQim5MM6QtzgN1tVJHp5/krgNn7BGW9z3WoPwb5Ql6+AAAA[0m[Pipeline] // script
+[8mha:////4JCDirWPAcwGtGpvuckfDPagELOnxdG0ksnaDg8qPUPLAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIRRWgQVVorDS8w8WGcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThyM6JEGS7GzwrvR5CUmDsPV8SR6voiOKbJD0eLUssZmwZYTwpKihJWEDVLnOFoyCbayVw9VOUWmOqeQv6OE0uo7PKGQ2ZxUSF+YA+xuo45MP89fAczeJygP+1x1/QEZexcMvgAAAA==[0m[Pipeline] }
+[8mha:////4D2/uqtD48BAwNOKaa+dDi48X0Wduk4vO1YPPD06wPkTAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIaBBqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFAetrn2uw8hOYT9vgAAAA==[0m[Pipeline] // stage
+[8mha:////4LgNeWL9QwfrQR6QxNpqhmJPtEJho5bhhLa1SSFDN7UyAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUFRILYuoadeEEoQkhafR/SVLSiRNxNe5AoBITHizbkvWeL6iChyN5zazCwWDoDRvdpHNiifxwcZSYpTPrCQM5xTqVOpKqXWpHUcGiooQVh7XC3lEwqCNsuBV3UTuBuj5Fn7cDh9LIGzyg4JkchY/fMnvYXicZCH+cvwCYxwhl02Tb7z7P6g1E4VGVwgAAAA==[0m[Pipeline] stage
+[8mha:////4HostBlCzszInzvtIhyIptIpgaIi5k1SeVcWu7B/XwV4AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0ALEgpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYL8sJttPz+LD7KBoKTCAAAA[0m[Pipeline] { (Run Postman Tests with Newman)
+[8mha:////4B2w4Q7w9jq97EtQ0FmeB46asTzpHWuvxtjX3VRRrJweAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0ARbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5AfdrPt52fxAZRHx0bCAAAA[0m[Pipeline] script
+[8mha:////4Pe2ARu5XzXmP0o6CXT+bMhhudgAsRY85/oW5eNoVPmeAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoh0ogtiYo26cILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMYAJwqGO42dxdha3vvRzIlnCt3NU+aOrrwljOQ1b3RuSOnzWhtKGlYVDDYCthpbT9GiSbATTj5k5SWa6pLCvB0FMKsGeEIhZnKSIX3LFGB/H1Uk/HH+AmDqE7D6sFi9PMsP+urdAcIAAAA=[0m[Pipeline] {
+[8mha:////4KJ2DIJzqm75KGhFqqP/OvVFLO0SfxnyXlwCWu1cNlbxAAAAox+LCAAAAAAAAP9tjTESwiAURH/iWNhaegjSxcKxsmVoPAEmiBDmfwJEUnkir+YdRDNj5RY7+7Z5zxesY4AjBc2swsFg7AzzbtJlsUxhuDrKzNKFdYSRnGJCZUG9Oi0oKClYUtWw4rBR2DmKBnWCLbfyLhsnUTfnFMp34FCbfoQHVLyYkwzpC3OA3W3qI+HP81cAs09Qt+2n9v4N8tcxgr4AAAA=[0m[Pipeline] sleep
+Sleeping for 10 sec
+[8mha:////4BzBUpq3QfrRvTx8ECKAjRVJp2P20a/HdbNDEg2hOZZvAAAApB+LCAAAAAAAAP9tjbEOwiAURV9rHFwd/Qi6NSbGyZWw+AXYIkLJexSodPKL/DX/QbSJk3e4uecu5/mCdQxwpKCZVTgYjJ1h3k26LJYpDFdHmVm6sI4wklNMqCyoV6cFBSUFS6oaVhw2CjtH0aBOsOVW3mXjJOrmnEL5Dhxq04/wgIoXc5IhfWEOsLtNfST8ef4KYPYJ6rb91N6/AT3LqQW+AAAA[0m[Pipeline] sh
++ docker run --network=host --rm pingurl:latest newman run ./newman_tests/Pingurl.postman_collection.json -e ./newman_tests/dev.postman_environment.json
+newman
+
+Pingurl
+
+→ create watched url
+  POST http://localhost:5000/watched-urls [errored]
+     socket hang up
+
+→ get watched url ids
+  GET http://localhost:5000/watched-urls [errored]
+     connect ECONNREFUSED 127.0.0.1:5000
+
+→ stats
+  GET http://localhost:5000/stats [errored]
+     connect ECONNREFUSED 127.0.0.1:5000
+
+→ remove watched url
+  DELETE http://localhost:5000/watched-urls/0 [errored]
+     connect ECONNREFUSED 127.0.0.1:5000
+
+┌─────────────────────────┬──────────┬──────────┐
+│                         │ executed │   failed │
+├─────────────────────────┼──────────┼──────────┤
+│              iterations │        1 │        0 │
+├─────────────────────────┼──────────┼──────────┤
+│                requests │        4 │        4 │
+├─────────────────────────┼──────────┼──────────┤
+│            test-scripts │        0 │        0 │
+├─────────────────────────┼──────────┼──────────┤
+│      prerequest-scripts │        0 │        0 │
+├─────────────────────────┼──────────┼──────────┤
+│              assertions │        0 │        0 │
+├─────────────────────────┴──────────┴──────────┤
+│ total run duration: 443ms                     │
+├───────────────────────────────────────────────┤
+│ total data received: 0B (approx)              │
+└───────────────────────────────────────────────┘
+
+  #  failure  detail                              
+                                                  
+ 1.  Error                                        
+              socket hang up                      
+              at request                          
+              inside "create watched url"         
+                                                  
+ 2.  Error                                        
+              connect ECONNREFUSED 127.0.0.1:5000 
+              at request                          
+              inside "get watched url ids"        
+                                                  
+ 3.  Error                                        
+              connect ECONNREFUSED 127.0.0.1:5000 
+              at request                          
+              inside "stats"                      
+                                                  
+ 4.  Error                                        
+              connect ECONNREFUSED 127.0.0.1:5000 
+              at request                          
+              inside "remove watched url"         
+[8mha:////4CYX0hIY3uLsI3ClQuYgIc6YHO17vMvfRMM3xBALN8iQAAAApB+LCAAAAAAAAP9tjbEOwiAURV9rHFwd/Qi6NTHGyZWw+AXYIkLJexSodPKL/DX/QbSJk3e4uecu5/mCdQxwpKCZVTgYjJ1h3k26LJYpDFdHmVm6sI4wklNMqCyoV6cFBSUFS6oaVhw2CjtH0aBOsOVW3mXjJOrmnEL5Dhxq04/wgIoXc5IhfWEOsLtNfST8ef4KYPYJ6rb91N6/AXz6shy+AAAA[0m[Pipeline] error
+[8mha:////4Lzycp3DX+IpntNP6qsslb62lZQAHbnKwPgzkRGK7/GcAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMKhCgWiSmul4QUmPowT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYMRPdJgKXZWeDeavMTEYbg6nkTPF9ExRXYoWpxa1tgs2HJCWFKUsJKwQeocR0smwVb26qEqp8hU5xTyd5RQWn2HJxQym5MK6QtzgN1t1JHp5/krgNn7BOVhn6uuP3GhGNO+AAAA[0m[Pipeline] }
+[8mha:////4Iv9nTqXw1sIoD3nIqzDBQQM9Gsexww3XXLJt5KJCrasAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiCqBAqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFAetrn2uw9uI02BvgAAAA==[0m[Pipeline] // script
+[8mha:////4B68j+dg4uQGF5xJ8sJ1yKpJ6fuffmx+yuod++7C68fJAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIQQFSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANQ4TysM21330AVmHecL4AAAA=[0m[Pipeline] }
+[8mha:////4CYgPvb0iOTFGwU9zPemiymM5aAHg06QqCzJBxgNQgKkAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSRIICUaW10vACExvjxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgsNc0WIqdRe9GkxdOHIar4wl7vmDHFNlpbPXUstLNgi0nDUuKElYCNpo6x9GSSbAVvXzIykky1TmF/B0FlFbd4QmFyOYkQ/rCHGB3G1Vk+nn+CmD2PkF5qHPt6w9QJ+YlvgAAAA==[0m[Pipeline] // stage
+[8mha:////4BGJfN+vopOJXJJrTSpwAvHjHDkOMH5Vq6LCIF9zJdkOAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUlZAYEFPXqAsnCE0ISaP/S5KSTpyIq3EHApWY8GDZlqz3fEEVPBzJa2YVDgZDb9joJp0TS+SHi6PELJ1ZTxjIKdap1JFU7VI7igoWFSWsOKwV9o6CQR1hw624i9oJ1PUp+rwdOJRG3uABBc/kKHz8ltnD9jrJQPjj/AXAPEYomybbfvd5Vm9I2iMuwgAAAA==[0m[Pipeline] stage
+[8mha:////4OCxqSkKUlvhDYCUd0V8i2aMWTP6BKlCXbIq9ofI6t+JAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0ATEgpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYL8sJttPz+LD08AFXvCAAAA[0m[Pipeline] { (Declarative: Post Actions)
+[8mha:////4C/MyXvB39yxWbbfJLk90HO6vRf4te0M4ii8wm8DavnqAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSAQWiSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyv32U7vwBoeWqme+AAAA[0m[Pipeline] echo
+The build failed.
+[8mha:////4GtAPA/L3MPRjkvqEq0ZFRS7ssZHuzPkQBsBjMGZip9UAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSoRSIitZKwwtMYowd686xHZyKF/E1/kAgEhVbrHa2mecL1jHAkYNGq6g3FFuD3o16Xpg59FfHGS1fsGWK7BQ2KjfcqdOCDScFS4oSVgI2ilrH0ZBOsBVW3mXlJOnqnML8HQSUphvgAYWYzUmG9IUpwO42dpHp5/krgMknKOv9p2r/BsansX6+AAAA[0m[Pipeline] sh
++ docker stop pingapp
+pingapp
+[8mha:////4PUBrgpueTVaHOoFyERGcb47mr8PZRzfovIx+8yboH6fAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSIZAQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUO62n9qHNwm7Kfm+AAAA[0m[Pipeline] sh
++ docker rm pingapp
+Error response from daemon: No such container: pingapp
++ true
+[8mha:////4HN+MmlGKfPH7JTZhnNFBEjtH7rWxGeXP7MFIJfeZ/jdAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSIYQQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrd/lPbN0KQBXS+AAAA[0m[Pipeline] }
+[8mha:////4NmZf5x8+NIFkPw0kl4poe8CBm2dT7od9my+XTWfLaQwAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJCgQQSSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANQ4TysM21330A9YFF0r4AAAA=[0m[Pipeline] // stage
+[8mha:////4Jav47Eg1XRLjaTSlDrj+UNrbrHHI4F5R6OS8aPT5q16AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMJROiRERWu54QUmMcaOdWfsC0nFi/gaf8AiEhVbrHa2mdcb1jnBkZIV3uDgMHdOxDDassREabgGmoSni+gIMwUjlJkU9ea0oCI2sKSqYSVhY7ALlB1ahq30+qGboNE2Z07lO0ioXX+HJ1SymFkn/sKcYHcb+0z48/wVwBwjQ71vS7XtB1kBKT++AAAA[0m[Pipeline] }
+[8mha:////4BeQQb3f+LJosx5x+R7c5MoSQe7c9pH5GiV60S6nKajUAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICVEgoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcrDPtdu+wFhQ7rOvgAAAA==[0m[Pipeline] // withEnv
+[8mha:////4PdHQ4V2+IhnCo4FNphENhqHzQudy+sEUvABwUC6DFDeAAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIpoEBCVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5PutINt9AJ0A6rK9AAAA[0m[Pipeline] }
+[8mha:////4LQjrwl9UMb8C+k/FSfAbgM+gJQb1mE4PX2Fr4T7G/o8AAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMIpoEBCVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5PudINt+AC5Jrp69AAAA[0m[Pipeline] // node
+[8mha:////4CtxNVrsdt2JRX5cR1SlLJaC8NbZikoCTPLEYLQvXVhhAAAApB+LCAAAAAAAAP9tjbEKwjAURW8rDq6OfkQKgiCIk2vo4hfENsa04b2avNpOfpG/5j9YLDh5p3vOcl5vLFPEkaNTjaXWU6q86kLvpqcGju018KAavqiKKXGwqrRDybU9zViyWMzLciw0VpaqwMmTE6x1Yx6mCIZccZY4uYNG7us7nsj0VBYT5QtjxObW14np1/kbwNh1gny/E2TbDwhQydS9AAAA[0m[Pipeline] End of Pipeline
+ERROR: Newman tests failed. Check the test results.
+Finished: FAILURE

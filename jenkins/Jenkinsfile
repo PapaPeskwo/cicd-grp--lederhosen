@@ -11,7 +11,6 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                    // Build the Docker image and fail the build if there are any errors
                     sh 'docker build --no-cache -t pingurl:latest .'
                 }
             }
@@ -20,10 +19,9 @@ pipeline {
         stage('Lint') {
             steps {
                 script {
-                    // Run pylint and fail if the score is under 9.0 (we are currently at ~9.5)
-                    def pylintStatus = sh(script: 'docker run --rm pingurl:latest pylint --fail-under=8.0 /backend', returnStatus: true)
+                    def pylintStatus = sh(script: 'docker run --rm pingurl:latest pylint --fail-under=9.0 /backend', returnStatus: true)
                     if (pylintStatus != 0) {
-                        error("Pylint score is below the threshold of 8.0")
+                        error("Pylint score is below the threshold of 9.0")
                     }
                 }
             }
@@ -32,7 +30,6 @@ pipeline {
         stage('Run Tests') {
             steps {
                 script {
-                    // Run pytest and fail the build if any tests fail
                     def pytestStatus = sh(script: 'docker run --rm pingurl:latest pytest /backend', returnStatus: true)
                     if (pytestStatus != 0) {
                         error("Pytest failed. Check the test results.")
@@ -44,7 +41,6 @@ pipeline {
         stage('Stop Existing Container') {
             steps {
                 script {
-                    // Stop and remove the Docker container if it's running
                     sh 'docker stop pingapp || true'
                     sh 'docker rm pingapp || true'
                 }
@@ -54,22 +50,28 @@ pipeline {
         stage('Run Application') {
             steps {
                 script {
-                    // Run the Flask application in a Docker container
                     sh 'docker run -d -p 5000:5000 --name pingapp pingurl:latest'
+                }
+            }
+        }
+
+        stage('Run Postman Tests with Newman') {
+            steps {
+                script {
+                    sleep(10) 
+
+                    def newmanStatus = sh(script: 'docker run --network="host" --rm pingurl:latest newman run ./newman_tests/Pingurl.postman_collection.json -e ./newman_tests/dev.postman_environment.json', returnStatus: true)
+                    if (newmanStatus != 0) {
+                        error("Newman tests failed. Check the test results.")
+                    }
                 }
             }
         }
     }
 
     post {
-        //always {
-        //    // Clean up: Stop and remove the Docker container if it's running
-        //    sh 'docker stop pingapp || true'
-        //    sh 'docker rm pingapp || true'
-        //}
         failure {
             echo 'The build failed.'
-            // Clean up
             sh 'docker stop pingapp || true'
             sh 'docker rm pingapp || true'
         }

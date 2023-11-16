@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "358c5e7e-d4f9-4828-b815-26098dbd662e",
+		"name": "Pingurl",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30969733"
+	},
+	"item": [
+		{
+			"name": "create watched url",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"activateAt\": \"2023-11-06T01:36:28+00:00\",\r\n  \"force\": true,\r\n  \"periodSec\": 30,\r\n  \"url\": \"https://example.com/\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/{{wu}}",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"{{wu}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get watched url ids",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/{{wu}}",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"{{wu}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stats",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/stats",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove watched url",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/{{wu}}/0",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"{{wu}}",
+						"0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
