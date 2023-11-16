@@ -44,7 +44,7 @@ pipeline {
         stage('Run Postman Tests with Newman') {
             steps {
                 script {
-                    def newmanStatus = sh(script: 'docker run --rm pingurl:latest newman run ./newman_tests/Pingurl.postman_collection.json -e ./newman_tests/dev.postman_environment.json', returnStatus: true)
+                    def newmanStatus = sh(script: 'docker run --rm pingurl:latest newman run ./newman_tests/dev.postman_environment.json -e ./newman_tests/Pingurl.postman_collection.json', returnStatus: true)
                     if (newmanStatus != 0) {
                         error("Newman tests failed. Check the test results.")
                     }
