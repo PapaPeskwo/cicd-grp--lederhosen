@@ -62,36 +62,6 @@
 			"response": []
 		},
 		{
-			"name": "get watched url data",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \"activateAt\": \"2023-11-06T01:36:28+00:00\",\r\n  \"force\": true,\r\n  \"periodSec\": 30,\r\n  \"url\": \"https://example.com/\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{localhost}}/{{wu}}/1",
-					"host": [
-						"{{localhost}}"
-					],
-					"path": [
-						"{{wu}}",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "stats",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -135,13 +105,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{localhost}}/{{wu}}/2",
+					"raw": "{{localhost}}/{{wu}}/0",
 					"host": [
 						"{{localhost}}"
 					],
 					"path": [
 						"{{wu}}",
-						"2"
+						"0"
 					]
 				}
 			},
