@@ -31,4 +31,4 @@ jobs:
         run: pylint --rcfile=.pylintrc /backend --fail-under=9.0 --exit-zero src
 
       - name: Test with pytest
-        run: pytest /backend/tests --cov=src --cov-report=xml
+        run: pytest
