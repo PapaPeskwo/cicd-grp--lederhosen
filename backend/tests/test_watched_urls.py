@@ -63,3 +63,30 @@ def test_add_watched_url_invalid_url(watched_url_client):
         "error": "Bad request",
         "message": "The 'url' parameter must be valid URL string.",
     }
+    
+def test_delete_watched_url_success(watched_url_client):
+    with patch("pingurl.watched_urls.business.delete_watched_url"):
+        response = watched_url_client.delete("/watched-urls/1")
+    assert response.status_code == 200
+    assert response.json == {"message": "Removed watched url with id 1"}
+
+
+def test_get_url_data_success(watched_url_client):
+    with patch("pingurl.persistance.get_url_data", return_value={"url": "http://example.com"}):
+        response = watched_url_client.get("/watched-urls/1")
+    assert response.status_code == 200
+    assert response.json == {"url": "http://example.com"}
+
+
+def test_get_url_ids(watched_url_client):
+    with patch("pingurl.persistance.get_url_ids", return_value=[1, 2, 3]):
+        response = watched_url_client.get("/watched-urls")
+    assert response.status_code == 200
+    assert response.json == {"urlIds": [1, 2, 3]}
+
+
+def test_get_total_stats(watched_url_client):
+    with patch("pingurl.persistance.get_stats", return_value={"total": 10}):
+        response = watched_url_client.get("/stats")
+    assert response.status_code == 200
+    assert response.json == {"total": 10}
