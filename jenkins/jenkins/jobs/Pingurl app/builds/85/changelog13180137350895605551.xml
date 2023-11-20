@@ -1,0 +1,569 @@
+commit e2ef48010ab663abdfd66ea10040e9328bae641a
+tree 03e310843255e7b33b477184d957cc59e3d52f11
+parent 43da126e9553ab574f86be65a5f6fa10f042c005
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 15:02:55 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 15:02:55 +0100
+
+    black: formatted
+
+
+:100644 100644 9b12ade419457585ff02fdb5005617f968161070 a0e9ba1fce4fcb0e25e3bec830fb484c9f69f8d6 M	backend/tests/test_models.py
+:100644 100644 73a5f7a6688dfe2c1582a1634bacb10875655646 7e5bdb7d1b8b9685b02a9b99b936614229f07d4e M	backend/tests/test_persistance.py
+:100644 100644 b742af00280e987847a835bdd84fc3584dd4eaa0 d9e93d79c5b5f50a411eea59856042a4adde779e M	backend/tests/test_ping.py
+:100644 100644 150e92eecf2e43639558f0bffaefb24984c421b6 327b2347ce3c3a284ea8724ae7c2cfc2f06428d7 M	backend/tests/test_schedule.py
+:100644 100644 30cdb4ce722722561736d55f268904c26aa25a1e 623d9435e576a1def66fa937b8e219747858d79d M	backend/tests/test_watched_urls.py
+commit 43da126e9553ab574f86be65a5f6fa10f042c005
+tree d8fc4723f8d25c9feb57823686f9f052b2d385f9
+parent 41102b78ccc9108cf0f1c206c7cbc80138497cb4
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 15:00:54 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 15:00:54 +0100
+
+    refactor: :recycle: refactor test_watched_urls.py for improved readability and clarity
+
+
+:100644 100644 07d2569f89138645982e33dcc5203c93070d532b 30cdb4ce722722561736d55f268904c26aa25a1e M	backend/tests/test_watched_urls.py
+commit 41102b78ccc9108cf0f1c206c7cbc80138497cb4
+tree 717e160504f7247a73363d21010db82ffdd266b9
+parent 495417ee23685b66e1e1c9e681f78baf9753cf80
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 14:55:41 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 14:55:41 +0100
+
+    refactor: :recycle: refactor test_schedule.py, removing unnecessary imports and blank lines
+
+
+:100644 100644 4444489644fcdc328ba4b1d9a8777829562506d3 150e92eecf2e43639558f0bffaefb24984c421b6 M	backend/tests/test_schedule.py
+commit 7607b193b3c67eb81a79f477987b2024c2a05365
+tree 5098410c062c32adcd54293e5c17cd51269a748c
+parent c660f831585cabf10ee1cfafb4513e965191d745
+author Sundgren95 <sundgren.david@gmail.com> 2023-11-16 14:54:36 +0100
+committer Sundgren95 <sundgren.david@gmail.com> 2023-11-16 14:54:36 +0100
+
+    fixed path and pr limit
+
+
+:100644 100644 95b538f8f32224ada5797ba99c3d7f71de81cd65 db00d48a86fe919ab7f76501ebbca31576dbd3d2 M	.github/workflows/dependabot.yml
+commit 495417ee23685b66e1e1c9e681f78baf9753cf80
+tree 249bfdb8cca95e703c815dbd70c102f46d458920
+parent 7898e8834be851112fbafa5cbb665c84e93abf0f
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 14:48:12 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 14:48:12 +0100
+
+    refactor: :recycle: refactor test_ping.py to use datetime with timezone.utc
+
+
+:100644 100644 ede27d431f967ee75aa53a9d3afc7eeaab2e2565 b742af00280e987847a835bdd84fc3584dd4eaa0 M	backend/tests/test_ping.py
+commit c660f831585cabf10ee1cfafb4513e965191d745
+tree 387055f90065fa63c5573cc181efbfffb0f8c824
+parent 23fc1b3c7a602a591c12d49fe5c6c90e8810112f
+author Sundgren95 <sundgren.david@gmail.com> 2023-11-16 14:45:14 +0100
+committer Sundgren95 <sundgren.david@gmail.com> 2023-11-16 14:45:14 +0100
+
+    moved dependabot file
+
+
+:100644 100644 95b538f8f32224ada5797ba99c3d7f71de81cd65 95b538f8f32224ada5797ba99c3d7f71de81cd65 R100	dependabot.yml	.github/workflows/dependabot.yml
+commit 23fc1b3c7a602a591c12d49fe5c6c90e8810112f
+tree 34a931f97f719174cc6986a7efd5b3723a392345
+parent 4c0d88bc38f49cbe6a1c73e89e95c1a13926c391
+author Sundgren95 <sundgren.david@gmail.com> 2023-11-16 14:41:23 +0100
+committer Sundgren95 <sundgren.david@gmail.com> 2023-11-16 14:41:23 +0100
+
+    added dependabot.yml
+
+
+:000000 100644 0000000000000000000000000000000000000000 95b538f8f32224ada5797ba99c3d7f71de81cd65 A	dependabot.yml
+commit 7898e8834be851112fbafa5cbb665c84e93abf0f
+tree 7d75d2cd3fd93a110e74a00f1c686633c01b997b
+parent e48012ccef1dcc1d4e8c5008e331c3ea5d7ecdbf
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 14:40:01 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 14:40:01 +0100
+
+    refactor: :recycle: refactor test_persistance.py by removing unnecessary imports and functions
+
+
+:100644 100644 5eda7c0eebf5d737113b846dadae0ace8f244baa 73a5f7a6688dfe2c1582a1634bacb10875655646 M	backend/tests/test_persistance.py
+commit e48012ccef1dcc1d4e8c5008e331c3ea5d7ecdbf
+tree d9df089399667420447edd549598fa8117e245da
+parent 48da571f5c69fec66b726a189b7c0d3d9e2ba920
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 14:39:35 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 14:39:35 +0100
+
+    refactor: :recycle: refactor test_models.py for more concise PingData.ok assertion
+
+
+:100644 100644 e627497fc9f4a8826152fdf7d6e361779ba29c64 9b12ade419457585ff02fdb5005617f968161070 M	backend/tests/test_models.py
+commit 33b502fa0722cbcabbb6252bbc5cd2772c6ce621
+tree 4f6e2988935cfd30506a455b166fb5c012df04af
+parent 3776b4c73293a489d28afa611e4f8a6418bdb05e
+author Sundgren95 <sundgren.david@gmail.com> 2023-11-16 14:29:49 +0100
+committer Sundgren95 <sundgren.david@gmail.com> 2023-11-16 14:29:49 +0100
+
+    added postman test with newman to local script
+
+
+:100755 100755 36c70652db120ec5270dcc7d0a589925675eb942 7e17324416c4376591657bc42b9e7f004bdedc70 M	local_checks.sh
+commit 48da571f5c69fec66b726a189b7c0d3d9e2ba920
+tree 25f4145e7213f447029e4ce91db350c6532df434
+parent 164160dcdd0a56ef9de49d5ca660ea8c043a26c6
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 14:26:58 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 14:26:58 +0100
+
+    refactor: updated .gitignore
+
+
+:100644 100644 d5eb4a7f3774cdac883d83cbaffe6ba20888cdcf 6decc77c31e654abb0684d9c24d505c99a781680 M	.gitignore
+commit 164160dcdd0a56ef9de49d5ca660ea8c043a26c6
+tree a0fc1567f27b7883dc1328979d47ecdb258ae1f8
+parent 11129ae020df47636b3a9876912103f96317fbe9
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 14:26:10 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 14:26:10 +0100
+
+    refactor: :recycle: refactor test_watched_urls.py for readability and remove unused imports
+
+
+:100644 100644 dcc0dab256dbc7a9a76ca469050f5300ed86ed91 07d2569f89138645982e33dcc5203c93070d532b M	backend/tests/test_watched_urls.py
+commit 00b3b4973aa7219ce18c697f050f3866e7ad57d3
+tree 8026660eb233b65105a238ba68d12db72fa27946
+parent 8e608994afa2b9fca8806fbfca123e5bb140ab3e
+author Sundgren95 <sundgren.david@gmail.com> 2023-11-16 14:11:34 +0100
+committer Sundgren95 <sundgren.david@gmail.com> 2023-11-16 14:12:23 +0100
+
+    should not be removed
+
+
+:000000 100644 0000000000000000000000000000000000000000 142bc376425ae6966edad3137091bed129030fea A	requirements.txt
+commit 8e608994afa2b9fca8806fbfca123e5bb140ab3e
+tree fe42166b19cb3eb1d497d8974a127c3f68767c9f
+parent 079147007909b9e420ec5870aaf396819e805c77
+author Tomislav O <58036451+PapaPeskwo@users.noreply.github.com> 2023-11-16 14:09:13 +0100
+committer GitHub <noreply@github.com> 2023-11-16 14:09:13 +0100
+
+    Update README.md
+
+:100644 100644 16e98c42908e26b1d39e7ff89fb2f488115e58d5 2a64f8c523c74fa8dc5ac3f2e77bb767910627e8 M	README.md
+commit 079147007909b9e420ec5870aaf396819e805c77
+tree df12d00fe4262af620c7112702c23601da2eed63
+parent f03bdf07d4100000b80844701f03398990e47454
+author Sundgren95 <sundgren.david@gmail.com> 2023-11-16 13:54:30 +0100
+committer Sundgren95 <sundgren.david@gmail.com> 2023-11-16 13:54:30 +0100
+
+    added readme
+
+
+:100644 100644 552e7896833603481a17d4cf1276ff04b15dbbaa 16e98c42908e26b1d39e7ff89fb2f488115e58d5 M	README.md
+:100644 000000 a9d2fc7bf1237032fa1214088ce02fb969083cc6 0000000000000000000000000000000000000000 D	requirements.txt
+:100644 000000 fe49bd2bc26239f98383d1dfd9914cd1daac8c27 0000000000000000000000000000000000000000 D	tutorial.md
+commit 11129ae020df47636b3a9876912103f96317fbe9
+tree aec32b13c2550fe7602b05ee657e8e6ee7d8d8e8
+parent 6d104a74f7f28b2eb440d7043befccf40a4034fe
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:48:45 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:48:45 +0100
+
+    -
+
+
+:000000 100644 0000000000000000000000000000000000000000 9bebfb89a58cf93718e85349397b2c983f920e3e A	jenkins/jenkins/.java/fonts/17.0.9/fcinfo-1-ca9a8dd57091-Debian GNU/Linux-12-en-.properties
+:100644 100644 57ed8108478fa7c4c7a8db3111364ae859e1f0c7 c2c8a3e1ac7c9f70a5c53a6d12b88da7e7e0028e M	jenkins/jenkins/copy_reference_file.log
+:100644 100644 b679e6e845e7e76343716079fbf5246a12bad926 6902520f164c0a07b6cd738a33a06d723ea621aa M	jenkins/jenkins/fingerprints/ec/c8/ff92a183dc748b488b693aedf849.xml
+:100644 000000 256d12dbff728ccd69a40c4721a57e29ebc18bd4 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/77/log-index
+:100644 000000 3fffd67d5cd4c7cff68afed0dff12357df8341c3 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/78/build.xml
+:100644 000000 59d38721b549ea9f46e8813aa4e4e80ab262a9f4 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/78/log
+:100644 000000 481dbe15d68ce413e8fcf72e9e018e851a268bb1 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/79/build.xml
+:100644 000000 ef341a9f4fd9c4cd65a42d9c5d9c9a45c600b668 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/79/log
+:100644 000000 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/79/log-index
+:100644 100644 609ed8a2050932a398a7b26fdcb3e07de9a1b94e e947dc1b568a11595e57b83134fb4bdc3a4e04fe R094	jenkins/jenkins/jobs/Pingurl app/builds/77/build.xml	jenkins/jenkins/jobs/Pingurl app/builds/82/build.xml
+:000000 100644 0000000000000000000000000000000000000000 6e8c7093680c075c45622d6560972d62c1207537 A	jenkins/jenkins/jobs/Pingurl app/builds/82/changelog17320610188034404928.xml
+:000000 100644 0000000000000000000000000000000000000000 0b8e95cb13bc6d96a6850c2f747affab987e1ec5 A	jenkins/jenkins/jobs/Pingurl app/builds/82/log
+:000000 100644 0000000000000000000000000000000000000000 3c6a19778421aa6337f8190c1399e418e4d79c13 A	jenkins/jenkins/jobs/Pingurl app/builds/82/log-index
+:100644 100644 4387959bb7bcc85b8308bf8a5b8cd10928c94a97 c1fb6fc2c794f4e19dbb0abf2f183d90cb5d4d3e R083	jenkins/jenkins/jobs/Pingurl app/builds/77/workflow-completed/flowNodeStore.xml	jenkins/jenkins/jobs/Pingurl app/builds/82/workflow-completed/flowNodeStore.xml
+:000000 100644 0000000000000000000000000000000000000000 c4689f51a9a7c9a365eb424005d57f8db694e39a A	jenkins/jenkins/jobs/Pingurl app/builds/83/build.xml
+:100644 100644 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 R100	jenkins/jenkins/jobs/Pingurl app/builds/77/changelog7787797473823622925.xml	jenkins/jenkins/jobs/Pingurl app/builds/83/changelog15354983485017737313.xml
+:100644 100644 8f2218e2307c077977b04b57b2ddc251fb20780d 7c3cb99d3f7897bafe266e976e5c03accbceed8e R076	jenkins/jenkins/jobs/Pingurl app/builds/77/log	jenkins/jenkins/jobs/Pingurl app/builds/83/log
+:000000 100644 0000000000000000000000000000000000000000 edaa9f7e768f52c180458f4f4c5077379ae9606a A	jenkins/jenkins/jobs/Pingurl app/builds/83/log-index
+:000000 100644 0000000000000000000000000000000000000000 99add17ab16268b85e7ebe139bde90a1b21cfff5 A	jenkins/jenkins/jobs/Pingurl app/builds/83/workflow-completed/flowNodeStore.xml
+:000000 100644 0000000000000000000000000000000000000000 27ad247a89e527705d3175b24d1a16128cce8265 A	jenkins/jenkins/jobs/Pingurl app/builds/84/build.xml
+:100644 100644 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 R100	jenkins/jenkins/jobs/Pingurl app/builds/78/log-index	jenkins/jenkins/jobs/Pingurl app/builds/84/changelog3891387120839725962.xml
+:000000 100644 0000000000000000000000000000000000000000 1fea7dae75b07f651bc67a62379f6c1095b27f83 A	jenkins/jenkins/jobs/Pingurl app/builds/84/log
+:000000 100644 0000000000000000000000000000000000000000 617e8747ca0149ab890f728cf3791db514baa433 A	jenkins/jenkins/jobs/Pingurl app/builds/84/log-index
+:000000 100644 0000000000000000000000000000000000000000 b857ef95013f3d516944f169884716465c4ce11a A	jenkins/jenkins/jobs/Pingurl app/builds/84/workflow-completed/flowNodeStore.xml
+:100644 100644 62e4899c536573e49fc138cff5ec668f86a9e72e 7229074dbf83cff1e7d358e63605dd447d466b24 M	jenkins/jenkins/jobs/Pingurl app/builds/permalinks
+:100644 100644 dde92ddc1a594acd912b467305f36d9f26da45f3 a862eb8444d443dbaf5db59f7e27d956cd7691d5 M	jenkins/jenkins/jobs/Pingurl app/nextBuildNumber
+:100644 100644 0a05155537897a0e294dae5e7b5187ebf54e8d6d 86f5afdde0f23117cc276035384a1b2e9f246569 M	jenkins/jenkins/logs/tasks/Periodic background build discarder.log.1
+:100644 100644 7ba2c28f2d8a8f6c54bd412e3452413a8149e904 0a05155537897a0e294dae5e7b5187ebf54e8d6d M	jenkins/jenkins/logs/tasks/Periodic background build discarder.log.2
+:100644 100644 60185f55f28a5bc20282265d3719eb34de036ef4 7ba2c28f2d8a8f6c54bd412e3452413a8149e904 M	jenkins/jenkins/logs/tasks/Periodic background build discarder.log.3
+:100644 100644 ba47db28803c2aac16da039169679b24baaf2815 60185f55f28a5bc20282265d3719eb34de036ef4 M	jenkins/jenkins/logs/tasks/Periodic background build discarder.log.4
+:100644 100644 f38dfb9253b6e45fa5506f26ac943cc2204d4f14 ba47db28803c2aac16da039169679b24baaf2815 M	jenkins/jenkins/logs/tasks/Periodic background build discarder.log.5
+:100644 100644 4693614a8d268b9e510f30a39a6e81ad90a074fa d9777233d5c48f7652964765bf9892675deb33dc M	jenkins/jenkins/queue.xml
+:100644 100644 d957eb67f4a94d506e88db7fdb8d43394f197745 f88e98186aa14991ddd37681256005d0ecb56719 M	jenkins/jenkins/queue.xml.bak
+commit 6d104a74f7f28b2eb440d7043befccf40a4034fe
+tree 11f79d2d010e4b39ab18e72bbc44c00eabf137de
+parent e5efd70be6f9a86e10726ab5c4d99e64ea09b1c0
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:38:46 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:38:46 +0100
+
+    -
+
+
+:100644 100644 0c0724137e6c51aef715ee9767b3d22969ea6e23 b679e6e845e7e76343716079fbf5246a12bad926 M	jenkins/jenkins/fingerprints/ec/c8/ff92a183dc748b488b693aedf849.xml
+:100644 000000 48709b97524bc2cae877f419bb3d219cb3ad697b 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/75/changelog17855722918777141887.xml
+:100644 000000 b4687e2278a915e0c29dde674e89f308aa7cc272 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/75/log
+:100644 000000 7c06f140c256eaa037e8a3a3494b651ff7753bcd 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/75/log-index
+:100644 000000 a4a68130dd6bda2ea39a7bddbbdd9a8cfc434352 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/76/build.xml
+:100644 000000 2e40b9e2923ceb39321732a3731e575d97e12235 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/76/changelog8600202482683294254.xml
+:100644 000000 c21cadfc2c9ce6a6f7b52d6d8e7fc824a97596a3 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/76/log
+:100644 000000 943f0f211220301be0fa18dae7e83ea9d64913e6 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/76/log-index
+:100644 000000 4209a7bb5ba6741de787ae31a34cd5dfc62ba1be 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/76/workflow-completed/flowNodeStore.xml
+:100644 100644 0b3f4d5c2a10e42cefbca16f3a1b470d1b4721eb cddd98deb08d01ee6789765f09d5120c852b8d3c R095	jenkins/jenkins/jobs/Pingurl app/builds/75/build.xml	jenkins/jenkins/jobs/Pingurl app/builds/81/build.xml
+:000000 100644 0000000000000000000000000000000000000000 4d714971e3f36c8c1caec67be5054b4a04c76a60 A	jenkins/jenkins/jobs/Pingurl app/builds/81/changelog9944460759052819578.xml
+:000000 100644 0000000000000000000000000000000000000000 9719ed4c9509508ecc4a40a87866ea9be63099b6 A	jenkins/jenkins/jobs/Pingurl app/builds/81/log
+:000000 100644 0000000000000000000000000000000000000000 6b242d5c66512784b27a9afbf6eb558113f27bd4 A	jenkins/jenkins/jobs/Pingurl app/builds/81/log-index
+:100644 100644 278d7dbc3b792572adb308c42d1d1b2d01badb96 9ade7109064d343c27beb0d468d6a408162bd52d R091	jenkins/jenkins/jobs/Pingurl app/builds/75/workflow-completed/flowNodeStore.xml	jenkins/jenkins/jobs/Pingurl app/builds/81/workflow-completed/flowNodeStore.xml
+:100644 100644 4b5530d39614b6d58acce9a1a9515d9f322f2ba6 62e4899c536573e49fc138cff5ec668f86a9e72e M	jenkins/jenkins/jobs/Pingurl app/builds/permalinks
+:100644 100644 d88e313699871a6c780316c8df7479aebe6999c0 dde92ddc1a594acd912b467305f36d9f26da45f3 M	jenkins/jenkins/jobs/Pingurl app/nextBuildNumber
+:100644 100644 cf6406d8adc6ab84764230e87ffb644583ad0fcb 4693614a8d268b9e510f30a39a6e81ad90a074fa M	jenkins/jenkins/queue.xml
+commit e5efd70be6f9a86e10726ab5c4d99e64ea09b1c0
+tree 82a094c9197e0b29596d7d7350af422f35915ebd
+parent 82a251647e35b9c78db0ea06e3bef66e3b4870e1
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:37:58 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:37:58 +0100
+
+    fix: :bug: update fingerprints ranges and timestamps for Pingurl app and Jenkins pipeline
+
+
+:100644 100644 cab5ec888117c757cb15f78287e50e5f0c0372de 0c0724137e6c51aef715ee9767b3d22969ea6e23 M	jenkins/jenkins/fingerprints/ec/c8/ff92a183dc748b488b693aedf849.xml
+:100644 000000 c9e50e883b66a72d0a24fd21af06ff34bbc39e35 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/73/build.xml
+:100644 000000 b6e573e8a4a81b2bf1f31b2febb751820dc6559c 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/73/log
+:100644 000000 d075d7740dd0008db10d6b8961d2e218aee85b2d 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/73/log-index
+:100644 000000 059c6ca3606884c4a4a7c80ae0f11f7abdf2e107 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/73/workflow-completed/flowNodeStore.xml
+:100644 000000 0a7adddc2839b54c908fbd858b3f0f449c295568 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/74/build.xml
+:100644 000000 ad08c29e3c4cefb673451592e9ea17b2c013434d 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/74/changelog9384599072932232219.xml
+:100644 000000 164fdeb15515fc513b1c83b6afb2bf86b2784082 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/74/log
+:100644 000000 233e7ebebd077eb9b069ca9976324def9bc6bd55 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/74/log-index
+:100644 000000 1468934656a9ebab8edb753cd0e71f063ab71853 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/74/workflow-completed/flowNodeStore.xml
+:000000 100644 0000000000000000000000000000000000000000 3fffd67d5cd4c7cff68afed0dff12357df8341c3 A	jenkins/jenkins/jobs/Pingurl app/builds/78/build.xml
+:000000 100644 0000000000000000000000000000000000000000 59d38721b549ea9f46e8813aa4e4e80ab262a9f4 A	jenkins/jenkins/jobs/Pingurl app/builds/78/log
+:100644 100644 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 R100	jenkins/jenkins/jobs/Pingurl app/builds/73/changelog16325001124200845835.xml	jenkins/jenkins/jobs/Pingurl app/builds/78/log-index
+:000000 100644 0000000000000000000000000000000000000000 481dbe15d68ce413e8fcf72e9e018e851a268bb1 A	jenkins/jenkins/jobs/Pingurl app/builds/79/build.xml
+:000000 100644 0000000000000000000000000000000000000000 ef341a9f4fd9c4cd65a42d9c5d9c9a45c600b668 A	jenkins/jenkins/jobs/Pingurl app/builds/79/log
+:000000 100644 0000000000000000000000000000000000000000 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 A	jenkins/jenkins/jobs/Pingurl app/builds/79/log-index
+:000000 100644 0000000000000000000000000000000000000000 f677a74b69d669ecd91d34d7fba514b85f7a7a95 A	jenkins/jenkins/jobs/Pingurl app/builds/80/build.xml
+:000000 100644 0000000000000000000000000000000000000000 ef341a9f4fd9c4cd65a42d9c5d9c9a45c600b668 A	jenkins/jenkins/jobs/Pingurl app/builds/80/log
+:000000 100644 0000000000000000000000000000000000000000 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 A	jenkins/jenkins/jobs/Pingurl app/builds/80/log-index
+:100644 100644 8c31f14f4a6ffe6513cb384abcc2c7b2efc31481 4b5530d39614b6d58acce9a1a9515d9f322f2ba6 M	jenkins/jenkins/jobs/Pingurl app/builds/permalinks
+:100644 100644 8e14edce9ccd63cedb63bd0c07f8b829438a6c8a d88e313699871a6c780316c8df7479aebe6999c0 M	jenkins/jenkins/jobs/Pingurl app/nextBuildNumber
+:100644 100644 c907daaabb2d380ffdd5bf12509cb40e8c5b35d1 cf6406d8adc6ab84764230e87ffb644583ad0fcb M	jenkins/jenkins/queue.xml
+:100644 100644 2df3b287167b54fe00be9331b98b243316bb0a12 749ffcc37600e3e709a8223b96941b93fe4f64a8 M	newman_tests/Pingurl.postman_collection.json
+commit 82a251647e35b9c78db0ea06e3bef66e3b4870e1
+tree 662f185a1f5671c9fae40108cc96fe4bcb3543a1
+parent 57709607bef2d76ce6ee9b6a1eea9edb7e921d94
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:32:48 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:32:48 +0100
+
+    fix: :bug: fix Docker network issue and add delay before running Newman tests
+
+
+:100644 100644 cc9ea8ddaea4a76acffb29ee51758319d4eac5d8 77de0753a5cd989552ce66292b8596194d81728b M	jenkins/Jenkinsfile
+commit 57709607bef2d76ce6ee9b6a1eea9edb7e921d94
+tree 4ffafb30f30a3b85898c02e5bf6c65bcd2624f4f
+parent a24dad2f4cfc7e88f0f7b5de9cbb8158a2785234
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:30:09 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:30:09 +0100
+
+    -
+
+
+:000000 100644 0000000000000000000000000000000000000000 a281828998e80bb8bb8c3f5d30df35a264251d90 A	jenkins/jenkins/.java/fonts/17.0.9/fcinfo-1-12a9bf338993-Debian GNU/Linux-12-en-.properties
+:100644 100644 a196ce69f74c706fe478cdee6f8dd0d0eedf015e 57ed8108478fa7c4c7a8db3111364ae859e1f0c7 M	jenkins/jenkins/copy_reference_file.log
+:100644 100644 d9d584ed36a236f3a27a934e3785cbc11ee6a8cc cab5ec888117c757cb15f78287e50e5f0c0372de M	jenkins/jenkins/fingerprints/ec/c8/ff92a183dc748b488b693aedf849.xml
+:100644 000000 dce0f2ab09d8041633da6e197fa4a9f956bf834e 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/71/log-index
+:100644 000000 9b9353deadf63b08f9f121d17da11cf2bf0098b0 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/72/build.xml
+:100644 000000 026df67338a380400ab2b20aa0709af7aaef7b14 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/72/log
+:100644 000000 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/72/log-index
+:100644 100644 971c926c5cf58203004879332a506e75a2b6817e a4a68130dd6bda2ea39a7bddbbdd9a8cfc434352 R085	jenkins/jenkins/jobs/Pingurl app/builds/71/build.xml	jenkins/jenkins/jobs/Pingurl app/builds/76/build.xml
+:000000 100644 0000000000000000000000000000000000000000 2e40b9e2923ceb39321732a3731e575d97e12235 A	jenkins/jenkins/jobs/Pingurl app/builds/76/changelog8600202482683294254.xml
+:000000 100644 0000000000000000000000000000000000000000 c21cadfc2c9ce6a6f7b52d6d8e7fc824a97596a3 A	jenkins/jenkins/jobs/Pingurl app/builds/76/log
+:000000 100644 0000000000000000000000000000000000000000 943f0f211220301be0fa18dae7e83ea9d64913e6 A	jenkins/jenkins/jobs/Pingurl app/builds/76/log-index
+:100644 100644 8c743c9ffad06c513e035c874e030cac866da072 4209a7bb5ba6741de787ae31a34cd5dfc62ba1be R070	jenkins/jenkins/jobs/Pingurl app/builds/71/workflow-completed/flowNodeStore.xml	jenkins/jenkins/jobs/Pingurl app/builds/76/workflow-completed/flowNodeStore.xml
+:000000 100644 0000000000000000000000000000000000000000 609ed8a2050932a398a7b26fdcb3e07de9a1b94e A	jenkins/jenkins/jobs/Pingurl app/builds/77/build.xml
+:100644 100644 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 R100	jenkins/jenkins/jobs/Pingurl app/builds/71/changelog7741777614458025268.xml	jenkins/jenkins/jobs/Pingurl app/builds/77/changelog7787797473823622925.xml
+:100644 100644 43709441be0c17971c502f0b1cf270d51983d557 8f2218e2307c077977b04b57b2ddc251fb20780d R055	jenkins/jenkins/jobs/Pingurl app/builds/71/log	jenkins/jenkins/jobs/Pingurl app/builds/77/log
+:000000 100644 0000000000000000000000000000000000000000 256d12dbff728ccd69a40c4721a57e29ebc18bd4 A	jenkins/jenkins/jobs/Pingurl app/builds/77/log-index
+:000000 100644 0000000000000000000000000000000000000000 4387959bb7bcc85b8308bf8a5b8cd10928c94a97 A	jenkins/jenkins/jobs/Pingurl app/builds/77/workflow-completed/flowNodeStore.xml
+:100644 100644 190f551888f71eae88bcdaa4360077d1ff685bcb 8c31f14f4a6ffe6513cb384abcc2c7b2efc31481 M	jenkins/jenkins/jobs/Pingurl app/builds/permalinks
+:100644 100644 dd475631baeff3ce652b97d921c1cc43c917b9e2 8e14edce9ccd63cedb63bd0c07f8b829438a6c8a M	jenkins/jenkins/jobs/Pingurl app/nextBuildNumber
+:100644 100644 d957eb67f4a94d506e88db7fdb8d43394f197745 c907daaabb2d380ffdd5bf12509cb40e8c5b35d1 M	jenkins/jenkins/queue.xml
+:100644 100644 245f47abbc8e9c9eb0b7a9881931a1f5ae58ef69 d957eb67f4a94d506e88db7fdb8d43394f197745 M	jenkins/jenkins/queue.xml.bak
+commit a24dad2f4cfc7e88f0f7b5de9cbb8158a2785234
+tree f242c9040a3f4889730206029c8655d831f53810
+parent 276877fb10f59b6d205d298f72571f6da9a76870
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:30:00 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:30:00 +0100
+
+    fix: :bug: update Pylint threshold to 9.0 in local_checks.sh
+
+
+:100755 100755 4f354293018ca62e11ca1294983c6a0ef9496b3f 36c70652db120ec5270dcc7d0a589925675eb942 M	local_checks.sh
+commit 276877fb10f59b6d205d298f72571f6da9a76870
+tree 13e3c47e343997ad658f2c41a5e641a717c2c2a7
+parent bd2cf25e94b3f70292fdeadc0ab411d43d44b596
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:29:39 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:29:39 +0100
+
+    fix: :bug: update pylint threshold to 9.0 and add Postman tests with Newman
+
+
+:100644 100644 2e64aca07ebb062f86c20d9bac27078aa46faf8a cc9ea8ddaea4a76acffb29ee51758319d4eac5d8 M	jenkins/Jenkinsfile
+commit bd2cf25e94b3f70292fdeadc0ab411d43d44b596
+tree 56889631bcc7c3291b85991f3c0841746e37aa29
+parent df07bdab2cf89a6b00c93780630f2cd791bfc000
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:20:30 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:20:30 +0100
+
+    -
+
+
+:100644 100644 c759bef59b4394505f244767e2ffd5a39f7a313e d9d584ed36a236f3a27a934e3785cbc11ee6a8cc M	jenkins/jenkins/fingerprints/ec/c8/ff92a183dc748b488b693aedf849.xml
+:100644 000000 0429ed3837b272f12cbc8f4f373d2f9418f1b637 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/69/build.xml
+:100644 000000 c36f2ba261157b951d4533f6fc92f113703a72db 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/69/changelog4139824885910011265.xml
+:100644 000000 452a6f0db430d1b1688e64f05fd3228405588baf 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/69/log
+:100644 000000 6ec462431150cc01e5a770cf4286f88e0d449080 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/69/log-index
+:100644 000000 b3f33faf99414127768fdf6de1fa71e6e72affe9 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/70/changelog11065849287697757533.xml
+:100644 000000 3388a7df32ba67c5dfb28a42d228209b78a2d65e 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/70/log
+:100644 000000 324c18d98b97a03bf69dde4f7a20f7ac8d89bf09 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/70/log-index
+:100644 000000 c5c55e5a1f93a0d85120e4a0d7a19ae691cf7df9 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/70/workflow-completed/flowNodeStore.xml
+:100644 100644 1cf43ba01d5b7af3d464aadb813ebcc81b92f954 0b3f4d5c2a10e42cefbca16f3a1b470d1b4721eb R085	jenkins/jenkins/jobs/Pingurl app/builds/70/build.xml	jenkins/jenkins/jobs/Pingurl app/builds/75/build.xml
+:000000 100644 0000000000000000000000000000000000000000 48709b97524bc2cae877f419bb3d219cb3ad697b A	jenkins/jenkins/jobs/Pingurl app/builds/75/changelog17855722918777141887.xml
+:000000 100644 0000000000000000000000000000000000000000 b4687e2278a915e0c29dde674e89f308aa7cc272 A	jenkins/jenkins/jobs/Pingurl app/builds/75/log
+:000000 100644 0000000000000000000000000000000000000000 7c06f140c256eaa037e8a3a3494b651ff7753bcd A	jenkins/jenkins/jobs/Pingurl app/builds/75/log-index
+:100644 100644 72537d81acec4a5f2990f279c31a93b253a729ae 278d7dbc3b792572adb308c42d1d1b2d01badb96 R083	jenkins/jenkins/jobs/Pingurl app/builds/69/workflow-completed/flowNodeStore.xml	jenkins/jenkins/jobs/Pingurl app/builds/75/workflow-completed/flowNodeStore.xml
+:100644 100644 e4f1476daf642aee34f70364b78eb679f7ed81e5 190f551888f71eae88bcdaa4360077d1ff685bcb M	jenkins/jenkins/jobs/Pingurl app/builds/permalinks
+:100644 100644 78eb67cee1ab25652fe5c9e29efc173671301400 dd475631baeff3ce652b97d921c1cc43c917b9e2 M	jenkins/jenkins/jobs/Pingurl app/nextBuildNumber
+:100644 100644 7ba2c28f2d8a8f6c54bd412e3452413a8149e904 0a05155537897a0e294dae5e7b5187ebf54e8d6d M	jenkins/jenkins/logs/tasks/Periodic background build discarder.log.1
+:100644 100644 60185f55f28a5bc20282265d3719eb34de036ef4 7ba2c28f2d8a8f6c54bd412e3452413a8149e904 M	jenkins/jenkins/logs/tasks/Periodic background build discarder.log.2
+:100644 100644 ba47db28803c2aac16da039169679b24baaf2815 60185f55f28a5bc20282265d3719eb34de036ef4 M	jenkins/jenkins/logs/tasks/Periodic background build discarder.log.3
+:100644 100644 f38dfb9253b6e45fa5506f26ac943cc2204d4f14 ba47db28803c2aac16da039169679b24baaf2815 M	jenkins/jenkins/logs/tasks/Periodic background build discarder.log.4
+:100644 100644 8b4e1592b9e49320dfbf2bc276c7918fa62531fa f38dfb9253b6e45fa5506f26ac943cc2204d4f14 M	jenkins/jenkins/logs/tasks/Periodic background build discarder.log.5
+:100644 100644 9930ede18418e315d4baeabc9f98d7f4bd5163eb d957eb67f4a94d506e88db7fdb8d43394f197745 M	jenkins/jenkins/queue.xml
+commit df07bdab2cf89a6b00c93780630f2cd791bfc000
+tree e7716de1338cceb1eb649bc7e3dec4395d0079fe
+parent 2de663d62fe4d314a51abc358bfa2f8b83da39a8
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:20:16 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:20:16 +0100
+
+    fix: :bug: fix Jenkinsfile command order for running Postman tests
+
+
+:100644 100644 f00f484ec44d372b8a6e22b5a82b187bf4f88ec5 2e64aca07ebb062f86c20d9bac27078aa46faf8a M	jenkins/Jenkinsfile
+commit 2de663d62fe4d314a51abc358bfa2f8b83da39a8
+tree bedcb4f4a058798539450b1f626026001bb25e2f
+parent 97fd9da03fa6bd6012cb7cf128a1c67509cd97e6
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:19:55 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:19:55 +0100
+
+    fix: :bug: update values for "localhost" and "wu" keys in dev.postman_environment.json
+
+
+:100644 100644 1b2163287e99752dfdf2a977d1c7789513df0c5b 4f2542049724d95ae4faa51f450f008545ab9cd5 M	newman_tests/dev.postman_environment.json
+commit 97fd9da03fa6bd6012cb7cf128a1c67509cd97e6
+tree 248cc502a6ebdc03ccc2021a0326bda24fa4c431
+parent e8ac109d40ff0047b1110593d1fa75b209c45c22
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:09:00 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:09:00 +0100
+
+    -
+
+
+:000000 100644 0000000000000000000000000000000000000000 84a5f180be816708a494bce4421c2dc97a78b39a A	jenkins/jenkins/.java/fonts/17.0.9/fcinfo-1-9a7ae45a04c0-Debian GNU/Linux-12-en-.properties
+:100644 100644 4745a19401ba03a747397c645f62767bc4d3a589 a196ce69f74c706fe478cdee6f8dd0d0eedf015e M	jenkins/jenkins/copy_reference_file.log
+:100644 100644 c07ccbb1027ff8d349748fb268a8420c10fcfcce c759bef59b4394505f244767e2ffd5a39f7a313e M	jenkins/jenkins/fingerprints/ec/c8/ff92a183dc748b488b693aedf849.xml
+:000000 100644 0000000000000000000000000000000000000000 0a7adddc2839b54c908fbd858b3f0f449c295568 A	jenkins/jenkins/jobs/Pingurl app/builds/74/build.xml
+:000000 100644 0000000000000000000000000000000000000000 ad08c29e3c4cefb673451592e9ea17b2c013434d A	jenkins/jenkins/jobs/Pingurl app/builds/74/changelog9384599072932232219.xml
+:000000 100644 0000000000000000000000000000000000000000 164fdeb15515fc513b1c83b6afb2bf86b2784082 A	jenkins/jenkins/jobs/Pingurl app/builds/74/log
+:000000 100644 0000000000000000000000000000000000000000 233e7ebebd077eb9b069ca9976324def9bc6bd55 A	jenkins/jenkins/jobs/Pingurl app/builds/74/log-index
+:000000 100644 0000000000000000000000000000000000000000 1468934656a9ebab8edb753cd0e71f063ab71853 A	jenkins/jenkins/jobs/Pingurl app/builds/74/workflow-completed/flowNodeStore.xml
+:100644 100644 86e31ed454d75c8e2e4c6b0f4dca325b1b7d6a5f e4f1476daf642aee34f70364b78eb679f7ed81e5 M	jenkins/jenkins/jobs/Pingurl app/builds/permalinks
+:100644 100644 fff0a2476aa5c8e60a3ef21cfc66e0cc670920be 78eb67cee1ab25652fe5c9e29efc173671301400 M	jenkins/jenkins/jobs/Pingurl app/nextBuildNumber
+:100644 100644 245f47abbc8e9c9eb0b7a9881931a1f5ae58ef69 9930ede18418e315d4baeabc9f98d7f4bd5163eb M	jenkins/jenkins/queue.xml
+:100644 100644 62e7e19551ddd3ff05277e34ad6ec8fd60b76dd0 245f47abbc8e9c9eb0b7a9881931a1f5ae58ef69 M	jenkins/jenkins/queue.xml.bak
+commit e8ac109d40ff0047b1110593d1fa75b209c45c22
+tree 4c382bc5e78138d8e78c8eca34bf8801bd3e715f
+parent 71171278590eef5d3b091efb0a917b9c216f19db
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:08:40 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:08:40 +0100
+
+    fix: :bug: fix incorrect order of Postman collection and environment in Newman command
+
+
+:100644 100644 2e64aca07ebb062f86c20d9bac27078aa46faf8a f00f484ec44d372b8a6e22b5a82b187bf4f88ec5 M	jenkins/Jenkinsfile
+commit 71171278590eef5d3b091efb0a917b9c216f19db
+tree c3dd98512544d1a0f9ebcf6210e82b523b2a946d
+parent 18de94841b0cf9f13aac20c7d1894a8af94c3831
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:02:14 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:02:14 +0100
+
+    -
+
+
+:100644 100644 2a39a5334b0c20a81cd99ce05d63a55f36daa254 a9091d2e75b02c64fb89339ae74dc228876b423b M	jenkins/jenkins/.config/jgit/config
+:100644 100644 596413ad7ab1c9fcf9a8aa795b545b46542bc84b c07ccbb1027ff8d349748fb268a8420c10fcfcce M	jenkins/jenkins/fingerprints/ec/c8/ff92a183dc748b488b693aedf849.xml
+:100644 000000 2ad859835aace46c1519208dfc8ab70a475787b2 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/68/log
+:100644 000000 c7b4f25f95dbbf84f56f57424a5f179b809fedc1 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/68/log-index
+:100644 100644 c5f496c002aa61e8a4ea406651f5732f2bb94336 c9e50e883b66a72d0a24fd21af06ff34bbc39e35 R085	jenkins/jenkins/jobs/Pingurl app/builds/68/build.xml	jenkins/jenkins/jobs/Pingurl app/builds/73/build.xml
+:100644 100644 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 R100	jenkins/jenkins/jobs/Pingurl app/builds/68/changelog11988395317912122327.xml	jenkins/jenkins/jobs/Pingurl app/builds/73/changelog16325001124200845835.xml
+:000000 100644 0000000000000000000000000000000000000000 b6e573e8a4a81b2bf1f31b2febb751820dc6559c A	jenkins/jenkins/jobs/Pingurl app/builds/73/log
+:000000 100644 0000000000000000000000000000000000000000 d075d7740dd0008db10d6b8961d2e218aee85b2d A	jenkins/jenkins/jobs/Pingurl app/builds/73/log-index
+:100644 100644 36531d98bab1138d378b8a328f3eb78a59f3cb11 059c6ca3606884c4a4a7c80ae0f11f7abdf2e107 R076	jenkins/jenkins/jobs/Pingurl app/builds/68/workflow-completed/flowNodeStore.xml	jenkins/jenkins/jobs/Pingurl app/builds/73/workflow-completed/flowNodeStore.xml
+:100644 100644 5c6f8865d307947b25c6826543258d694fcb597b 86e31ed454d75c8e2e4c6b0f4dca325b1b7d6a5f M	jenkins/jenkins/jobs/Pingurl app/builds/permalinks
+:100644 100644 d69c74c8b95c8c0574cec707ab1a39d5926b9398 fff0a2476aa5c8e60a3ef21cfc66e0cc670920be M	jenkins/jenkins/jobs/Pingurl app/nextBuildNumber
+:100644 100644 9abecdb47bcf148aacda668f6df25ca7f9bd3d0f 245f47abbc8e9c9eb0b7a9881931a1f5ae58ef69 M	jenkins/jenkins/queue.xml
+commit 18de94841b0cf9f13aac20c7d1894a8af94c3831
+tree 5f7221054a87ac160a46f74e273a8d8427327216
+parent b877aad22a5cebc737a22d71c922786f4966a77b
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:01:58 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:01:58 +0100
+
+    feat: :sparkles: add Pingurl Postman collection and dev environment files
+
+
+:000000 100644 0000000000000000000000000000000000000000 2df3b287167b54fe00be9331b98b243316bb0a12 A	newman_tests/Pingurl.postman_collection.json
+:000000 100644 0000000000000000000000000000000000000000 1b2163287e99752dfdf2a977d1c7789513df0c5b A	newman_tests/dev.postman_environment.json
+commit b877aad22a5cebc737a22d71c922786f4966a77b
+tree 177ebe7a56611db20eec33f43c63379f31af9031
+parent 3307cdf8d99629e87bf1273b73f42f5965d11e58
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:01:37 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:01:37 +0100
+
+    fix: :bug: refactor Jenkinsfile to use actual file names in Newman test execution
+
+
+:100644 100644 3f1714abe36f92c7e4ffb480a572acfe0f781f50 2e64aca07ebb062f86c20d9bac27078aa46faf8a M	jenkins/Jenkinsfile
+commit 3307cdf8d99629e87bf1273b73f42f5965d11e58
+tree 3b149927e09dd5eff123cf2d24a143caa4204605
+parent 7b84754481b00b5ad098e1f9680853aeff49b804
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:00:27 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 13:00:27 +0100
+
+    feat: :sparkles: refactor Dockerfile: add newman_tests and update nodejs installation
+
+
+:100644 100644 5f532053884f8cfe19f28ccd0dc708f5a9443420 fe23a71aabc05f5a90ab2a189833e1da96c60a5b M	Dockerfile
+commit 7b84754481b00b5ad098e1f9680853aeff49b804
+tree 6c951afff1d0e32445d1f038fc0d81d9ad8d0765
+parent 973b287f414c5ee58365d81ee532d7ad8f432fc5
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 12:53:29 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 12:53:29 +0100
+
+    -
+
+
+:000000 100644 0000000000000000000000000000000000000000 12afaa270b273a73d1d202bedfd84b11d4f52a04 A	jenkins/jenkins/.java/fonts/17.0.9/fcinfo-1-39b7ebe5545e-Debian GNU/Linux-12-en-.properties
+:000000 100644 0000000000000000000000000000000000000000 1b765c27368bc1f846324570d894b956632f7bf9 A	jenkins/jenkins/.java/fonts/17.0.9/fcinfo-1-fabc4118ba46-Debian GNU/Linux-12-en-.properties
+:100644 100644 b9427d7ecec6ec8fcc3e1f99bf95add81612c0f3 4745a19401ba03a747397c645f62767bc4d3a589 M	jenkins/jenkins/copy_reference_file.log
+:100644 100644 a3b5e274a6a7d6d28a3751f4bf26cfd4e8651ecb 596413ad7ab1c9fcf9a8aa795b545b46542bc84b M	jenkins/jenkins/fingerprints/ec/c8/ff92a183dc748b488b693aedf849.xml
+:100644 000000 19d6a75f379ce61d6d7555305773d634e2afe391 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/65/log-index
+:100644 000000 2780c267b2ecbda0e8f93154b6c7aabe75362b05 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/65/workflow-completed/flowNodeStore.xml
+:100644 000000 213a9cd4785b29e216f404ddcc66adf6c4fac06e 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/66/log
+:100644 000000 e62650dab28bf494fc27c0b124aeddacaf80c620 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/66/log-index
+:100644 000000 c5543fc1202ee88aed4fb286a3a69fc9cf771f85 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/67/build.xml
+:100644 000000 c535cb0c8307089b3ea3a66ebd41662ce6467282 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/67/changelog14523874388554679667.xml
+:100644 000000 1a1554e2f42d1b7df6407b134348889c31102b16 0000000000000000000000000000000000000000 D	jenkins/jenkins/jobs/Pingurl app/builds/67/log-index
+:100644 100644 8279f1b4843fa0a494d58193c0f61d3a41425f62 1cf43ba01d5b7af3d464aadb813ebcc81b92f954 R093	jenkins/jenkins/jobs/Pingurl app/builds/65/build.xml	jenkins/jenkins/jobs/Pingurl app/builds/70/build.xml
+:000000 100644 0000000000000000000000000000000000000000 b3f33faf99414127768fdf6de1fa71e6e72affe9 A	jenkins/jenkins/jobs/Pingurl app/builds/70/changelog11065849287697757533.xml
+:100644 100644 124c27f81aac0cb7a1b869be31aeb3a3e0593dc2 3388a7df32ba67c5dfb28a42d228209b78a2d65e R061	jenkins/jenkins/jobs/Pingurl app/builds/67/log	jenkins/jenkins/jobs/Pingurl app/builds/70/log
+:000000 100644 0000000000000000000000000000000000000000 324c18d98b97a03bf69dde4f7a20f7ac8d89bf09 A	jenkins/jenkins/jobs/Pingurl app/builds/70/log-index
+:100644 100644 767f1915be3d3ab860ff3b6657b1950f8ac89325 c5c55e5a1f93a0d85120e4a0d7a19ae691cf7df9 R077	jenkins/jenkins/jobs/Pingurl app/builds/67/workflow-completed/flowNodeStore.xml	jenkins/jenkins/jobs/Pingurl app/builds/70/workflow-completed/flowNodeStore.xml
+:100644 100644 862fcaff61b007abea00461d5c7ccfcc13ba17bf 971c926c5cf58203004879332a506e75a2b6817e R092	jenkins/jenkins/jobs/Pingurl app/builds/66/build.xml	jenkins/jenkins/jobs/Pingurl app/builds/71/build.xml
+:100644 100644 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 R100	jenkins/jenkins/jobs/Pingurl app/builds/65/changelog12694036312582633057.xml	jenkins/jenkins/jobs/Pingurl app/builds/71/changelog7741777614458025268.xml
+:100644 100644 2b2e6a567ab9bcea64fea74e9a4d21e491fe0fc8 43709441be0c17971c502f0b1cf270d51983d557 R055	jenkins/jenkins/jobs/Pingurl app/builds/65/log	jenkins/jenkins/jobs/Pingurl app/builds/71/log
+:000000 100644 0000000000000000000000000000000000000000 dce0f2ab09d8041633da6e197fa4a9f956bf834e A	jenkins/jenkins/jobs/Pingurl app/builds/71/log-index
+:100644 100644 9be16cbb42cf12666c3de8df4c2e0108edcf9b2b 8c743c9ffad06c513e035c874e030cac866da072 R074	jenkins/jenkins/jobs/Pingurl app/builds/66/workflow-completed/flowNodeStore.xml	jenkins/jenkins/jobs/Pingurl app/builds/71/workflow-completed/flowNodeStore.xml
+:000000 100644 0000000000000000000000000000000000000000 9b9353deadf63b08f9f121d17da11cf2bf0098b0 A	jenkins/jenkins/jobs/Pingurl app/builds/72/build.xml
+:000000 100644 0000000000000000000000000000000000000000 026df67338a380400ab2b20aa0709af7aaef7b14 A	jenkins/jenkins/jobs/Pingurl app/builds/72/log
+:100644 100644 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 R100	jenkins/jenkins/jobs/Pingurl app/builds/66/changelog1084354699142677849.xml	jenkins/jenkins/jobs/Pingurl app/builds/72/log-index
+:100644 100644 1f5267fbd78e74822c89b5aa3e1aba82a08a8f87 5c6f8865d307947b25c6826543258d694fcb597b M	jenkins/jenkins/jobs/Pingurl app/builds/permalinks
+:100644 100644 a6d56c08d3300b161e93114b02230e562e5df5ce 6bd0fc18ff4cbfa67ea85998ed25528a7a092927 M	jenkins/jenkins/jobs/Pingurl app/config.xml
+:100644 100644 2bbd69c2e548374bb9a87e06a2cfe52136f28465 d69c74c8b95c8c0574cec707ab1a39d5926b9398 M	jenkins/jenkins/jobs/Pingurl app/nextBuildNumber
+:100644 100644 60185f55f28a5bc20282265d3719eb34de036ef4 7ba2c28f2d8a8f6c54bd412e3452413a8149e904 M	jenkins/jenkins/logs/tasks/Periodic background build discarder.log.1
+:100644 100644 ba47db28803c2aac16da039169679b24baaf2815 60185f55f28a5bc20282265d3719eb34de036ef4 M	jenkins/jenkins/logs/tasks/Periodic background build discarder.log.2
+:100644 100644 f38dfb9253b6e45fa5506f26ac943cc2204d4f14 ba47db28803c2aac16da039169679b24baaf2815 M	jenkins/jenkins/logs/tasks/Periodic background build discarder.log.3
+:100644 100644 8b4e1592b9e49320dfbf2bc276c7918fa62531fa f38dfb9253b6e45fa5506f26ac943cc2204d4f14 M	jenkins/jenkins/logs/tasks/Periodic background build discarder.log.4
+:100644 100644 98a496971c350da66b72a78243f04adbaf261a6c 8b4e1592b9e49320dfbf2bc276c7918fa62531fa M	jenkins/jenkins/logs/tasks/Periodic background build discarder.log.5
+:100644 100644 62e7e19551ddd3ff05277e34ad6ec8fd60b76dd0 9abecdb47bcf148aacda668f6df25ca7f9bd3d0f M	jenkins/jenkins/queue.xml
+:100644 100644 6aeeb81fdb944bd1b113b4648b680781f196f5d8 62e7e19551ddd3ff05277e34ad6ec8fd60b76dd0 M	jenkins/jenkins/queue.xml.bak
+:000000 100644 0000000000000000000000000000000000000000 14f3dce438fb519a1af66a0da00b05f51c25f7f1 A	jenkins/jenkins/war/WEB-INF/classes/images/symbols/brush-outline.svg
+:000000 100644 0000000000000000000000000000000000000000 406ad9cb0b853dfb2fba130c4b328b613587c5af A	jenkins/jenkins/war/WEB-INF/classes/images/symbols/up-to-date.svg
+:000000 100644 0000000000000000000000000000000000000000 837cc84cc1c1b0fde574b4eab1978aaec32aa2ce A	jenkins/jenkins/war/jsbundles/pages/cloud-set.css
+:000000 100644 0000000000000000000000000000000000000000 c5542c5c6b5000a775eb4184971d728e43037b0b A	jenkins/jenkins/war/jsbundles/pages/cloud-set.css.map
+:000000 100644 0000000000000000000000000000000000000000 618330a9ed4bceee8ddf729e74d5bf46a7b93dcb A	jenkins/jenkins/war/jsbundles/pages/cloud-set.js
+:000000 100644 0000000000000000000000000000000000000000 ec6de32134ead62e4c3e3e273db4f23f77e05ee6 A	jenkins/jenkins/war/jsbundles/pages/cloud-set.js.map
+commit 973b287f414c5ee58365d81ee532d7ad8f432fc5
+tree c7f34dcaefffc7f2e741ccabd88fb2aa84c60fa3
+parent 801a7339364ad128634a71a49b14318534536f09
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 12:53:14 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 12:53:14 +0100
+
+    feat: :sparkles: run Postman tests with Newman in Jenkinsfile
+
+
+:100644 100644 41af57046ed532fd55cfe4e7b370cdaae88af75d 3f1714abe36f92c7e4ffb480a572acfe0f781f50 M	jenkins/Jenkinsfile
+commit 801a7339364ad128634a71a49b14318534536f09
+tree cbef32f6dac70f234d9924316de4ae1cdb446a1d
+parent e9c04aaf49b87fd3fb2f50dfe0d97ec7b4677d3d
+author PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 12:52:42 +0100
+committer PapaPeskwo <tomi.orlovac@gmail.com> 2023-11-16 12:52:42 +0100
+
+    feat: :sparkles: add Node.js and Newman installation to Dockerfile
+
+
+:100644 100644 f1ba7d5af9eef63a5d8daf85a329b1ee459cff3f 5f532053884f8cfe19f28ccd0dc708f5a9443420 M	Dockerfile
+commit c9e1a4fb7ca3d05a5b83ed07b8a572d34a11be73
+tree 1950c76a85705b13b5c1a9259fafb4488bd7ddf7
+parent 67eb791d64de7ac156d1cefd89312f3eba88de0d
+author daniel <daniel.brunomatzui@yh.nackademin.se> 2023-11-16 10:53:09 +0100
+committer daniel <daniel.brunomatzui@yh.nackademin.se> 2023-11-16 10:53:09 +0100
+
+    Mergeable in gt actions when healthy
+
+
+:100644 100644 75bb9d72789ceed21861e76c7d466d8fee32493c 262197055936c1596f589d54979b48bf47d13f74 M	.github/workflows/workflow_pull-request.yaml
+commit 67eb791d64de7ac156d1cefd89312f3eba88de0d
+tree ebce573b81775f7af37d6688f16854f5ad7ea4f9
+parent 6fe7d9470159340f14d4c7bad1ca1f3a815b018e
+author daniel <daniel.brunomatzui@yh.nackademin.se> 2023-11-16 10:47:20 +0100
+committer daniel <daniel.brunomatzui@yh.nackademin.se> 2023-11-16 10:47:20 +0100
+
+    test passes
+
+
+:100644 100644 9c4c7e883f55324c75e8e64f56297d47c975b0ed dcc0dab256dbc7a9a76ca469050f5300ed86ed91 M	backend/tests/test_watched_urls.py
+commit 88486def695e7e028819a148065cf669aba64275
+tree d7ac2b58f9916490f50ab8ae015ff3320be6ad60
+parent b19b1f441ec239b772bee027197dfff462c688cb
+author David Sundgren <112482629+Sundgren95@users.noreply.github.com> 2023-11-16 10:41:49 +0100
+committer GitHub <noreply@github.com> 2023-11-16 10:41:49 +0100
+
+    Revert "Merge check on workflow"
+
+
+:100644 100644 75bb9d72789ceed21861e76c7d466d8fee32493c 0e68921b48c33df346dac88eef0ad0ee27e66b75 M	.github/workflows/workflow_pull-request.yaml
+:100644 100644 9c4c7e883f55324c75e8e64f56297d47c975b0ed dcc0dab256dbc7a9a76ca469050f5300ed86ed91 M	backend/tests/test_watched_urls.py
+commit 6fe7d9470159340f14d4c7bad1ca1f3a815b018e
+tree 82987bf3c6f1d767021cffb2aed924a4ae5e55e7
+parent 549a005cd4ff54369dee6a82ecef3eb86c8c478c
+author daniel <daniel.brunomatzui@yh.nackademin.se> 2023-11-16 10:40:07 +0100
+committer daniel <daniel.brunomatzui@yh.nackademin.se> 2023-11-16 10:40:07 +0100
+
+    failed test
+
+
+:100644 100644 dcc0dab256dbc7a9a76ca469050f5300ed86ed91 9c4c7e883f55324c75e8e64f56297d47c975b0ed M	backend/tests/test_watched_urls.py
+commit 549a005cd4ff54369dee6a82ecef3eb86c8c478c
+tree ebce573b81775f7af37d6688f16854f5ad7ea4f9
+parent 0c2e194b57e5371d19bdabc98bccf154d1671363
+author daniel <daniel.brunomatzui@yh.nackademin.se> 2023-11-16 10:32:48 +0100
+committer daniel <daniel.brunomatzui@yh.nackademin.se> 2023-11-16 10:32:48 +0100
+
+    Merge check on workflow
+
+
+:100644 100644 0e68921b48c33df346dac88eef0ad0ee27e66b75 75bb9d72789ceed21861e76c7d466d8fee32493c M	.github/workflows/workflow_pull-request.yaml
