@@ -1,0 +1,10 @@
+commit 1b6ee955acb09808a7afc6811f3ffd79f348681d
+tree f050e26f5f644b4ac724557d3a3b7388fefcced1
+parent ac971754a7ce846a313c57fc09bbcecbd6922b94
+author daniel <daniel.brunomatzui@yh.nackademin.se> 2023-11-20 13:21:55 +0100
+committer daniel <daniel.brunomatzui@yh.nackademin.se> 2023-11-20 13:21:55 +0100
+
+    Reformatted with black
+
+
+:100644 100644 091c94cac4d9fa00681a53f554187e0765c40ca4 28289411223e15c1899597318e57098a4af6197b M	backend/tests/test_watched_urls.py
